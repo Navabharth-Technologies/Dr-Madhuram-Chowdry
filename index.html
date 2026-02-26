@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Madhuram Chowdry | Knee Replacement Specialist</title>
+  <meta name="description"
+    content="India's leading knee replacement surgeon — total, partial &amp; revision knee surgery with advanced robotic techniques. Book a consultation with Dr. Madhuram Chowdry today." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Flatpickr (Advanced Date Picker) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#videoBanner" class="nav-logo">
+        <div class="logo-icon">
+          <img src="assets/logo.png" alt="Dr. Madhuram Chowdry Logo" class="logo-img" />
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#videoBanner" class="nav-link active" data-section="videoBanner" data-i18n="nav_home">Home</a>
+        <a href="#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
+        <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
+        <a href="#appointment" class="nav-cta-btn" data-i18n="nav_cta">Schedule Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"
+          title="Toggle dark/light mode">
+          🌙
+        </button>
+
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-text">English</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="#" class="lang-option active" data-value="en">English</a>
+            <a href="#" class="lang-option" data-value="kn">ಕನ್ನಡ</a>
+          </div>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <button class="drawer-close" id="drawerClose" aria-label="Close Menu">✕</button>
+      <nav class="drawer-links">
+        <a href="#videoBanner" class="drawer-link" data-i18n="nav_home">Home</a>
+        <a href="#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
+        <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
+        <a href="#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Schedule Consultation</a>
+      </nav>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+  </header>
+
+  <!-- ===================== VIDEO BANNER ===================== -->
+  <section class="video-banner" id="videoBanner">
+
+    <video class="video-banner__video" src="assets/Video_Creation_for_Website (1).mp4" autoplay muted loop playsinline
+      preload="auto" aria-label="Knee replacement procedure overview"></video>
+    <div class="video-banner__overlay"></div>
+    <div class="video-banner__text">
+      <span class="vb-name" data-i18n="hero_name">Dr. Madhuram Chowdry</span>
+      <span class="vb-line1" data-i18n="hero_line1">Knee Replacement</span>
+      <span class="vb-line2" data-i18n="hero_line2">Specialist<span class="vb-dot">.</span></span>
+    </div>
+
+    <!-- Stats overlay on video -->
+    <div class="vb-stats-overlay">
+      <div class="vb-stat-item">
+        <span class="vb-stat-num" data-target="10">0</span><span class="vb-stat-suf">+</span>
+        <span class="vb-stat-label" data-i18n="stat_years">Years Experience</span>
+      </div>
+      <div class="vb-stat-divider"></div>
+      <div class="vb-stat-item">
+        <span class="vb-stat-num" data-target="500">0</span><span class="vb-stat-suf">+</span>
+        <span class="vb-stat-label" data-i18n="stat_knees">Knees Replaced</span>
+      </div>
+      <div class="vb-stat-divider"></div>
+      <div class="vb-stat-item">
+        <span class="vb-stat-num" data-target="99">0</span><span class="vb-stat-suf">%</span>
+        <span class="vb-stat-label" data-i18n="stat_success">Success Rate</span>
+      </div>
+    </div>
+
+    <!-- Blurring the "Veo" watermark in the bottom right -->
+    <div class="watermark-blur"></div>
+  </section>
+
+
+
+
+  <!-- ===================== EXPERTISE / SERVICES ===================== -->
+  <section class="services" id="expertise">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+          </svg>
+          <span data-i18n="services_tag">Knee Surgery Specializations</span>
+        </div>
+        <h2 class="section-title" data-i18n="services_title">Our Knee <span class="highlight-text">Expertise</span></h2>
+        <p class="section-sub" data-i18n="services_sub">Click on any procedure to learn about our advanced knee
+          replacement techniques and treatment options.</p>
+      </div>
+
+      <div class="hex-grid" id="hexGrid">
+        <div class="hex-item" data-index="0">
+          <div class="hex-shape">
+            <div class="hex-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="24" y1="8" x2="24" y2="40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M14 16L24 12L34 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M14 32L24 38L34 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <h3 data-i18n="service_0_title">Total Knee Replacement</h3>
+            <p data-i18n="service_0_sub">Full joint resurfacing</p>
+          </div>
+          <div class="hex-expand" id="hexExpand-0">
+            <div class="expand-content">
+              <div class="expand-icon">🦴</div>
+              <h4 data-i18n="service_0_title">Total Knee Replacement</h4>
+              <p data-i18n="service_0_desc">Complete resurfacing of the knee joint using high-grade titanium and
+                polyethylene implants. Ideal for
+                severe arthritis, providing long-lasting pain relief and restored mobility.</p>
+              <div class="expand-tags">
+                <span>Titanium Implant</span><span>Arthritis</span><span>Robotic-Assisted</span><span>Fast
+                  Recovery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hex-item" data-index="1">
+          <div class="hex-shape">
+            <div class="hex-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 10 L24 8 L32 10 L32 26 Q32 36 24 40 Q16 36 16 26 Z" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round" />
+                <line x1="24" y1="18" x2="24" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 data-i18n="service_1_title">Partial Knee Replacement</h3>
+            <p data-i18n="service_1_sub">Unicompartmental surgery</p>
+          </div>
+          <div class="hex-expand" id="hexExpand-1">
+            <div class="expand-content">
+              <div class="expand-icon">🔩</div>
+              <h4 data-i18n="service_1_title">Partial Knee Replacement</h4>
+              <p data-i18n="service_1_desc">Minimally invasive surgery replacing only the damaged compartment of the
+                knee. Preserves healthy bone
+                and ligaments for a quicker, more natural recovery.</p>
+              <div class="expand-tags">
+                <span>Minimally Invasive</span><span>Unicompartmental</span><span>Quick Recovery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hex-item" data-index="2">
+          <div class="hex-shape">
+            <div class="hex-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2" />
+                <path d="M16 24 Q20 18 24 22 Q28 26 32 24" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 data-i18n="service_2_title">Revision Knee Surgery</h3>
+            <p data-i18n="service_2_sub">Implant replacement &amp; repair</p>
+          </div>
+          <div class="hex-expand" id="hexExpand-2">
+            <div class="expand-content">
+              <div class="expand-icon">🔧</div>
+              <h4 data-i18n="service_2_title">Revision Knee Surgery</h4>
+              <p data-i18n="service_2_desc">Specialised surgery to replace or repair a failed or worn-out knee implant.
+                Our team handles the most
+                complex revision cases with cutting-edge implants and techniques.</p>
+              <div class="expand-tags">
+                <span>Implant Failure</span><span>Complex Cases</span><span>Re-operation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hex-item" data-index="3">
+          <div class="hex-shape">
+            <div class="hex-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="16" r="7" stroke="currentColor" stroke-width="2" />
+                <path d="M14 40C14 33.373 18.477 28 24 28C29.523 28 34 33.373 34 40" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" />
+                <line x1="18" y1="34" x2="30" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 data-i18n="service_3_title">Knee Arthroscopy</h3>
+            <p data-i18n="service_3_sub">Keyhole joint surgery</p>
+          </div>
+          <div class="hex-expand" id="hexExpand-3">
+            <div class="expand-content">
+              <div class="expand-icon">�</div>
+              <h4 data-i18n="service_3_title">Knee Arthroscopy</h4>
+              <p data-i18n="service_3_desc">Minimally invasive keyhole surgery to diagnose and treat meniscal tears,
+                ligament injuries, cartilage
+                damage, and loose bodies inside the knee joint.</p>
+              <div class="expand-tags">
+                <span>Meniscal Tear</span><span>ACL Repair</span><span>Cartilage</span><span>Keyhole</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hex-item" data-index="4">
+          <div class="hex-shape">
+            <div class="hex-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8L16 16H8L14 22L11 30L20 24L29 30L26 22L32 16H24L20 8Z" stroke="currentColor"
+                  stroke-width="2" stroke-linejoin="round" />
+                <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.4" />
+              </svg>
+            </div>
+            <h3 data-i18n="service_4_title">Sports Knee Injuries</h3>
+            <p data-i18n="service_4_sub">ACL, meniscus &amp; ligaments</p>
+          </div>
+          <div class="hex-expand" id="hexExpand-4">
+            <div class="expand-content">
+              <div class="expand-icon">⚽</div>
+              <h4 data-i18n="service_4_title">Sports Knee Injuries</h4>
+              <p data-i18n="service_4_desc">Expert management of sports-related knee injuries including ACL/PCL tears,
+                meniscal injuries, patellar
+                dislocations, and collateral ligament damage for athletes of all levels.</p>
+              <div class="expand-tags">
+                <span>ACL Reconstruction</span><span>PCL Repair</span><span>Meniscus</span><span>Athletes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hex-item" data-index="5">
+          <div class="hex-shape">
+            <div class="hex-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="10" width="24" height="28" rx="4" stroke="currentColor" stroke-width="2" />
+                <path d="M18 22h12M18 28h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M18 16h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 data-i18n="service_5_title">Post-Op Rehabilitation</h3>
+            <p data-i18n="service_5_sub">Recovery &amp; physiotherapy</p>
+          </div>
+          <div class="hex-expand" id="hexExpand-5">
+            <div class="expand-content">
+              <div class="expand-icon">🏃</div>
+              <h4 data-i18n="service_5_title">Post-Op Rehabilitation</h4>
+              <p data-i18n="service_5_desc">Comprehensive physiotherapy and rehabilitation programs tailored for knee
+                replacement patients — from
+                in-hospital mobilisation to full return-to-activity milestones.</p>
+              <div class="expand-tags">
+                <span>Physiotherapy</span><span>Gait Training</span><span>Pain Management</span><span>Mobility</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          <span data-i18n="testimonials_tag">Patient Success Stories</span>
+        </div>
+        <h2 class="section-title" data-i18n="testimonials_title">Knees <span class="highlight-text">Transformed</span>
+        </h2>
+        <p class="section-sub" data-i18n="testimonials_sub">Real patients, real recoveries-walking pain-free after knee
+          replacement with Dr. Madhuram Chowdry.</p>
+      </div>
+    </div>
+
+    <div class="testimonial-ribbon-wrapper">
+      <div class="ribbon-fade-left"></div>
+      <div class="ribbon-fade-right"></div>
+      <div class="testimonial-ribbon" id="testimonialRibbon">
+        <div class="ribbon-track" id="ribbonTrack">
+          <!-- Cards injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPOINTMENT FORM ===================== -->
+  <section class="appointment" id="appointment">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          <span data-i18n="form_tag">Book Knee Consultation</span>
+        </div>
+        <h2 class="section-title" data-i18n="form_title">Schedule Your <span class="highlight-text">Knee
+            Assessment</span></h2>
+        <p class="section-sub" data-i18n="form_sub">Start your journey to pain-free movement. Our knee specialist team
+          will confirm your appointment within 24 hours.</p>
+      </div>
+
+      <div class="form-wrapper">
+        <!-- Progress Bar -->
+        <div class="form-progress">
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-steps">
+            <div class="progress-step active" id="step-indicator-1">
+              <div class="step-num">1</div>
+              <span data-i18n="step_1">Personal</span>
+            </div>
+            <div class="progress-step" id="step-indicator-2">
+              <div class="step-num">2</div>
+              <span data-i18n="step_2">Medical</span>
+            </div>
+            <div class="progress-step" id="step-indicator-3">
+              <div class="step-num">3</div>
+              <span data-i18n="step_3">Confirm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-glass">
+          <!-- Step 1 -->
+          <div class="form-step active" id="formStep1">
+            <h3 class="step-title" data-i18n="step_1_title">Personal Information</h3>
+            <div class="form-grid">
+              <div class="form-group" id="fg-firstName">
+                <label data-i18n="label_first_name">First Name</label>
+                <input type="text" id="firstName" data-i18n-placeholder="placeholder_first_name" placeholder="Rahul"
+                  autocomplete="given-name" />
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group" id="fg-lastName">
+                <label data-i18n="label_last_name">Last Name</label>
+                <input type="text" id="lastName" data-i18n-placeholder="placeholder_last_name" placeholder="Sharma"
+                  autocomplete="family-name" />
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group full-width" id="fg-email">
+                <label data-i18n="label_email">Email Address</label>
+                <input type="email" id="email" data-i18n-placeholder="placeholder_email" placeholder="rahul@email.com"
+                  autocomplete="email" />
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group full-width" id="fg-phone">
+                <label data-i18n="label_phone">Phone Number</label>
+                <input type="tel" id="phone" data-i18n-placeholder="placeholder_phone" placeholder="+91 98765 43210"
+                  autocomplete="tel" />
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group" id="fg-dob">
+                <label data-i18n="label_dob">Date of Birth</label>
+                <input type="date" id="dob" />
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group" id="fg-gender">
+                <label data-i18n="label_gender">Gender</label>
+                <select id="gender">
+                  <option value="" data-i18n="opt_select">Select</option>
+                  <option value="male" data-i18n="opt_male">Male</option>
+                  <option value="female" data-i18n="opt_female">Female</option>
+                  <option value="other" data-i18n="opt_other">Other</option>
+                  <option value="prefer-not" data-i18n="opt_prefer_not">Prefer not to say</option>
+                </select>
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+            </div>
+            <button class="form-next-btn" id="nextBtn1" onclick="nextStep(1)">
+              <span data-i18n="btn_medical">Continue to Medical Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" id="formStep2">
+            <h3 class="step-title" data-i18n="step_2_title">Medical Details</h3>
+            <div class="form-grid">
+              <div class="form-group full-width" id="fg-specialty">
+                <label data-i18n="label_specialty">Specialty / Department</label>
+                <select id="specialty">
+                  <option value="" data-i18n="opt_procedure">Choose procedure…</option>
+                  <option value="total-knee" data-i18n="opt_total_knee">Total Knee Replacement</option>
+                  <option value="partial-knee" data-i18n="opt_partial_knee">Partial Knee Replacement</option>
+                  <option value="revision" data-i18n="opt_revision">Revision Knee Surgery</option>
+                  <option value="arthroscopy" data-i18n="opt_arthroscopy">Knee Arthroscopy</option>
+                  <option value="sports" data-i18n="opt_sports">Sports Knee Injury</option>
+                  <option value="rehab" data-i18n="opt_rehab">Post-Op Rehabilitation</option>
+                  <option value="assessment" data-i18n="opt_assessment">Initial Knee Assessment</option>
+                </select>
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group" id="fg-date">
+                <label data-i18n="label_date">Preferred Date</label>
+                <input type="date" id="preferredDate" />
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group" id="fg-time">
+                <label data-i18n="label_time">Preferred Time</label>
+                <select id="preferredTime">
+                  <option value="" data-i18n="opt_time">Select time…</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                </select>
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+              <div class="form-group full-width" id="fg-reason">
+                <label data-i18n="label_reason">Reason for Visit</label>
+                <textarea id="reason" data-i18n-placeholder="placeholder_reason"
+                  placeholder="Describe your knee pain, symptoms, or previous treatments…" rows="4"></textarea>
+                <div class="validation-icon"></div>
+                <span class="field-error"></span>
+              </div>
+            </div>
+            <div class="form-btn-row">
+              <button class="form-back-btn" onclick="prevStep(2)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span data-i18n="btn_back">Back</span>
+              </button>
+              <button class="form-next-btn" onclick="nextStep(2)">
+                <span data-i18n="btn_confirm">Review & Confirm</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step" id="formStep3">
+            <h3 class="step-title" data-i18n="step_3_title">Confirm Appointment</h3>
+            <div class="confirm-summary" id="confirmSummary">
+              <!-- Filled by JS -->
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="consent" />
+              <label for="consent" data-i18n="label_consent">I confirm that the information provided is accurate and I
+                consent to data processing for appointment scheduling.</label>
+            </div>
+            <div class="form-btn-row">
+              <button class="form-back-btn" onclick="prevStep(3)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span data-i18n="btn_back">Back</span>
+              </button>
+              <button class="form-submit-btn" id="submitBtn" onclick="submitForm()">
+                <span data-i18n="btn_final_confirm">Confirm Appointment</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Success State -->
+          <div class="form-step" id="formSuccess">
+            <div class="success-state">
+              <div class="success-ring">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <h3 data-i18n="success_title">Appointment Requested!</h3>
+              <p data-i18n="success_msg">Thank you! Our team will contact you within <strong>24 hours</strong> to
+                confirm your appointment.</p>
+              <button class="form-next-btn" onclick="resetForm()" style="margin-top:1.5rem" data-i18n="btn_reset">Book
+                Another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== CONTACT & FOOTER ===================== -->
+  <footer class="contact-footer" id="contact">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Dr. Madhuram Chowdry Logo" class="footer-logo-img" />
+            <div>
+              <div class="footer-name" data-i18n="footer_name">Dr. Madhuram Chowdry</div>
+              <div class="footer-tagline" data-i18n="footer_tagline">MBBS, MS-Orthopedics</div>
+            </div>
+          </div>
+          <p class="footer-desc" data-i18n="footer_desc">Mysuru's leading knee replacement surgeon, dedicated to
+            restoring mobility and eliminating knee pain through advanced robotic-assisted surgery and compassionate
+            care.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon-wrap blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label" data-i18n="label_address">Address</div>
+                <div class="ci-value" data-i18n="value_address">A R Hospital 22, New Kantharaj Urs Rd, CFTRI layout,
+                  Sharadadevi Nagar <br>
+                  Mysuru, Karnataka– 570022</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap green">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label" data-i18n="label_phone_footer">Phone</div>
+                <div class="ci-value">+91 9620307042<br>+91 821 350 1645</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap orange">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value">madhuramchowdry14@gmail.com<br></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div>
+                <div class="ci-label" data-i18n="label_hours">Hours</div>
+                <div class="ci-value" data-i18n="value_hours">Mon – Sat: 11:00 AM – 8:00 PM<br>Sun: Emergency Only</div>
+              </div>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#06080F" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map Column -->
+        <div class="map-col">
+          <div class="map-container">
+            <div class="map-overlay-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              A R Hospital, Mysuru
+            </div>
+            <iframe
+              src="https://maps.google.com/maps?q=A%20R%20Hospital,%2022,%20New%20Kantharaj%20Urs%20Rd,%20CFTRI%20layout,%20Sharadadevi%20Nagar,%20Mysuru,%20Karnataka%20570022&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Dr. Madhuram Chowdry Clinic Location">
+            </iframe>
+            <div class="map-neon-overlay"></div>
+          </div>
+          <div class="map-cta">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=A+R+Hospital,+22,+New+Kantharaj+Urs+Rd,+CFTRI+layout,+Sharadadevi+Nagar,+Mysuru,+Karnataka+570022"
+              target="_blank" rel="noopener noreferrer" class="directions-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom footer bar -->
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2026 Dr. Madhuram Chowdry. All rights reserved. | Designed with ❤️ for better
+          healthcare.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
