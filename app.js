@@ -764,13 +764,16 @@ function scrollToSection(id) {
 // 4. GSAP SCROLL ANIMATIONS
 // ============================================================
 (function initScrollAnimations() {
-  // Hero entrance
-  gsap.from('.hero-badge', { duration: 0.7, y: 30, opacity: 0, ease: 'power3.out', delay: 0.2 });
-  gsap.from('.hero-headline', { duration: 0.9, y: 50, opacity: 0, ease: 'power3.out', delay: 0.4 });
-  gsap.from('.hero-sub', { duration: 0.8, y: 30, opacity: 0, ease: 'power3.out', delay: 0.6 });
-  gsap.from('.hero-actions', { duration: 0.8, y: 30, opacity: 0, ease: 'power3.out', delay: 0.75 });
-  gsap.from('.hero-stats', { duration: 0.8, y: 30, opacity: 0, ease: 'power3.out', delay: 0.9 });
-  gsap.from('.scroll-indicator', { duration: 0.8, y: 20, opacity: 0, ease: 'power3.out', delay: 1.2 });
+  // Helper: only animate if element exists
+  function animateIfExists(selector, props) {
+    if (document.querySelector(selector)) {
+      gsap.from(selector, props);
+    }
+  }
+
+  // Video banner entrance (replaces old hero animations)
+  animateIfExists('.video-banner__text', { duration: 0.9, y: 50, opacity: 0, ease: 'power3.out', delay: 0.3 });
+  animateIfExists('.vb-stats-overlay', { duration: 0.8, y: 30, opacity: 0, ease: 'power3.out', delay: 0.7 });
 
   // Section headers
   const headers = document.querySelectorAll('.section-header');
@@ -781,32 +784,143 @@ function scrollToSection(id) {
     });
   });
 
+  // About Doctor — image from left, text from right
+  animateIfExists('#aboutImgCol', {
+    scrollTrigger: { trigger: '.about-doctor', start: 'top 80%', toggleActions: 'play none none none' },
+    x: -80, opacity: 0, duration: 1, ease: 'power3.out'
+  });
+  animateIfExists('#aboutTextCol', {
+    scrollTrigger: { trigger: '.about-doctor', start: 'top 80%', toggleActions: 'play none none none' },
+    x: 80, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.15
+  });
+  animateIfExists('.about-highlight-card', {
+    scrollTrigger: { trigger: '.about-highlights', start: 'top 90%', toggleActions: 'play none none none' },
+    y: 30, opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power3.out'
+  });
+
   // Hex items stagger
-  gsap.from('.hex-item', {
+  animateIfExists('.hex-item', {
     scrollTrigger: { trigger: '#hexGrid', start: 'top 80%', toggleActions: 'play none none none' },
     y: 50, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out'
   });
 
   // Form wrapper
-  gsap.from('.form-wrapper', {
+  animateIfExists('.form-wrapper', {
     scrollTrigger: { trigger: '.appointment', start: 'top 75%', toggleActions: 'play none none none' },
     y: 60, opacity: 0, duration: 0.8, ease: 'power3.out'
   });
 
-  // Portal card
-  gsap.from('.portal-card', {
-    scrollTrigger: { trigger: '.portal', start: 'top 75%', toggleActions: 'play none none none' },
-    y: 60, opacity: 0, duration: 0.8, ease: 'power3.out'
-  });
-
   // Contact grid
-  gsap.from('.contact-info-col', {
+  animateIfExists('.contact-info-col', {
     scrollTrigger: { trigger: '.contact-footer', start: 'top 80%', toggleActions: 'play none none none' },
     x: -50, opacity: 0, duration: 0.8, ease: 'power3.out'
   });
-  gsap.from('.map-col', {
+  animateIfExists('.map-col', {
     scrollTrigger: { trigger: '.contact-footer', start: 'top 80%', toggleActions: 'play none none none' },
     x: 50, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.15
+  });
+})();
+
+// ============================================================
+// 4b. TYPING ANIMATION — About section bio text
+// ============================================================
+(function initTypingAnimation() {
+  const targets = document.querySelectorAll('.typing-target');
+  if (!targets.length) return;
+
+  let hasPlayed = false;
+
+  function typeText(element, html, speed, callback) {
+    element.innerHTML = '';
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    element.appendChild(cursor);
+
+    let i = 0;
+    let isInsideTag = false;
+    let tagBuffer = '';
+
+    function tick() {
+      if (i >= html.length) {
+        // Typing done — remove cursor after a pause
+        setTimeout(() => {
+          cursor.remove();
+          if (callback) callback();
+        }, 400);
+        return;
+      }
+
+      const char = html[i];
+
+      // Handle HTML tags — type them instantly
+      if (char === '<') {
+        isInsideTag = true;
+        tagBuffer = '<';
+        i++;
+        tick();
+        return;
+      }
+
+      if (isInsideTag) {
+        tagBuffer += char;
+        if (char === '>') {
+          isInsideTag = false;
+          // Insert the full tag before the cursor
+          cursor.insertAdjacentHTML('beforebegin', tagBuffer);
+          tagBuffer = '';
+
+          // If it's an opening tag (e.g. <strong>), we need to move cursor into it
+          // If it's a closing tag (e.g. </strong>), move cursor out
+          if (tagBuffer !== '' || html[i] === '>') {
+            // Re-append cursor at the end of current content
+            const lastTextNode = element.querySelector('strong:last-of-type');
+            if (lastTextNode && !tagBuffer.startsWith('</')) {
+              // Don't move; the next chars go inside the tag naturally
+            }
+          }
+        }
+        i++;
+        tick();
+        return;
+      }
+
+      // Regular character — type it with delay
+      cursor.insertAdjacentText('beforebegin', char);
+      i++;
+      setTimeout(tick, speed);
+    }
+
+    tick();
+  }
+
+  function startTyping() {
+    if (hasPlayed) return;
+    hasPlayed = true;
+
+    const el1 = document.getElementById('aboutBio1');
+    const el2 = document.getElementById('aboutBio2');
+
+    if (el1) {
+      const html1 = el1.dataset.typing || '';
+      // Decode HTML entities
+      const decoded1 = html1.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+
+      typeText(el1, decoded1, 12, () => {
+        if (el2) {
+          const html2 = el2.dataset.typing || '';
+          const decoded2 = html2.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+          typeText(el2, decoded2, 12);
+        }
+      });
+    }
+  }
+
+  // Trigger typing when About section scrolls into view
+  ScrollTrigger.create({
+    trigger: '.about-doctor',
+    start: 'top 75%',
+    onEnter: startTyping,
+    once: true
   });
 })();
 

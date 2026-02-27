@@ -134,8 +134,8 @@ body {
 }
 
 .logo-img {
-  width: 78px;
-  height: 78px;
+  width: 92px;
+  height: 92px;
   object-fit: contain;
   border-radius: 50%;
   display: block;
@@ -2440,6 +2440,204 @@ select option {
 }
 
 /* ============================================
+   ABOUT DOCTOR SECTION
+============================================ */
+.about-doctor {
+  padding: 100px 0;
+  background: var(--bg-base);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── Image Column ── */
+.about-img-col {
+  position: relative;
+}
+
+.about-img-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-img-glow {
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.20), rgba(22, 163, 74, 0.15), rgba(234, 88, 12, 0.10));
+  border-radius: var(--radius-xl);
+  z-index: 0;
+  filter: blur(30px);
+  animation: aboutGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes aboutGlow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-xl);
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.about-img-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 8px 16px;
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.about-badge-icon {
+  font-size: 1.1rem;
+}
+
+/* ── Text Column ── */
+.about-text-col .section-tag {
+  margin-bottom: 12px;
+}
+
+.about-text-col .section-title {
+  margin-bottom: 24px;
+}
+
+.about-bio {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-bio strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Highlight Cards ── */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.about-highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.about-highlight-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.ahc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.ahc-icon.blue {
+  background: rgba(14, 165, 233, 0.12);
+}
+
+.ahc-icon.green {
+  background: rgba(22, 163, 74, 0.12);
+}
+
+.ahc-icon.orange {
+  background: rgba(234, 88, 12, 0.12);
+}
+
+.ahc-title {
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.ahc-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Typing Animation ── */
+.typing-target {
+  min-height: 1.8em;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--blue);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: typingBlink 0.7s steps(1) infinite;
+}
+
+@keyframes typingBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ============================================
    VIDEO BANNER
    Full-width video just below the fixed navbar
 ============================================ */
@@ -2557,17 +2755,16 @@ select option {
   align-items: center;
   gap: 16px;
   background: rgba(15, 23, 42, 0.7);
-  /* Darker, more professional glass */
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 14px;
-  /* Slightly sharper corners */
   padding: 12px 24px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   max-width: fit-content;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   z-index: 4;
+  pointer-events: auto;
 }
 
 .vb-stat-item {
@@ -2651,8 +2848,8 @@ select option {
   }
 
   .logo-img {
-    width: 44px;
-    height: 44px;
+    width: 52px;
+    height: 52px;
   }
 
   .nav-links {
@@ -2695,6 +2892,34 @@ select option {
     right: 0;
   }
 
+
+  /* ── ABOUT DOCTOR ── */
+  .about-doctor {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-img-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .about-bio {
+    font-size: 0.95rem;
+  }
+
+  .about-highlights {
+    gap: 10px;
+  }
+
+  .about-highlight-card {
+    padding: 14px 16px;
+  }
+
   /* ── VIDEO BANNER / HERO ── */
   .video-banner {
     min-height: 100vh;
@@ -2707,22 +2932,22 @@ select option {
   }
 
   .video-banner__text {
-    padding: 0 24px 140px;
-    gap: 12px;
+    padding: 0 24px 60px;
+    gap: 14px;
     justify-content: center;
   }
 
   .vb-name {
-    font-size: clamp(1.6rem, 6vw, 2.4rem);
-    margin-bottom: 4px;
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    margin-bottom: 6px;
   }
 
   .vb-line1 {
-    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   .vb-line2 {
-    font-size: clamp(1.8rem, 7vw, 2.8rem);
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   .video-banner__caption {
@@ -2736,12 +2961,16 @@ select option {
 
   /* ── STATS OVERLAY ON VIDEO ── */
   .vb-stats-overlay {
-    bottom: 60px;
-    padding: 10px 16px;
-    gap: 10px;
+    /* Position below text instead of pinned to bottom */
+    position: static;
+    transform: none;
+    margin: 20px auto 0;
+    padding: 12px 20px;
+    gap: 12px;
     border-radius: 12px;
     width: calc(100% - 48px);
     max-width: 400px;
+    pointer-events: auto;
   }
 
   .vb-stat-item {
@@ -2750,15 +2979,15 @@ select option {
 
   .vb-stat-num,
   .vb-stat-suf {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .vb-stat-label {
-    font-size: 0.55rem;
+    font-size: 0.58rem;
   }
 
   .vb-stat-divider {
-    height: 28px;
+    height: 30px;
   }
 
   /* ── HERO (original section) ── */
@@ -2993,8 +3222,8 @@ select option {
   }
 
   .logo-img {
-    width: 38px;
-    height: 38px;
+    width: 46px;
+    height: 46px;
   }
 
   .theme-toggle {
@@ -3004,18 +3233,18 @@ select option {
   }
 
   .vb-name {
-    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
   .vb-line1,
   .vb-line2 {
-    font-size: clamp(1.5rem, 6.5vw, 2.2rem);
+    font-size: clamp(1.7rem, 7.5vw, 2.4rem);
   }
 
   .vb-stats-overlay {
-    bottom: 50px;
-    padding: 8px 10px;
-    gap: 6px;
+    padding: 10px 14px;
+    gap: 8px;
+    margin-top: 16px;
   }
 
   .vb-stat-item {
@@ -3024,11 +3253,11 @@ select option {
 
   .vb-stat-num,
   .vb-stat-suf {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .vb-stat-label {
-    font-size: 0.5rem;
+    font-size: 0.52rem;
   }
 
   .hero-headline {
