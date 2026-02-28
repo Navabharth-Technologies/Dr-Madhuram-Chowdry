@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 
 <head>
@@ -7,6 +7,8 @@
   <title>Dr. Madhuram Chowdry | Knee Replacement Specialist</title>
   <meta name="description"
     content="India's leading knee replacement surgeon — total, partial &amp; revision knee surgery with advanced robotic techniques. Book a consultation with Dr. Madhuram Chowdry today." />
+  <meta name="keywords"
+    content="Knee replacement surgeon Mysuru, Orthopedic doctor Mysuru, Best knee surgery Mysore, Robotic knee replacement India" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,6 +27,9 @@
 
   <!-- Flatpickr (Advanced Date Picker) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+
+  <!-- Preload Critical Images -->
+  <link rel="preload" href="assets/logo.png" as="image" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -82,7 +87,8 @@
     <div class="nav-container">
       <a href="#videoBanner" class="nav-logo">
         <div class="logo-icon">
-          <img src="assets/logo.png" alt="Dr. Madhuram Chowdry Logo" class="logo-img" />
+          <img src="assets/logo.png" alt="Dr. Madhuram Chowdry Logo" class="logo-img" fetchpriority="high"
+            decoding="async" />
         </div>
       </a>
 
@@ -190,7 +196,7 @@
           <div class="about-highlight-card">
             <div class="ahc-icon blue">🎓</div>
             <div>
-              <div class="ahc-title">MBBS, MS — Orthopedics</div>
+              <div class="ahc-title">MBBS, MS - Orthopedics</div>
               <div class="ahc-sub">Advanced Surgical Training</div>
             </div>
           </div>
@@ -198,7 +204,7 @@
             <div class="ahc-icon green">🤖</div>
             <div>
               <div class="ahc-title">Robotic-Assisted Surgery</div>
-              <div class="ahc-sub">Precision &amp; Accuracy</div>
+              <div class="ahc-sub">Precision & Accuracy</div>
             </div>
           </div>
           <div class="about-highlight-card">
@@ -212,6 +218,64 @@
 
       </div>
 
+    </div>
+  </section>
+
+  <!-- ===================== KNEE REPLACEMENT PROCESS ===================== -->
+  <section class="knee-process-section" id="kneeProcess">
+    <div class="section-container">
+      <h2 class="section-title text-center" style="text-align:center; margin-bottom: 40px;">Your Journey to a <span
+          class="highlight-text">Pain-Free Life</span></h2>
+
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="assets/process-1.png" alt="Active Lifestyle Before Pain" class="process-img">
+            <div class="process-step-badge">1</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-title">Active Before Pain</h3>
+            <p class="process-desc">Enjoying an active lifestyle without joint discomfort.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="assets/process-2.png" alt="Experiencing Knee Pain" class="process-img">
+            <div class="process-step-badge">2</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-title">Developing Knee Pain</h3>
+            <p class="process-desc">Age or injury causing severe pain and mobility issues.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="assets/process-3.png" alt="Surgical Operation" class="process-img">
+            <div class="process-step-badge">3</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-title">Robotic Surgery</h3>
+            <p class="process-desc">Precision robotic-assisted knee replacement treatment.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card">
+          <div class="process-img-wrap">
+            <img src="assets/process-4.png" alt="Recovery" class="process-img">
+            <div class="process-step-badge">4</div>
+          </div>
+          <div class="process-content">
+            <h3 class="process-title">Rapid Recovery</h3>
+            <p class="process-desc">Walking within 24 hours and returning to an active life.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

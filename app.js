@@ -798,8 +798,8 @@ function scrollToSection(id) {
     x: 80, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.15
   });
   animateIfExists('.about-highlight-card', {
-    scrollTrigger: { trigger: '.about-highlights', start: 'top 90%', toggleActions: 'play none none none' },
-    y: 30, opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power3.out'
+    scrollTrigger: { trigger: '.about-doctor', start: 'top 75%', toggleActions: 'play none none none' },
+    x: 30, opacity: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out'
   });
 
   // Hex items stagger
