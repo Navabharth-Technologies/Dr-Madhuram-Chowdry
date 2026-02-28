@@ -6,6 +6,7 @@
 const i18nData = {
   en: {
     nav_home: "Home",
+    nav_about: "About",
     nav_expertise: "Expertise",
     nav_contact: "Contact",
     nav_cta: "Schedule Now",
@@ -102,6 +103,7 @@ const i18nData = {
   },
   kn: {
     nav_home: "ಮುಖಪುಟ",
+    nav_about: "ಬಗ್ಗೆ",
     nav_expertise: "ಪರಿಣಿತಿ",
     nav_contact: "ಸಂಪರ್ಕ",
     nav_cta: "ಈಗಲೇ ನಿಗದಿಪಡಿಸಿ",
@@ -273,9 +275,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     document.body.style.overflow = open ? 'hidden' : '';
   }
 
-  // Active section detection
+  // Active section detection — only runs on pages that have these sections (e.g. index.html)
   const sections = ['videoBanner', 'expertise', 'testimonials', 'appointment', 'portal', 'contact'];
+  const hasSections = !!document.getElementById('videoBanner'); // Only true on index.html
   function updateActiveLink() {
+    if (!hasSections) return; // Skip on about.html — active link is set in HTML
     const scrollPos = window.scrollY + 120;
     let current = 'videoBanner';
     sections.forEach(id => {
@@ -821,108 +825,7 @@ function scrollToSection(id) {
   });
 })();
 
-// ============================================================
-// 4b. TYPING ANIMATION — About section bio text
-// ============================================================
-(function initTypingAnimation() {
-  const targets = document.querySelectorAll('.typing-target');
-  if (!targets.length) return;
 
-  let hasPlayed = false;
-
-  function typeText(element, html, speed, callback) {
-    element.innerHTML = '';
-    const cursor = document.createElement('span');
-    cursor.className = 'typing-cursor';
-    element.appendChild(cursor);
-
-    let i = 0;
-    let isInsideTag = false;
-    let tagBuffer = '';
-
-    function tick() {
-      if (i >= html.length) {
-        // Typing done — remove cursor after a pause
-        setTimeout(() => {
-          cursor.remove();
-          if (callback) callback();
-        }, 400);
-        return;
-      }
-
-      const char = html[i];
-
-      // Handle HTML tags — type them instantly
-      if (char === '<') {
-        isInsideTag = true;
-        tagBuffer = '<';
-        i++;
-        tick();
-        return;
-      }
-
-      if (isInsideTag) {
-        tagBuffer += char;
-        if (char === '>') {
-          isInsideTag = false;
-          // Insert the full tag before the cursor
-          cursor.insertAdjacentHTML('beforebegin', tagBuffer);
-          tagBuffer = '';
-
-          // If it's an opening tag (e.g. <strong>), we need to move cursor into it
-          // If it's a closing tag (e.g. </strong>), move cursor out
-          if (tagBuffer !== '' || html[i] === '>') {
-            // Re-append cursor at the end of current content
-            const lastTextNode = element.querySelector('strong:last-of-type');
-            if (lastTextNode && !tagBuffer.startsWith('</')) {
-              // Don't move; the next chars go inside the tag naturally
-            }
-          }
-        }
-        i++;
-        tick();
-        return;
-      }
-
-      // Regular character — type it with delay
-      cursor.insertAdjacentText('beforebegin', char);
-      i++;
-      setTimeout(tick, speed);
-    }
-
-    tick();
-  }
-
-  function startTyping() {
-    if (hasPlayed) return;
-    hasPlayed = true;
-
-    const el1 = document.getElementById('aboutBio1');
-    const el2 = document.getElementById('aboutBio2');
-
-    if (el1) {
-      const html1 = el1.dataset.typing || '';
-      // Decode HTML entities
-      const decoded1 = html1.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-
-      typeText(el1, decoded1, 12, () => {
-        if (el2) {
-          const html2 = el2.dataset.typing || '';
-          const decoded2 = html2.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
-          typeText(el2, decoded2, 12);
-        }
-      });
-    }
-  }
-
-  // Trigger typing when About section scrolls into view
-  ScrollTrigger.create({
-    trigger: '.about-doctor',
-    start: 'top 75%',
-    onEnter: startTyping,
-    once: true
-  });
-})();
 
 // ============================================================
 // 5. STAT COUNTER ANIMATION

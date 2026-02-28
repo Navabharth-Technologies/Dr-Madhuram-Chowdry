@@ -58,6 +58,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -562,6 +563,42 @@ body {
   animation-duration: 14s;
   animation-delay: -7s;
 }
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 12px;
+  }
+
+  .blob-1,
+  .blob-2,
+  .blob-3,
+  .blob-4 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .blob-1 {
+    top: -150px;
+    left: -150px;
+  }
+
+  .blob-2 {
+    top: 30%;
+    right: -100px;
+  }
+
+  .blob-3 {
+    bottom: -80px;
+    left: 20%;
+  }
+
+  .blob-4 {
+    top: 30%;
+    left: 45%;
+  }
+}
+
 
 @keyframes blobMove {
   0% {
@@ -2034,6 +2071,25 @@ body {
   color: var(--text-muted);
 }
 
+.powered-by {
+  font-size: 0.78rem !important;
+  color: var(--text-muted) !important;
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+}
+
+.powered-by a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.powered-by a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
 .footer-legal {
   display: flex;
   gap: 24px;
@@ -2448,6 +2504,140 @@ select option {
   position: relative;
 }
 
+/* ── About Carousel ── */
+.about-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  margin-bottom: 60px;
+  box-shadow: var(--shadow-lg);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.carousel-slide:hover .carousel-img {
+  transform: scale(1.02);
+}
+
+/* Video slides fill the frame like a cover */
+.carousel-img-wrap video.carousel-img {
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 28px 36px;
+}
+
+.carousel-cap-title {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.carousel-cap-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.carousel-cap-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Prev / Next Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 228px;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s;
+  color: var(--text-primary);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: var(--blue);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 16px;
+}
+
+.carousel-next {
+  right: 16px;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: calc(var(--caption-h, 120px) + 14px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--blue);
+  width: 28px;
+  border-radius: 5px;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -2540,6 +2730,7 @@ select option {
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 16px;
+  text-align: justify;
 }
 
 .about-bio strong {
@@ -2610,32 +2801,7 @@ select option {
   margin-top: 2px;
 }
 
-/* ── Typing Animation ── */
-.typing-target {
-  min-height: 1.8em;
-}
 
-.typing-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1.1em;
-  background: var(--blue);
-  margin-left: 2px;
-  vertical-align: text-bottom;
-  animation: typingBlink 0.7s steps(1) infinite;
-}
-
-@keyframes typingBlink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
 
 /* ============================================
    VIDEO BANNER
@@ -2656,13 +2822,17 @@ select option {
   height: auto;
   /* full video, no cropping */
   display: block;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .vb-badge-wrapper {
   position: absolute;
-  top: 110px;
-  left: 24px;
+  top: calc(var(--navbar-h, 72px) + 16px);
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
+  white-space: nowrap;
 }
 
 .vb-badge-wrapper .hero-badge {
@@ -2686,8 +2856,8 @@ select option {
   gap: 4px;
   pointer-events: none;
   text-align: center;
-  padding: 0 24px 100px;
-  /* Added bottom padding to push text up */
+  /* top padding clears badge, bottom padding clears stats bar */
+  padding: calc(var(--navbar-h, 72px) + 60px) 24px 140px;
 }
 
 .vb-name {
@@ -2748,7 +2918,7 @@ select option {
 /* Stats overlay for Video Banner */
 .vb-stats-overlay {
   position: absolute;
-  bottom: 320px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -2761,10 +2931,12 @@ select option {
   padding: 12px 24px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  max-width: fit-content;
+  max-width: calc(100% - 32px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   z-index: 4;
   pointer-events: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .vb-stat-item {
@@ -2807,6 +2979,75 @@ select option {
   /* Shorter divider */
   background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
   margin: 0;
+}
+
+/* ── Video Banner Responsive ── */
+@media (max-width: 1024px) {
+  .vb-stats-overlay {
+    gap: 12px;
+    padding: 10px 16px;
+  }
+
+  .vb-stat-item {
+    min-width: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vb-badge-wrapper {
+    top: calc(var(--navbar-h, 60px) + 10px);
+  }
+
+  .video-banner__text {
+    padding: calc(var(--navbar-h, 60px) + 52px) 16px 120px;
+  }
+
+  .vb-stats-overlay {
+    gap: 8px;
+    padding: 8px 12px;
+    bottom: 16px;
+  }
+
+  .vb-stat-item {
+    min-width: 60px;
+  }
+
+  .vb-stat-num,
+  .vb-stat-suf {
+    font-size: 1.15rem;
+  }
+
+  .vb-stat-label {
+    font-size: 0.55rem;
+  }
+
+  .vb-stat-divider {
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-banner__text {
+    padding: calc(var(--navbar-h, 56px) + 48px) 12px 110px;
+  }
+
+  .vb-stats-overlay {
+    gap: 6px;
+    padding: 8px 10px;
+  }
+
+  .vb-stat-divider {
+    display: none;
+  }
+
+  .vb-stat-item {
+    min-width: 54px;
+  }
+
+  .vb-stat-num,
+  .vb-stat-suf {
+    font-size: 1rem;
+  }
 }
 
 /* Caption bar at bottom */
@@ -2922,32 +3163,46 @@ select option {
 
   /* ── VIDEO BANNER / HERO ── */
   .video-banner {
-    min-height: 100vh;
+    min-height: 100svh;
+    max-height: 100svh;
   }
 
   .video-banner__video {
-    min-height: 100vh;
-    max-height: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center center;
+  }
+
+  .video-banner__overlay {
+    position: absolute;
+    inset: 0;
   }
 
   .video-banner__text {
-    padding: 0 24px 60px;
-    gap: 14px;
+    position: absolute;
+    inset: 0;
+    padding: 100px 20px 100px;
+    /* top clears badge, bottom clears stats */
+    gap: 10px;
     justify-content: center;
+    align-items: center;
   }
 
   .vb-name {
-    font-size: clamp(1.8rem, 7vw, 2.6rem);
-    margin-bottom: 6px;
+    font-size: clamp(1.5rem, 6vw, 2.4rem);
+    margin-bottom: 4px;
   }
 
   .vb-line1 {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 3rem);
   }
 
   .vb-line2 {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.8rem, 8vw, 3rem);
   }
 
   .video-banner__caption {
@@ -2961,15 +3216,16 @@ select option {
 
   /* ── STATS OVERLAY ON VIDEO ── */
   .vb-stats-overlay {
-    /* Position below text instead of pinned to bottom */
-    position: static;
-    transform: none;
-    margin: 20px auto 0;
-    padding: 12px 20px;
-    gap: 12px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px 16px;
+    gap: 10px;
     border-radius: 12px;
-    width: calc(100% - 48px);
-    max-width: 400px;
+    width: auto;
+    max-width: calc(100% - 32px);
     pointer-events: auto;
   }
 
@@ -2979,14 +3235,22 @@ select option {
 
   .vb-stat-num,
   .vb-stat-suf {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .vb-stat-label {
-    font-size: 0.58rem;
+    font-size: 0.55rem;
   }
 
   .vb-stat-divider {
+    height: 28px;
+  }
+
+  /* Watermark blur adjustment for mobile */
+  .watermark-blur {
+    bottom: 16px;
+    right: 12px;
+    width: 70px;
     height: 30px;
   }
 
@@ -3242,9 +3506,9 @@ select option {
   }
 
   .vb-stats-overlay {
-    padding: 10px 14px;
-    gap: 8px;
-    margin-top: 16px;
+    padding: 8px 12px;
+    gap: 6px;
+    bottom: 24px;
   }
 
   .vb-stat-item {

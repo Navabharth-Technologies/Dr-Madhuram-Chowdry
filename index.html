@@ -44,6 +44,7 @@
 
       <nav class="nav-links" id="navLinks">
         <a href="#videoBanner" class="nav-link active" data-section="videoBanner" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav-link" data-section="about" data-i18n="nav_about">About</a>
         <a href="#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
         <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
         <a href="#appointment" class="nav-cta-btn" data-i18n="nav_cta">Schedule Now</a>
@@ -79,6 +80,7 @@
       <button class="drawer-close" id="drawerClose" aria-label="Close Menu">✕</button>
       <nav class="drawer-links">
         <a href="#videoBanner" class="drawer-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="drawer-link" data-i18n="nav_about">About</a>
         <a href="#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
         <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
         <a href="#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Schedule Consultation</a>
@@ -132,21 +134,22 @@
             <div class="about-img-glow"></div>
             <img src="assets/doctor-portrait.jpeg" alt="Dr. Madhuram Chowdry-Knee Replacement Specialist"
               class="about-img" />
-            <div class="about-img-badge">
-              <span class="about-badge-icon">🏥</span>
-              <span>A R Hospital, Mysuru</span>
-            </div>
           </div>
         </div>
 
         <!-- Right: About Text -->
         <div class="about-text-col" id="aboutTextCol">
           <h2 class="section-title"><span class="highlight-text">Dr. Madhuram Chowdry</span></h2>
-          <p class="about-bio typing-target" id="aboutBio1"
-            data-typing="Dr. Madhuram Chowdry is a highly skilled &lt;strong&gt;Orthopedic Surgeon&lt;/strong&gt; specializing in &lt;strong&gt;Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery&lt;/strong&gt;. With over &lt;strong&gt;10+ years of experience&lt;/strong&gt; and &lt;strong&gt;500+ successful knee replacements&lt;/strong&gt;, he is committed to restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.">
+          <p class="about-bio" id="aboutBio1">
+            Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total
+              Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+
+              years of experience</strong> and <strong>500+ successful knee replacements</strong>, he is committed to
+            restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.
           </p>
-          <p class="about-bio typing-target" id="aboutBio2"
-            data-typing="Based at &lt;strong&gt;A R Hospital, Mysuru&lt;/strong&gt;, Dr. Chowdry combines cutting-edge technology with compassionate patient care, ensuring every patient receives a personalized treatment plan for the fastest possible recovery.">
+          <p class="about-bio" id="aboutBio2">
+            Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology with
+            compassionate patient care, ensuring every patient receives a personalized treatment plan for the fastest
+            possible recovery.
           </p>
 
           <div class="about-highlights">
@@ -172,6 +175,19 @@
               </div>
             </div>
           </div>
+
+          <div class="about-cta" style="margin-top: 32px;">
+            <a href="about.html" class="liquid-btn">
+              <div class="liquid-fill"></div>
+              <span class="btn-text">
+                Explore More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
@@ -670,7 +686,8 @@
             </div>
           </div>
           <div class="social-row">
-            <a href="#" class="social-btn" aria-label="Facebook">
+            <a href="https://www.facebook.com/madhuram.chowdry/" target="_blank" rel="noopener noreferrer"
+              class="social-btn" aria-label="Facebook">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
               </svg>
@@ -681,7 +698,8 @@
                   d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
               </svg>
             </a>
-            <a href="#" class="social-btn" aria-label="LinkedIn">
+            <a href="https://in.linkedin.com/in/madhuram-chowdry-675aa9126" target="_blank" rel="noopener noreferrer"
+              class="social-btn" aria-label="LinkedIn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                 <circle cx="4" cy="4" r="2" />
@@ -692,6 +710,20 @@
                 <path
                   d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
                 <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#06080F" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/madhuramchowdry14?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.333 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.333-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.333-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.197.157 3.355.673 1.999 2.029.643 3.385.127 5.227.042 7.083.014 8.363 0 8.771 0 12c0 3.229.014 3.637.072 4.917.085 1.856.601 3.698 1.957 5.054 1.356 1.356 3.198 1.872 5.054 1.957C8.363 23.986 8.771 24 12 24s3.637-.014 4.917-.072c1.856-.085 3.698-.601 5.054-1.957 1.356-1.356 1.872-3.198 1.957-5.054C23.986 15.637 24 15.229 24 12s-.014-3.637-.072-4.917c-.085-1.856-.601-3.698-1.957-5.054C20.615.643 18.773.127 16.917.042 15.637.014 15.229 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+              </svg>
+            </a>
+            <a href="https://www.threads.com/@madhuramchowdry14" target="_blank" rel="noopener noreferrer"
+              class="social-btn" aria-label="Threads">
+              <svg width="18" height="18" viewBox="0 0 192 192" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M141.537 88.988a66.667 66.667 0 0 0-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.376-11.319 11.308-24.925 16.2-45.488 16.351-22.809-.169-40.06-7.484-51.275-21.742C35.236 139.966 29.808 120.983 29.605 96c.203-24.983 5.63-43.966 16.133-56.425C57.053 25.518 74.303 18.185 97.113 18.016c22.961.17 40.526 7.54 52.202 21.906 5.765 7.098 10.109 16.283 12.99 27.264l16.138-4.308c-3.476-13.048-8.995-24.289-16.524-33.47C147.042 12.023 125.588 2.27 97.218 2.054h-.08c-28.307.215-50.135 10.012-64.888 27.12C20.62 43.52 14.346 64.815 14.113 96l.001.054c.232 31.185 6.506 52.48 18.117 66.826 14.753 17.108 36.58 26.905 64.888 27.12h.08c25.334-.193 43.098-6.812 57.682-21.386 19.16-19.148 18.616-43.243 12.305-58.063-4.569-10.653-13.219-19.386-25.649-25.563Zm-44.8 42.851c-10.454.587-21.35-4.098-21.913-14.22-.421-7.866 5.601-16.63 23.733-17.669 2.076-.119 4.112-.176 6.109-.176 6.26 0 12.139.609 17.495 1.778-1.989 24.823-15.58 29.712-25.424 30.287Z" />
               </svg>
             </a>
           </div>
@@ -730,7 +762,8 @@
       <div class="footer-bottom">
         <p data-i18n="footer_rights">© 2026 Dr. Madhuram Chowdry. All rights reserved. | Designed with ❤️ for better
           healthcare.</p>
-
+        <p class="powered-by">Powered by <a href="https://www.navabharathtechnologies.com/" target="_blank"
+            rel="noopener noreferrer">Navabharath Technologies</a></p>
       </div>
     </div>
   </footer>

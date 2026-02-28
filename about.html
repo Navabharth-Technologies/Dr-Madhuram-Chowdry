@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Madhuram Chowdry | Knee Replacement Specialist</title>
+  <meta name="description"
+    content="India's leading knee replacement surgeon — total, partial &amp; revision knee surgery with advanced robotic techniques. Book a consultation with Dr. Madhuram Chowdry today." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Flatpickr (Advanced Date Picker) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    /* About page — center the footer copyright bar */
+    .contact-footer .footer-bottom {
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* ── About page stacked layout ─────────────────── */
+    .about-stack {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-stack .about-page-title {
+      text-align: center;
+      margin-bottom: 32px;
+      width: 100%;
+    }
+
+    /* Carousel centred below the name */
+    .about-stack .about-carousel {
+      width: 100%;
+      max-width: 620px;
+      margin-bottom: 36px;
+    }
+
+    /* Bio text below the image, justified */
+    .about-stack .about-bio {
+      text-align: justify;
+      line-height: 1.9;
+      margin-bottom: 18px;
+      width: 100%;
+      color: var(--text-secondary, #555);
+    }
+
+    /* Highlights below bio */
+    .about-stack .about-highlights {
+      width: 100%;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#videoBanner" class="nav-logo">
+        <div class="logo-icon">
+          <img src="assets/logo.png" alt="Dr. Madhuram Chowdry Logo" class="logo-img" />
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-section="videoBanner" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav-link active" data-section="about" data-i18n="nav_about">About</a>
+        <a href="index.html#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
+        <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
+        <a href="index.html#appointment" class="nav-cta-btn" data-i18n="nav_cta">Schedule Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"
+          title="Toggle dark/light mode">
+          🌙
+        </button>
+
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-text">English</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="#" class="lang-option active" data-value="en">English</a>
+            <a href="#" class="lang-option" data-value="kn">ಕನ್ನಡ</a>
+          </div>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <button class="drawer-close" id="drawerClose" aria-label="Close Menu">✕</button>
+      <nav class="drawer-links">
+        <a href="index.html" class="drawer-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="drawer-link active" data-i18n="nav_about">About</a>
+        <a href="index.html#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
+        <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
+        <a href="index.html#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Schedule Consultation</a>
+      </nav>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+  </header>
+
+  <!-- ===================== ABOUT DR. MADHURAM CHOWDRY ===================== -->
+  <section class="about-doctor" id="aboutDoctorPage" style="padding-top: 180px; min-height: 80vh;">
+    <div class="section-container">
+
+      <div class="about-stack">
+
+        <!-- 1. Name at the top -->
+        <h2 class="section-title about-page-title">
+          <span class="highlight-text">Dr. Madhuram Chowdry</span>
+        </h2>
+
+        <!-- 2. Image carousel below the name -->
+        <div class="about-carousel" id="aboutCarousel">
+          <div class="carousel-track" id="carouselTrack">
+
+            <!-- Slide 1 -->
+            <div class="carousel-slide">
+              <div class="carousel-img-wrap">
+                <img src="assets/Mr. Madhuran Chowdry.png" alt="Dr. Madhuram Chowdry – Orthopedic Surgeon"
+                  class="carousel-img" />
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+              <div class="carousel-img-wrap">
+                <img src="assets/Mr. Madhuran Chowdry (2).png" alt="Dr. Madhuram Chowdry – Consulting a Patient"
+                  class="carousel-img" />
+              </div>
+            </div>
+
+          </div>
+          <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+          </div>
+        </div>
+
+        <!-- 3. Bio text below the image -->
+        <p class="about-bio">
+          Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in
+          <strong>Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>.
+          With over <strong>10+ years of experience</strong> and <strong>500+ successful knee
+            replacements</strong>, he is committed to restoring mobility and eliminating knee pain through
+          advanced robotic-assisted surgical techniques.
+        </p>
+        <p class="about-bio">
+          Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology
+          with compassionate patient care, ensuring every patient receives a personalized treatment plan
+          for the fastest possible recovery.
+        </p>
+
+        <!-- 4. Highlight cards -->
+        <div class="about-highlights">
+          <div class="about-highlight-card">
+            <div class="ahc-icon blue">🎓</div>
+            <div>
+              <div class="ahc-title">MBBS, MS — Orthopedics</div>
+              <div class="ahc-sub">Advanced Surgical Training</div>
+            </div>
+          </div>
+          <div class="about-highlight-card">
+            <div class="ahc-icon green">🤖</div>
+            <div>
+              <div class="ahc-title">Robotic-Assisted Surgery</div>
+              <div class="ahc-sub">Precision &amp; Accuracy</div>
+            </div>
+          </div>
+          <div class="about-highlight-card">
+            <div class="ahc-icon orange">⚡</div>
+            <div>
+              <div class="ahc-title">Rapid Recovery Protocol</div>
+              <div class="ahc-sub">Walk Within 24 Hours</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== CONTACT & FOOTER ===================== -->
+  <footer class="contact-footer" id="contact">
+    <div class="section-container">
+
+      <!-- Bottom footer bar -->
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">© 2026 Dr. Madhuram Chowdry. All rights reserved. | Designed with ❤️ for better
+          healthcare.</p>
+        <p class="powered-by">Powered by <a href="https://www.navabharathtechnologies.com/" target="_blank"
+            rel="noopener noreferrer">Navabharath Technologies</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="app.js"></script>
+  <script>
+    // ── About Page Carousel ──────────────────────────────────
+    (function () {
+      const track = document.getElementById('carouselTrack');
+      const dots = document.querySelectorAll('.carousel-dot');
+      const total = dots.length;
+      let current = 0;
+      let timer;
+
+      function goTo(idx) {
+        current = (idx + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      // Dot click still works for manual navigation
+      dots.forEach(d => d.addEventListener('click', () => {
+        goTo(+d.dataset.index);
+        resetTimer();
+      }));
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 5000);
+      }
+
+      resetTimer();
+    })();
+  </script>
+</body>
+
+</html>
