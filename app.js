@@ -1080,8 +1080,50 @@ function submitForm() {
     gsap.fromTo(consent.parentElement, { x: -4 }, { x: 4, repeat: 5, yoyo: true, duration: 0.05, ease: 'power1.inOut', onComplete: () => gsap.set(consent.parentElement, { x: 0 }) });
     return;
   }
-  // Show success
-  showStep(99); // beyond 3 → none visible
+
+  // Collect form data
+  const getValue = id => (document.getElementById(id)?.value || '').trim();
+  const getSelectText = id => {
+    const sel = document.getElementById(id);
+    return sel?.options[sel.selectedIndex]?.text || '';
+  };
+
+  const firstName = getValue('firstName');
+  const lastName = getValue('lastName');
+  const phone = getValue('phone');
+  const email = getValue('email');
+  const specialty = getSelectText('specialty');
+  const date = getValue('preferredDate');
+  const time = getSelectText('preferredTime');
+  const reason = getValue('reason');
+
+  // Build WhatsApp message
+  const message = [
+    `🏥 *New Appointment Request*`,
+    ``,
+    `👤 *Name:* ${firstName} ${lastName}`,
+    `📞 *Phone:* ${phone}`,
+    `📧 *Email:* ${email}`,
+    `🦴 *Specialty:* ${specialty}`,
+    `📅 *Preferred Date:* ${date}`,
+    `⏰ *Preferred Time:* ${time}`,
+    `📝 *Reason:* ${reason}`,
+  ].join('\n');
+
+  const encodedMsg = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/918073582068?text=${encodedMsg}`;
+
+  // Use anchor click to bypass popup blockers
+  const a = document.createElement('a');
+  a.href = whatsappURL;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+
+  // Show success screen
+  showStep(99);
   document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
   const successEl = document.getElementById('formSuccess');
   successEl.classList.add('active');
