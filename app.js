@@ -99,7 +99,44 @@ const i18nData = {
     footer_rights: "© 2026 Dr. Madhuram Chowdry. All rights reserved. | Designed with ❤️ for better healthcare.",
     link_privacy: "Privacy Policy",
     link_terms: "Terms of Service",
-    link_hipaa: "HIPAA Compliance"
+    link_hipaa: "HIPAA Compliance",
+    // About section
+    about_section_title: 'Dr. Madhuram Chowdry',
+    about_bio_1: 'Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+ years of experience</strong> and <strong>500+ successful knee replacements</strong>, he is committed to restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.',
+    about_bio_2: 'Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology with compassionate patient care, ensuring every patient receives a personalized treatment plan for the fastest possible recovery.',
+    ahc_1_title: 'MBBS, MS - Orthopedics',
+    ahc_1_sub: 'Advanced Surgical Training',
+    ahc_2_title: 'Robotic-Assisted Surgery',
+    ahc_2_sub: 'Precision & Accuracy',
+    ahc_3_title: 'Rapid Recovery Protocol',
+    ahc_3_sub: 'Walk Within 24 Hours',
+    btn_explore: 'Explore More',
+    // Life Story section
+    ls_tag: 'Journey & Legacy',
+    ls_title: 'Life Story of <span class="highlight-text">Dr. Madhuram Chowdry</span>',
+    ls_sub: 'A journey of dedication, perseverance, and an unwavering commitment to healing.',
+    ls_year_1: 'Early Life & Education',
+    ls_card_title_1: 'The Foundation of Excellence',
+    ls_card_text_1: 'Dr. Madhuram Chowdry pursued his dream of medicine with passion, earning his <strong>MBBS degree</strong> followed by a <strong>Master of Surgery (MS) in Orthopedics</strong>. His academic journey laid a strong foundation in the science of bones, joints, and surgical precision.',
+    ls_year_2: 'Training & Specialisation',
+    ls_card_title_2: 'Mastering the Art of Knee Surgery',
+    ls_card_text_2: 'After completing his postgraduate training, Dr. Chowdry undertook advanced fellowship training in <strong>Joint Replacement Surgery</strong> and <strong>Robotic-Assisted Knee Procedures</strong>. He trained alongside leading orthopedic surgeons, honing his craft to world-class standards.',
+    ls_year_3: 'Clinical Practice',
+    ls_card_title_3: 'Building a Legacy of Mobility',
+    ls_card_text_3: 'Joining <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry established himself as the city\'s most trusted knee specialist. With over <strong>10+ years</strong> of hands-on experience and <strong>500+ successful knee replacements</strong>, he has given hundreds of patients a new lease on life — free from pain and full of movement.',
+    ls_year_4: 'Today & Beyond',
+    ls_card_title_4: 'A Commitment That Never Stops',
+    ls_card_text_4: 'Dr. Chowdry continues to push the boundaries of orthopedic care — embracing the latest innovations in <strong>robotics</strong>, <strong>minimally invasive techniques</strong>, and <strong>rapid recovery protocols</strong>. His mission remains simple: help every patient walk pain-free, as quickly and safely as possible.',
+    // Knee process section
+    process_section_title: 'Your Journey to a <span class="highlight-text">Pain-Free Life</span>',
+    process_1_title: 'Active Before Pain',
+    process_1_desc: 'Enjoying an active lifestyle without joint discomfort.',
+    process_2_title: 'Developing Knee Pain',
+    process_2_desc: 'Age or injury causing severe pain and mobility issues.',
+    process_3_title: 'Robotic Surgery',
+    process_3_desc: 'Precision robotic-assisted knee replacement treatment.',
+    process_4_title: 'Rapid Recovery',
+    process_4_desc: 'Walking within 24 hours and returning to an active life.'
   },
   kn: {
     nav_home: "ಮುಖಪುಟ",
@@ -120,7 +157,7 @@ const i18nData = {
     services_sub: "ನಮ್ಮ ಸುಧಾರಿತ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ತಂತ್ರಗಳು ಮತ್ತು ಚಿಕಿತ್ಸಾ ಆಯ್ಕೆಗಳ ಬಗ್ಗೆ ತಿಳಿಯಲು ಯಾವುದೇ ವಿಧಾನದ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ.",
     testimonials_tag: "ರೋಗಿಗಳ ಯಶಸ್ಸಿನ ಕಥೆಗಳು",
     testimonials_title: 'ಮೊಣಕಾಲುಗಳ <span class="highlight-text">ರೂಪಾಂತರ</span>',
-    testimonials_sub: "ನಿಜವಾದ ರೋಗಿಗಳು, ನಿಜವಾದ ಚೇತರಿಕೆಗಳು-ಡಾ. ಮಧುರಂ ಚೌದರಿಯವರೊಂದಿಗೆ ಮೊಣಕಾಲು ಬದಲಾವಣೆಯ ನಂತರ ನೋವು ಮುಕ್ತವಾಗಿ ನಡೆಯುತ್ತಿದ್ದಾರೆ.",
+    testimonials_sub: "ನಿಜವಾದ ರೋಗಿಗಳು, ನಿಜವಾದ ಚೇತರಿಕೆಗಳು-ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರೊಂದಿಗೆ ಮೊಣಕಾಲು ಬದಲಾವಣೆಯ ನಂತರ ನೋವು ಮುಕ್ತವಾಗಿ ನಡೆಯುತ್ತಿದ್ದಾರೆ.",
     form_tag: "ಮೊಣಕಾಲು ಸಮಾಲೋಚನೆ ಕಾಯ್ದಿರಿಸಿ",
     form_title: 'ನಿಮ್ಮ ಮೊಣಕಾಲು <span class="highlight-text">ಮೌಲ್ಯಮಾಪನವನ್ನು</span> ನಿಗದಿಪಡಿಸಿ',
     form_sub: "ನೋವು ಮುಕ್ತ ಚಲನೆಯತ್ತ ನಿಮ್ಮ ಪ್ರಯಾಣವನ್ನು ಪ್ರಾರಂಭಿಸಿ. ನಮ್ಮ ಮೊಣಕಾಲು ತಜ್ಞರ ತಂಡವು 24 ಗಂಟೆಗಳ ಒಳಗೆ ನಿಮ್ಮ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಅನ್ನು ದೃಢೀಕರಿಸುತ್ತದೆ.",
@@ -193,10 +230,47 @@ const i18nData = {
     label_phone_footer: "ಫೋನ್",
     label_hours: "ಸಮಯ",
     value_hours: "ಸೋಮ – ಶನಿ: 11:00 AM – 8:00 PM<br>ಭಾನು: ತುರ್ತು ಪರಿಸ್ಥಿತಿ ಮಾತ್ರ",
-    footer_rights: "© 2026 ಡಾ. ಮಧು ರಾಮ್ ಚೌದರಿ. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ. | ಉತ್ತಮ ಆರೋಗ್ಯ ರಕ್ಷಣೆಗಾಗಿ ❤️ ನೊಂದಿಗೆ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
+    footer_rights: "© 2026 ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ. | ಉತ್ತಮ ಆರೋಗ್ಯ ರಕ್ಷಣೆಗಾಗಿ ❤️ ನೊಂದಿಗೆ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.",
     link_privacy: "ಗೌಪ್ಯತಾ ನೀತಿ",
     link_terms: "ಸೇವಾ ನಿಯಮಗಳು",
-    link_hipaa: "HIPAA ಅನುಸರಣೆ"
+    link_hipaa: "HIPAA ಅನುಸರಣೆ",
+    // About section
+    about_section_title: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ',
+    about_bio_1: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಒಬ್ಬ ಉನ್ನತ ಕೌಶಲ್ಯದ <strong>ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕ</strong>, <strong>ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ, ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong>ಯಲ್ಲಿ ಪರಿಣಿತರು. <strong>10+ ವರ್ಷಗಳ ಅನುಭವ</strong> ಮತ್ತು <strong>500+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ಅವರು ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತಂತ್ರಗಳ ಮೂಲಕ ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಮತ್ತು ಮೊಣಕಾಲು ನೋವನ್ನು ತೆಗೆದುಹಾಕಲು ಬದ್ಧರಾಗಿದ್ದಾರೆ.',
+    about_bio_2: '<strong>ಎ ಆರ್ ಆಸ್ಪತ್ರೆ, ಮೈಸೂರು</strong>ದಲ್ಲಿ ನೆಲೆಸಿರುವ ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅಧುನಾತನ ತಂತ್ರಜ್ಞಾನವನ್ನು ಸಹಾನುಭೂತಿಯ ರೋಗಿ ಆರೈಕೆಯೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತಾರೆ, ಪ್ರತಿ ರೋಗಿಗೂ ವೇಗವಾಗಿ ಚೇತರಿಕೆಗಾಗಿ ವೈಯಕ್ತಿಕ ಚಿಕಿತ್ಸಾ ಯೋಜನೆಯನ್ನು ಖಾತ್ರಿಪಡಿಸುತ್ತಾರೆ.',
+    ahc_1_title: 'MBBS, MS - ಆರ್ಥೋಪೆಡಿಕ್ಸ್',
+    ahc_1_sub: 'ಸುಧಾರಿತ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತರಬೇತಿ',
+    ahc_2_title: 'ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ',
+    ahc_2_sub: 'ನಿಖರತೆ ಮತ್ತು ಕರಾರು',
+    ahc_3_title: 'ತ್ವರಿತ ಚೇತರಿಕೆ ಪ್ರೋಟೋಕಾಲ್',
+    ahc_3_sub: '24 ಗಂಟೆಗಳಲ್ಲಿ ನಡೆಯಿರಿ',
+    btn_explore: 'ಇನ್ನಷ್ಟು ಅನ್ವೇಷಿಸಿ',
+    // Life Story section
+    ls_tag: 'ಪ್ರಯಾಣ ಮತ್ತು ಪರಂಪರೆ',
+    ls_title: 'ಡಾ. ಮಧು ರಾಮ್ <span class="highlight-text">ಚೌದ್ರಿ</span> ಅವರ ಜೀವನ ಕಥೆ',
+    ls_sub: 'ಸಮರ್ಪಣೆ, ಪರಿಶ್ರಮ ಮತ್ತು ಗುಣಪಡಿಸುವ ಅಚಲ ಬದ್ಧತೆಯ ಪ್ರಯಾಣ.',
+    ls_year_1: 'ಆರಂಭಿಕ ಜೀವನ ಮತ್ತು ಶಿಕ್ಷಣ',
+    ls_card_title_1: 'ಶ್ರೇಷ್ಠತೆಯ ಅಡಿಪಾಯ',
+    ls_card_text_1: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ತಮ್ಮ ವೈದ್ಯಕೀಯ ಕನಸನ್ನು ಉತ್ಸಾಹದಿಂದ ಅನ್ವೇಷಿಸಿದರು, <strong>MBBS ಪದವಿ</strong> ನಂತರ <strong>ಆರ್ಥೋಪೆಡಿಕ್ಸ್‌ನಲ್ಲಿ ಎಂ.ಎಸ್.</strong> ಪಡೆದರು. ಅವರ ಶೈಕ್ಷಣಿಕ ಪ್ರಯಾಣವು ಮೂಳೆ, ಕೀಲು ಮತ್ತು ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ನಿಖರತೆಯ ವಿಜ್ಞಾನದಲ್ಲಿ ದೃಢ ಅಡಿಪಾಯ ಹಾಕಿತು.',
+    ls_year_2: 'ತರಬೇತಿ ಮತ್ತು ಪರಿಣಿತಿ',
+    ls_card_title_2: 'ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ಕಲೆ ಕರಗತ',
+    ls_card_text_2: 'ಸ್ನಾತಕೋತ್ತರ ತರಬೇತಿ ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ <strong>ಜಾಯಿಂಟ್ ರಿಪ್ಲೇಸ್‌ಮೆಂಟ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong> ಮತ್ತು <strong>ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಮೊಣಕಾಲು ವಿಧಾನಗಳಲ್ಲಿ</strong> ಸುಧಾರಿತ ಫೆಲೋಶಿಪ್ ತರಬೇತಿ ಪಡೆದರು. ಅವರು ಪ್ರಮುಖ ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರ ಜೊತೆ ತರಬೇತಿ ಪಡೆದು ವಿಶ್ವ ಮಟ್ಟ ತಲುಪಿದರು.',
+    ls_year_3: 'ವೈದ್ಯಕೀಯ ಅಭ್ಯಾಸ',
+    ls_card_title_3: 'ಚಲನಶೀಲತೆಯ ಪರಂಪರೆ ನಿರ್ಮಾಣ',
+    ls_card_text_3: '<strong>ಎ ಆರ್ ಆಸ್ಪತ್ರೆ, ಮೈಸೂರು</strong> ಸೇರಿ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ನಗರದ ಅತ್ಯಂತ ವಿಶ್ವಾಸಾರ್ಹ ಮೊಣಕಾಲು ತಜ್ಞರಾಗಿ ನಿಲ್ಲಿದರು. <strong>10+ ವರ್ಷಗಳ</strong> ಪ್ರಾಯೋಗಿಕ ಅನುಭವ ಮತ್ತು <strong>500+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ನೂರಾರು ರೋಗಿಗಳಿಗೆ ಹೊಸ ಜೀವನ ನೀಡಿದ್ದಾರೆ.',
+    ls_year_4: 'ಇಂದು ಮತ್ತು ಮುಂದೆ',
+    ls_card_title_4: 'ನಿಲ್ಲದ ಬದ್ಧತೆ',
+    ls_card_text_4: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಆರ್ಥೋಪೆಡಿಕ್ ಆರೈಕೆಯ ಗಡಿಗಳನ್ನು ತಳ್ಳುತ್ತಲೇ ಇದ್ದಾರೆ — <strong>ರೊಬೋಟಿಕ್ಸ್</strong>, <strong>ಕನಿಷ್ಠ ಆಕ್ರಮಣಕಾರಿ ತಂತ್ರಗಳು</strong>, ಮತ್ತು <strong>ತ್ವರಿತ ಚೇತರಿಕೆ ಪ್ರೋಟೋಕಾಲ್‌ಗಳಲ್ಲಿ</strong> ಇತ್ತೀಚಿನ ಆವಿಷ್ಕಾರಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುತ್ತಾ. ಅವರ ಧ್ಯೇಯ ಸರಳ: ಪ್ರತಿ ರೋಗಿಯನ್ನು ನೋವು ಮುಕ್ತವಾಗಿ ನಡೆಯುವಂತೆ ಮಾಡುವುದು.',
+    // Knee process section
+    process_section_title: 'ನಿಮ್ಮ <span class="highlight-text">ನೋವು ಮುಕ್ತ ಜೀವನ</span>ಕ್ಕೆ ಪ್ರಯಾಣ',
+    process_1_title: 'ನೋವಿಗೆ ಮೊದಲು ಸಕ್ರಿಯ',
+    process_1_desc: 'ಕೀಲು ಅಸ್ವಸ್ಥತೆಯಿಲ್ಲದೆ ಸಕ್ರಿಯ ಜೀವನಶೈಲಿ ಆನಂದಿಸುವುದು.',
+    process_2_title: 'ಮೊಣಕಾಲು ನೋವು ಬೆಳೆಯುವುದು',
+    process_2_desc: 'ವಯಸ್ಸು ಅಥವಾ ಗಾಯದಿಂದ ತೀವ್ರ ನೋವು ಮತ್ತು ಚಲನಶೀಲತೆ ತೊಂದರೆ.',
+    process_3_title: 'ರೊಬೊಟಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ',
+    process_3_desc: 'ನಿಖರ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಚಿಕಿತ್ಸೆ.',
+    process_4_title: 'ತ್ವರಿತ ಚೇತರಿಕೆ',
+    process_4_desc: '24 ಗಂಟೆಗಳಲ್ಲಿ ನಡೆಯುವುದು ಮತ್ತು ಸಕ್ರಿಯ ಜೀವನಕ್ಕೆ ಮರಳುವುದು.'
   }
 };
 
@@ -347,6 +421,40 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
       switcher.classList.remove('open');
       btn.setAttribute('aria-expanded', false);
     }
+  });
+})();
+
+// ── Wire up drawer language buttons ──────────────────────────────
+(function initDrawerLang() {
+  const drawerOpts = document.querySelectorAll('.drawer-lang-opt');
+  if (!drawerOpts.length) return;
+
+  // Sync initial state from localStorage
+  const savedLang = localStorage.getItem('drChowdryLang') || 'en';
+  drawerOpts.forEach(o => {
+    o.classList.toggle('active', o.dataset.value === savedLang);
+  });
+
+  drawerOpts.forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lang = opt.dataset.value;
+
+      // Update drawer button states
+      drawerOpts.forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+
+      // Also sync the navbar dropdown if it exists
+      const navOpts = document.querySelectorAll('.lang-option');
+      navOpts.forEach(o => {
+        o.classList.toggle('active', o.dataset.value === lang);
+      });
+      const textLabel = document.querySelector('.lang-text');
+      if (textLabel) textLabel.textContent = lang === 'kn' ? 'ಕನ್ನಡ' : 'English';
+
+      // Switch language
+      switchLanguage(lang);
+    });
   });
 })();
 
@@ -920,12 +1028,12 @@ function scrollToSection(id) {
   ];
 
   const reviewsKN = [
-    { name: 'ಪ್ರಿಯಾ ಶರ್ಮಾ', dept: 'ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ವರ್ಷಗಳ ಮೊಣಕಾಲು ನೋವಿನ ನಂತರ, ಡಾ. ಚೌದರಿ ನನಗೆ ನನ್ನ ಜೀವನವನ್ನು ಮರಳಿ ನೀಡಿದರು. ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ಒಂದು ವಾರದಲ್ಲೇ ನಾನು ಕೋಲಿನ ಸಹಾಯವಿಲ್ಲದೆ ನಡೆಯುತ್ತಿದ್ದೆ. ನಿಜವಾಗಿಯೂ ಜೀವನ ಬದಲಾಯಿತು!', color: '#38bdf8', initials: 'PS' },
+    { name: 'ಪ್ರಿಯಾ ಶರ್ಮಾ', dept: 'ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ವರ್ಷಗಳ ಮೊಣಕಾಲು ನೋವಿನ ನಂತರ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ನನಗೆ ನನ್ನ ಜೀವನವನ್ನು ಮರಳಿ ನೀಡಿದರು. ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ಒಂದು ವಾರದಲ್ಲೇ ನಾನು ಕೋಲಿನ ಸಹಾಯವಿಲ್ಲದೆ ನಡೆಯುತ್ತಿದ್ದೆ. ನಿಜವಾಗಿಯೂ ಜೀವನ ಬದಲಾಯಿತು!', color: '#38bdf8', initials: 'PS' },
     { name: 'ರಾಜೇಶ್ ಕುಮಾರ್', dept: 'ದ್ವಿಪಕ್ಷೀಯ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ನನ್ನ ಎರಡೂ ಮೊಣಕಾಲುಗಳನ್ನು ಒಂದೇ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯಲ್ಲಿ ಬದಲಾಯಿಸಲಾಯಿತು. ರೊಬೊಟಿಕ್ ನಿಖರತೆ ಅದ್ಭುತವಾಗಿತ್ತು. ನಾನು ಈಗ 10 ವರ್ಷಗಳಲ್ಲಿ ಮೊದಲ ಬಾರಿಗೆ ನೋವು ಮುಕ್ತವಾಗಿ ಮೆಟ್ಟಿಲುಗಳನ್ನು ಹತ್ತುತ್ತಿದ್ದೇನೆ.', color: '#22c55e', initials: 'RK' },
-    { name: 'ಅನನ್ಯಾ ರೆಡ್ಡಿ', dept: 'ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ಚೇತರಿಕೆಯ ಸಮಯದ ಬಗ್ಗೆ ನಾನು ಚಿಂತಿತಳಾಗಿದ್ದೆ, ಆದರೆ ಡಾ. ಚೌದರಿಯವರ ಚಿಕಿತ್ಸೆಯು ಎರಡು ದಿನಗಳಲ್ಲಿ ನನ್ನನ್ನು ಮನೆಗೆ ಮರಳುವಂತೆ ಮಾಡಿತು. ಮೊಣಕಾಲು ಸಂಪೂರ್ಣವಾಗಿ ಸಹಜವಾಗಿ ಭಾಸವಾಗುತ್ತಿದೆ.', color: '#f97316', initials: 'AR' },
-    { name: 'ಮೊಹಮ್ಮದ್ ಅಲಿ', dept: 'ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ನನ್ನ ಹಿಂದಿನ ಇಂಪ್ಲಾಂಟ್ ಬೇರೆಡೆ ವಿಫಲವಾಗಿತ್ತು. ಡಾ. ಚೌದರಿ ಅವರು ಅಸಾಧಾರಣ ಪರಿಣತಿಯೊಂದಿಗೆ ಸಂಕೀರ್ಣ ಪುನರಾವರ್ತಿತ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯನ್ನು ನಿರ್ವಹಿಸಿದರು. ಇಂದು ನನಗೆ ಕಿಂಚಿತ್ತೂ ನೋವಿಲ್ಲ.', color: '#38bdf8', initials: 'MA' },
-    { name: 'ಸುಜಾತಾ ನಾಯರ್', dept: 'ಮೊಣಕಾಲು ಆರ್ಥ್ರೋಸ್ಕೋಪಿ', stars: 5, text: 'ನನ್ನ ಮೆನಿಸ್ಕಲ್ ಕಣ್ಣೀರಿಗೆ ಕೀಹೋಲ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಸುಗಮವಾಗಿತ್ತು ಮತ್ತು ಚೇತರಿಕೆ ವೇಗವಾಗಿತ್ತು. ಡಾ. ಚೌದರಿ ಪ್ರತಿಯೊಂದು ಹಂತವನ್ನೂ ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸಿದರು. 3 ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನಡೆಯುತ್ತಿದ್ದೇನೆ!', color: '#22c55e', initials: 'SN' },
-    { name: 'ವಿಕ್ರಮ್ ಪಟೇಲ್', dept: 'ಕ್ರೀಡಾ ಮೊಣಕಾಲು ಗಾಯ', stars: 5, text: 'ಕ್ರಿಕೆಟ್ ಆಟಗಾರನಾಗಿ, ನನ್ನ ACL ಕಣ್ಣೀರು ವಿನಾಶಕಾರಿಯಾಗಿತ್ತು. ಡಾ. ಚೌದರಿಯವರ ಪುನರ್ನಿರ್ಮಾಣ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯು 6 ತಿಂಗಳಲ್ಲಿ ನನ್ನನ್ನು ಮತ್ತೆ ಮೈದಾನಕ್ಕೆ ಮರಳುವಂತೆ ಮಾಡಿತು. ಅತ್ಯುತ್ತಮ ಕೆಲಸ!', color: '#f97316', initials: 'VP' },
+    { name: 'ಅನನ್ಯಾ ರೆಡ್ಡಿ', dept: 'ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ಚೇತರಿಕೆಯ ಸಮಯದ ಬಗ್ಗೆ ನಾನು ಚಿಂತಿತಳಾಗಿದ್ದೆ, ಆದರೆ ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರ ಚಿಕಿತ್ಸೆಯು ಎರಡು ದಿನಗಳಲ್ಲಿ ನನ್ನನ್ನು ಮನೆಗೆ ಮರಳುವಂತೆ ಮಾಡಿತು. ಮೊಣಕಾಲು ಸಂಪೂರ್ಣವಾಗಿ ಸಹಜವಾಗಿ ಭಾಸವಾಗುತ್ತಿದೆ.', color: '#f97316', initials: 'AR' },
+    { name: 'ಮೊಹಮ್ಮದ್ ಅಲಿ', dept: 'ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ನನ್ನ ಹಿಂದಿನ ಇಂಪ್ಲಾಂಟ್ ಬೇರೆಡೆ ವಿಫಲವಾಗಿತ್ತು. ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರು ಅಸಾಧಾರಣ ಪರಿಣತಿಯೊಂದಿಗೆ ಸಂಕೀರ್ಣ ಪುನರಾವರ್ತಿತ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯನ್ನು ನಿರ್ವಹಿಸಿದರು. ಇಂದು ನನಗೆ ಕಿಂಚಿತ್ತೂ ನೋವಿಲ್ಲ.', color: '#38bdf8', initials: 'MA' },
+    { name: 'ಸುಜಾತಾ ನಾಯರ್', dept: 'ಮೊಣಕಾಲು ಆರ್ಥ್ರೋಸ್ಕೋಪಿ', stars: 5, text: 'ನನ್ನ ಮೆನಿಸ್ಕಲ್ ಕಣ್ಣೀರಿಗೆ ಕೀಹೋಲ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಸುಗಮವಾಗಿತ್ತು ಮತ್ತು ಚೇತರಿಕೆ ವೇಗವಾಗಿತ್ತು. ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಪ್ರತಿಯೊಂದು ಹಂತವನ್ನೂ ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸಿದರು. 3 ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನಡೆಯುತ್ತಿದ್ದೇನೆ!', color: '#22c55e', initials: 'SN' },
+    { name: 'ವಿಕ್ರಮ್ ಪಟೇಲ್', dept: 'ಕ್ರೀಡಾ ಮೊಣಕಾಲು ಗಾಯ', stars: 5, text: 'ಕ್ರಿಕೆಟ್ ಆಟಗಾರನಾಗಿ, ನನ್ನ ACL ಕಣ್ಣೀರು ವಿನಾಶಕಾರಿಯಾಗಿತ್ತು. ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರ ಪುನರ್ನಿರ್ಮಾಣ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯು 6 ತಿಂಗಳಲ್ಲಿ ನನ್ನನ್ನು ಮತ್ತೆ ಮೈದಾನಕ್ಕೆ ಮರಳುವಂತೆ ಮಾಡಿತು. ಅತ್ಯುತ್ತಮ ಕೆಲಸ!', color: '#f97316', initials: 'VP' },
     { name: 'ದೀಪಿಕಾ ಸಿಂಗ್', dept: 'ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ನಿಖರವಾಗಿತ್ತು. ನನ್ನ ಹೊಸ ಮೊಣಕಾಲು ಸಂಪೂರ್ಣವಾಗಿ ಸಹಜವಾಗಿ ಭಾಸವಾಗುತ್ತಿದೆ. ಆರು ತಿಂಗಳ ನಂತರ ನಾನು ನನ್ನ ಮಗಳ ಮದುವೆಯಲ್ಲಿ ನೃತ್ಯ ಮಾಡುತ್ತಿದ್ದೇನೆ — ನೋವು ಮುಕ್ತವಾಗಿ!', color: '#38bdf8', initials: 'DS' },
     { name: 'ಅರ್ಜುನ್ ಕೃಷ್ಣನ್', dept: 'ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ನಂತರದ ಪುನರ್ವಸತಿ', stars: 5, text: 'ಪುನರ್ವಸತಿ ತಂಡವು ಅಸಾಧಾರಣವಾಗಿತ್ತು. ಮೊದಲ ದಿನದಿಂದ ಯೋಜಿತ ಫಿಸಿಯೋಥೆರಪಿ ನನ್ನ ಚೇತರಿಕೆಯನ್ನು ಸುಗಮಗೊಳಿಸಿತು. ನಾನು ಎಲ್ಲಾ ಚೇತರಿಕೆಯ ಗುರಿಗಳನ್ನು ಮೀರಿಸಿದ್ದೇನೆ.', color: '#22c55e', initials: 'AK' },
   ];

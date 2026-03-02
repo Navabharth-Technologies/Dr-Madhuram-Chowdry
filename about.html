@@ -41,6 +41,24 @@
       text-align: center;
     }
 
+    /* About section top spacing */
+    #aboutDoctorPage {
+      padding-top: 180px;
+      min-height: 80vh;
+    }
+
+    @media (max-width: 992px) {
+      #aboutDoctorPage {
+        padding-top: 120px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #aboutDoctorPage {
+        padding-top: 90px;
+      }
+    }
+
     /* ── About page stacked layout ─────────────────── */
     .about-stack {
       max-width: 780px;
@@ -77,13 +95,228 @@
       width: 100%;
       margin-top: 28px;
     }
+
+    /* ── Life Story Section ─────────────────────────── */
+    .life-story-section {
+      padding: 80px 0 60px;
+      background: var(--bg-base, #f0f6ff);
+    }
+
+    .ls-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .ls-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(26, 144, 255, 0.1);
+      color: var(--accent, #1a90ff);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .ls-title {
+      margin-bottom: 12px;
+    }
+
+    .ls-sub {
+      color: var(--text-secondary, #666);
+      max-width: 520px;
+      margin: 0 auto;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* Timeline and Video Layout */
+    .ls-content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    .ls-timeline {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .ls-video-wrap {
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      position: sticky;
+      top: 200px;
+      margin-top: 150px;
+      border: 6px solid var(--bg-card, #ffffff);
+      z-index: 10;
+    }
+
+    .ls-video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .ls-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: var(--bg-card, #ffffff);
+      border-radius: 16px;
+      padding: 28px 28px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border, #e8eef7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .ls-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(26, 144, 255, 0.12);
+    }
+
+    .ls-icon-wrap {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ls-blue {
+      background: rgba(26, 144, 255, 0.12);
+      color: #1a90ff;
+    }
+
+    .ls-green {
+      background: rgba(16, 185, 129, 0.12);
+      color: #10b981;
+    }
+
+    .ls-orange {
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+    }
+
+    .ls-purple {
+      background: rgba(139, 92, 246, 0.12);
+      color: #8b5cf6;
+    }
+
+    .ls-card-body {
+      flex: 1;
+    }
+
+    .ls-year {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent, #1a90ff);
+      margin-bottom: 6px;
+    }
+
+    .ls-card-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-primary, #1a1a2e);
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .ls-card-title::after {
+      content: '+';
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--accent, #1a90ff);
+      transition: transform 0.4s ease;
+    }
+
+    .ls-card.active .ls-card-title::after {
+      transform: rotate(45deg);
+    }
+
+    .ls-card-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary, #555);
+      line-height: 1.6;
+      text-align: justify;
+      hyphens: auto;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    }
+
+    .ls-card.active .ls-card-text {
+      max-height: 900px;
+      opacity: 1;
+      margin-top: 14px;
+    }
+
+    /* Connector line between cards */
+    .ls-connector {
+      width: 2px;
+      height: 32px;
+      background: linear-gradient(to bottom, #1a90ff44, #8b5cf644);
+      margin: 0 auto 0 38px;
+    }
+
+    @media (max-width: 992px) {
+      .ls-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .ls-video-wrap {
+        position: static;
+        margin-top: 0;
+        order: -1;
+        /* Video on top on mobile */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .ls-card {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .ls-icon-wrap {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+      }
+
+      .ls-connector {
+        margin-left: 28px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <!-- ===================== NAVBAR ===================== -->
-  <header class="navbar" id="navbar">
+  <header class="navbar scrolled" id="navbar">
     <div class="nav-container">
       <a href="#videoBanner" class="nav-logo">
         <div class="logo-icon">
@@ -134,19 +367,28 @@
         <a href="index.html#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
         <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
         <a href="index.html#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Schedule Consultation</a>
+
+        <!-- Language switcher inside drawer -->
+        <div class="drawer-lang-row">
+          <span class="drawer-lang-label">🌐 Language</span>
+          <div class="drawer-lang-options">
+            <a href="#" class="drawer-lang-opt active" data-value="en">English</a>
+            <a href="#" class="drawer-lang-opt" data-value="kn">ಕನ್ನಡ</a>
+          </div>
+        </div>
       </nav>
     </div>
     <div class="drawer-overlay" id="drawerOverlay"></div>
   </header>
 
   <!-- ===================== ABOUT DR. MADHURAM CHOWDRY ===================== -->
-  <section class="about-doctor" id="aboutDoctorPage" style="padding-top: 180px; min-height: 80vh;">
+  <section class="about-doctor" id="aboutDoctorPage">
     <div class="section-container">
 
       <div class="about-stack">
 
         <!-- 1. Name at the top -->
-        <h2 class="section-title about-page-title">
+        <h2 class="section-title about-page-title" data-i18n="about_section_title">
           <span class="highlight-text">Dr. Madhuram Chowdry</span>
         </h2>
 
@@ -178,14 +420,14 @@
         </div>
 
         <!-- 3. Bio text below the image -->
-        <p class="about-bio">
+        <p class="about-bio" data-i18n="about_bio_1">
           Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in
           <strong>Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>.
           With over <strong>10+ years of experience</strong> and <strong>500+ successful knee
             replacements</strong>, he is committed to restoring mobility and eliminating knee pain through
           advanced robotic-assisted surgical techniques.
         </p>
-        <p class="about-bio">
+        <p class="about-bio" data-i18n="about_bio_2">
           Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology
           with compassionate patient care, ensuring every patient receives a personalized treatment plan
           for the fastest possible recovery.
@@ -196,22 +438,22 @@
           <div class="about-highlight-card">
             <div class="ahc-icon blue">🎓</div>
             <div>
-              <div class="ahc-title">MBBS, MS - Orthopedics</div>
-              <div class="ahc-sub">Advanced Surgical Training</div>
+              <div class="ahc-title" data-i18n="ahc_1_title">MBBS, MS - Orthopedics</div>
+              <div class="ahc-sub" data-i18n="ahc_1_sub">Advanced Surgical Training</div>
             </div>
           </div>
           <div class="about-highlight-card">
             <div class="ahc-icon green">🤖</div>
             <div>
-              <div class="ahc-title">Robotic-Assisted Surgery</div>
-              <div class="ahc-sub">Precision & Accuracy</div>
+              <div class="ahc-title" data-i18n="ahc_2_title">Robotic-Assisted Surgery</div>
+              <div class="ahc-sub" data-i18n="ahc_2_sub">Precision & Accuracy</div>
             </div>
           </div>
           <div class="about-highlight-card">
             <div class="ahc-icon orange">⚡</div>
             <div>
-              <div class="ahc-title">Rapid Recovery Protocol</div>
-              <div class="ahc-sub">Walk Within 24 Hours</div>
+              <div class="ahc-title" data-i18n="ahc_3_title">Rapid Recovery Protocol</div>
+              <div class="ahc-sub" data-i18n="ahc_3_sub">Walk Within 24 Hours</div>
             </div>
           </div>
         </div>
@@ -221,11 +463,136 @@
     </div>
   </section>
 
+  <!-- ===================== LIFE STORY ===================== -->
+  <section class="life-story-section" id="lifeStory">
+    <div class="section-container">
+
+      <!-- Section Header -->
+      <div class="ls-header">
+        <div class="ls-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" />
+            <path d="M12 6v6l4 2" />
+          </svg>
+          <span data-i18n="ls_tag">Journey &amp; Legacy</span>
+        </div>
+        <h2 class="section-title ls-title" data-i18n="ls_title">
+          Life Story of <span class="highlight-text">Dr. Madhuram Chowdry</span>
+        </h2>
+        <p class="section-sub ls-sub" data-i18n="ls_sub">
+          A journey of dedication, perseverance, and an unwavering commitment to healing.
+        </p>
+      </div>
+
+      <!-- Timeline Cards and Video -->
+      <div class="ls-content-wrapper">
+        <div class="ls-timeline">
+
+          <div class="ls-card">
+            <div class="ls-icon-wrap ls-blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div class="ls-card-body">
+              <div class="ls-year" data-i18n="ls_year_1">Early Life &amp; Education</div>
+              <h3 class="ls-card-title" data-i18n="ls_card_title_1">The Foundation of Excellence</h3>
+              <p class="ls-card-text" data-i18n="ls_card_text_1">
+                Dr. Madhuram Chowdry began his medical journey by pursuing MBBS at Mandya Institute of Medical Sciences,
+                Mandya. He chose orthopedics as his specialization to build a stable career early in life after marrying
+                young. Over time, treating fractures and relieving patients from severe pain developed into his true
+                passion. The ability to provide immediate relief and help patients return quickly to normal life
+                motivated
+                his strong dedication to orthopedic practice.
+              </p>
+            </div>
+          </div>
+
+          <div class="ls-connector"></div>
+
+          <div class="ls-card">
+            <div class="ls-icon-wrap ls-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <div class="ls-card-body">
+              <div class="ls-year" data-i18n="ls_year_2">Training &amp; Specialisation</div>
+              <h3 class="ls-card-title" data-i18n="ls_card_title_2">Mastering the Art of Knee Surgery</h3>
+              <p class="ls-card-text" data-i18n="ls_card_text_2">
+                Dr. Madhuram Chowdry has gained extensive training in orthopedics with a fellowship in sports medicine
+                and
+                joint replacement. He served at Mandya Government Hospital for one year and worked as a visiting
+                consultant in multiple hospitals in Mysore, followed by four years of freelancing practice. He later
+                became Medical Director of A.R. Hospital, building it from scratch, and went on to specialize in knee
+                replacement surgery, with a strong focus on treating chronic knee pain and improving mobility,
+                especially
+                for elderly patients.
+              </p>
+            </div>
+          </div>
+
+          <div class="ls-connector"></div>
+
+          <div class="ls-card">
+            <div class="ls-icon-wrap ls-orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <div class="ls-card-body">
+              <div class="ls-year" data-i18n="ls_year_3">Clinical Practice</div>
+              <h3 class="ls-card-title" data-i18n="ls_card_title_3">Building a Legacy of Mobility</h3>
+              <p class="ls-card-text" data-i18n="ls_card_text_3">
+                Joining <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry established himself as the city's most
+                trusted knee specialist. With over <strong>10+ years</strong> of hands-on experience and
+                500+ successful knee replacements</strong>, he has given hundreds of patients a new lease on life
+                -
+                free from pain and full of movement.
+              </p>
+            </div>
+          </div>
+
+          <div class="ls-connector"></div>
+
+          <div class="ls-card">
+            <div class="ls-icon-wrap ls-purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <div class="ls-card-body">
+              <div class="ls-year" data-i18n="ls_year_4">Today &amp; Beyond</div>
+              <h3 class="ls-card-title" data-i18n="ls_card_title_4">A Commitment That Never Stops</h3>
+              <p class="ls-card-text" data-i18n="ls_card_text_4">
+                Dr. Chowdry continues to push the boundaries of orthopedic care-embracing the latest innovations
+                in <strong>robotics</strong>, <strong>minimally invasive techniques</strong>, and
+                <strong>rapid recovery protocols</strong>. His mission remains simple: help every patient walk
+                pain-free, as quickly and safely as possible.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /.ls-timeline -->
+
+        <div class="ls-video-wrap">
+          <video src="assets/life story.mp4" id="lsVideo" class="ls-video" controls loop playsinline></video>
+        </div>
+      </div><!-- /.ls-content-wrapper -->
+    </div>
+  </section>
+
   <!-- ===================== KNEE REPLACEMENT PROCESS ===================== -->
   <section class="knee-process-section" id="kneeProcess">
     <div class="section-container">
-      <h2 class="section-title text-center" style="text-align:center; margin-bottom: 40px;">Your Journey to a <span
-          class="highlight-text">Pain-Free Life</span></h2>
+      <h2 class="section-title text-center" style="text-align:center; margin-bottom: 40px;"
+        data-i18n="process_section_title">Your Journey to a <span class="highlight-text">Pain-Free Life</span></h2>
 
       <div class="process-timeline">
         <!-- Step 1 -->
@@ -235,8 +602,9 @@
             <div class="process-step-badge">1</div>
           </div>
           <div class="process-content">
-            <h3 class="process-title">Active Before Pain</h3>
-            <p class="process-desc">Enjoying an active lifestyle without joint discomfort.</p>
+            <h3 class="process-title" data-i18n="process_1_title">Active Before Pain</h3>
+            <p class="process-desc" data-i18n="process_1_desc">Enjoying an active lifestyle without joint discomfort.
+            </p>
           </div>
         </div>
 
@@ -247,8 +615,9 @@
             <div class="process-step-badge">2</div>
           </div>
           <div class="process-content">
-            <h3 class="process-title">Developing Knee Pain</h3>
-            <p class="process-desc">Age or injury causing severe pain and mobility issues.</p>
+            <h3 class="process-title" data-i18n="process_2_title">Developing Knee Pain</h3>
+            <p class="process-desc" data-i18n="process_2_desc">Age or injury causing severe pain and mobility issues.
+            </p>
           </div>
         </div>
 
@@ -259,8 +628,9 @@
             <div class="process-step-badge">3</div>
           </div>
           <div class="process-content">
-            <h3 class="process-title">Robotic Surgery</h3>
-            <p class="process-desc">Precision robotic-assisted knee replacement treatment.</p>
+            <h3 class="process-title" data-i18n="process_3_title">Robotic Surgery</h3>
+            <p class="process-desc" data-i18n="process_3_desc">Precision robotic-assisted knee replacement treatment.
+            </p>
           </div>
         </div>
 
@@ -271,8 +641,9 @@
             <div class="process-step-badge">4</div>
           </div>
           <div class="process-content">
-            <h3 class="process-title">Rapid Recovery</h3>
-            <p class="process-desc">Walking within 24 hours and returning to an active life.</p>
+            <h3 class="process-title" data-i18n="process_4_title">Rapid Recovery</h3>
+            <p class="process-desc" data-i18n="process_4_desc">Walking within 24 hours and returning to an active life.
+            </p>
           </div>
         </div>
       </div>
@@ -324,6 +695,46 @@
       }
 
       resetTimer();
+    })();
+
+    // ── About Page Life Story Accordion ─────────────────────
+    (function () {
+      const lsCards = document.querySelectorAll('.ls-card');
+
+      // Open the first card by default for better UX
+      if (lsCards.length > 0) lsCards[0].classList.add('active');
+
+      lsCards.forEach(card => {
+        card.addEventListener('click', () => {
+          // Close others if you want standard accordion (only 1 open at a time)
+          lsCards.forEach(c => {
+            if (c !== card) c.classList.remove('active');
+          });
+
+          // Toggle the clicked one
+          card.classList.toggle('active');
+        });
+      });
+    })();
+
+    // ── Play Video only when visible ────────────────────────
+    (function () {
+      const video = document.getElementById('lsVideo');
+      if (!video) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Play video if it enters the viewport
+            video.play().catch(e => console.log('Auto-play prevented by browser:', e));
+          } else {
+            // Pause video if it leaves the viewport
+            video.pause();
+          }
+        });
+      }, { threshold: 0.2 }); // Triggers when 20% of the video is visible
+
+      observer.observe(video);
     })();
   </script>
 </body>

@@ -90,6 +90,15 @@
         <a href="#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
         <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
         <a href="#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Schedule Consultation</a>
+
+        <!-- Language switcher inside drawer -->
+        <div class="drawer-lang-row">
+          <span class="drawer-lang-label">🌐 Language</span>
+          <div class="drawer-lang-options">
+            <a href="#" class="drawer-lang-opt active" data-value="en">English</a>
+            <a href="#" class="drawer-lang-opt" data-value="kn">ಕನ್ನಡ</a>
+          </div>
+        </div>
       </nav>
     </div>
     <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -142,14 +151,15 @@
 
         <!-- Right: About Text -->
         <div class="about-text-col" id="aboutTextCol">
-          <h2 class="section-title"><span class="highlight-text">Dr. Madhuram Chowdry</span></h2>
-          <p class="about-bio" id="aboutBio1">
+          <h2 class="section-title" data-i18n="about_section_title"><span class="highlight-text">Dr. Madhuram
+              Chowdry</span></h2>
+          <p class="about-bio" id="aboutBio1" data-i18n="about_bio_1">
             Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total
               Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+
               years of experience</strong> and <strong>500+ successful knee replacements</strong>, he is committed to
             restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.
           </p>
-          <p class="about-bio" id="aboutBio2">
+          <p class="about-bio" id="aboutBio2" data-i18n="about_bio_2">
             Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology with
             compassionate patient care, ensuring every patient receives a personalized treatment plan for the fastest
             possible recovery.
@@ -159,22 +169,22 @@
             <div class="about-highlight-card">
               <div class="ahc-icon blue">🎓</div>
               <div>
-                <div class="ahc-title">MBBS, MS - Orthopedics</div>
-                <div class="ahc-sub">Advanced Surgical Training</div>
+                <div class="ahc-title" data-i18n="ahc_1_title">MBBS, MS - Orthopedics</div>
+                <div class="ahc-sub" data-i18n="ahc_1_sub">Advanced Surgical Training</div>
               </div>
             </div>
             <div class="about-highlight-card">
               <div class="ahc-icon green">🤖</div>
               <div>
-                <div class="ahc-title">Robotic-Assisted Surgery</div>
-                <div class="ahc-sub">Precision & Accuracy</div>
+                <div class="ahc-title" data-i18n="ahc_2_title">Robotic-Assisted Surgery</div>
+                <div class="ahc-sub" data-i18n="ahc_2_sub">Precision & Accuracy</div>
               </div>
             </div>
             <div class="about-highlight-card">
               <div class="ahc-icon orange">⚡</div>
               <div>
-                <div class="ahc-title">Rapid Recovery Protocol</div>
-                <div class="ahc-sub">Walk Within 24 Hours</div>
+                <div class="ahc-title" data-i18n="ahc_3_title">Rapid Recovery Protocol</div>
+                <div class="ahc-sub" data-i18n="ahc_3_sub">Walk Within 24 Hours</div>
               </div>
             </div>
           </div>
@@ -183,7 +193,7 @@
             <a href="about.html" class="liquid-btn">
               <div class="liquid-fill"></div>
               <span class="btn-text">
-                Explore More
+                <span data-i18n="btn_explore">Explore More</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>

@@ -154,8 +154,8 @@ body {
 }
 
 .logo-img {
-  width: 92px;
-  height: 92px;
+  width: 108px;
+  height: 108px;
   object-fit: contain;
   border-radius: 50%;
   display: block;
@@ -3226,7 +3226,66 @@ select option {
   }
 
   .lang-switcher {
+    position: relative;
+    /* Keep visible and properly stacked on mobile */
+  }
+
+  .lang-btn {
+    padding: 5px 8px;
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+
+  .lang-text {
     display: none;
+    /* Hide "English" text, show only chevron on tiny screens */
+  }
+
+  /* Drawer language switcher */
+  .drawer-lang-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+  }
+
+  .drawer-lang-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+
+  .drawer-lang-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .drawer-lang-opt {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+
+  .drawer-lang-opt:hover,
+  .drawer-lang-opt.active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
   }
 
   .hamburger {
