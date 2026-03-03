@@ -14,7 +14,7 @@ const i18nData = {
     hero_badge: "Accepting Knee Replacement Patients",
     hero_name: "Dr. Madhuram Chowdry",
     hero_line1: "Knee Replacement",
-    hero_line2: 'Specialist<span class="vb-dot">.</span>',
+    hero_line2: 'surgeon<span class="vb-dot">.</span>',
     stat_years: "Years Experience",
     stat_knees: "Knees Replaced",
     stat_success: "Success Rate",
@@ -23,7 +23,7 @@ const i18nData = {
     services_sub: "Click on any procedure to learn about our advanced knee replacement techniques and treatment options.",
     testimonials_tag: "Patient Success Stories",
     testimonials_title: 'Knees <span class="highlight-text">Transformed</span>',
-    testimonials_sub: "Real patients, real recoveries-walking pain-free after knee replacement with Dr. Madhuram Chowdry.",
+    testimonials_sub: "Our patients, walking pain-free after knee replacement with Dr. Madhuram Chowdry.",
     form_tag: "Book Knee Consultation",
     form_title: 'Schedule Your <span class="highlight-text">Knee Assessment</span>',
     form_sub: "Start your journey to pain-free movement. Our knee specialist team will confirm your appointment within 24 hours.",
@@ -997,16 +997,7 @@ function scrollToSection(id) {
 // 7. TESTIMONIALS RIBBON — dynamic card generation
 // ============================================================
 (function initTestimonials() {
-  const reviews = [
-    { name: 'Priya Sharma', dept: 'Total Knee Replacement', stars: 5, text: 'After years of unbearable knee pain, Dr. Chowdry gave me my life back. I was walking without a stick within a week of surgery. Truly life-changing!', color: '#38bdf8', initials: 'PS' },
-    { name: 'Rajesh Kumar', dept: 'Bilateral Knee Replacement', stars: 5, text: 'Both my knees were replaced in a single surgery. The robotic precision was incredible. I am now climbing stairs pain-free for the first time in 10 years.', color: '#22c55e', initials: 'RK' },
-    { name: 'Ananya Reddy', dept: 'Partial Knee Replacement', stars: 5, text: 'I was worried about recovery time, but Dr. Chowdry\'s minimally invasive approach had me back home in two days. The knee feels completely natural.', color: '#f97316', initials: 'AR' },
-    { name: 'Mohammed Ali', dept: 'Revision Knee Surgery', stars: 5, text: 'My previous implant had failed elsewhere. Dr. Chowdry handled the complex revision surgery with extraordinary expertise. I have zero pain today.', color: '#38bdf8', initials: 'MA' },
-    { name: 'Sujatha Nair', dept: 'Knee Arthroscopy', stars: 5, text: 'The keyhole surgery for my meniscal tear was smooth and recovery was fast. Dr. Chowdry explained every step clearly. Back to walking in 3 days!', color: '#22c55e', initials: 'SN' },
-    { name: 'Vikram Patel', dept: 'Sports Knee Injury', stars: 5, text: 'As a cricket player, my ACL tear was devastating. Dr. Chowdry\'s reconstruction surgery got me back on the field in 6 months. Outstanding work!', color: '#f97316', initials: 'VP' },
-    { name: 'Deepika Singh', dept: 'Total Knee Replacement', stars: 5, text: 'The robotic-assisted surgery was precise. My new knee feels completely natural. Six months later I am dancing at my daughter\'s wedding — pain free!', color: '#38bdf8', initials: 'DS' },
-    { name: 'Arjun Krishnan', dept: 'Post-Op Rehabilitation', stars: 5, text: 'The rehabilitation team was exceptional. Structured physiotherapy from day one made my recovery incredibly smooth. I exceeded all recovery milestones.', color: '#22c55e', initials: 'AK' },
-  ];
+  const reviews = [];
 
   const track = document.getElementById('ribbonTrack');
   if (!track) return;
@@ -1017,26 +1008,17 @@ function scrollToSection(id) {
   const currentLang = localStorage.getItem('drChowdryLang') || 'en';
 
   const reviewsEN = [
-    { name: 'Priya Sharma', dept: 'Total Knee Replacement', stars: 5, text: 'After years of unbearable knee pain, Dr. Chowdry gave me my life back. I was walking without a stick within a week of surgery. Truly life-changing!', color: '#38bdf8', initials: 'PS' },
-    { name: 'Rajesh Kumar', dept: 'Bilateral Knee Replacement', stars: 5, text: 'Both my knees were replaced in a single surgery. The robotic precision was incredible. I am now climbing stairs pain-free for the first time in 10 years.', color: '#22c55e', initials: 'RK' },
-    { name: 'Ananya Reddy', dept: 'Partial Knee Replacement', stars: 5, text: 'I was worried about recovery time, but Dr. Chowdry\'s minimally invasive approach had me back home in two days. The knee feels completely natural.', color: '#f97316', initials: 'AR' },
-    { name: 'Mohammed Ali', dept: 'Revision Knee Surgery', stars: 5, text: 'My previous implant had failed elsewhere. Dr. Chowdry handled the complex revision surgery with extraordinary expertise. I have zero pain today.', color: '#38bdf8', initials: 'MA' },
-    { name: 'Sujatha Nair', dept: 'Knee Arthroscopy', stars: 5, text: 'The keyhole surgery for my meniscal tear was smooth and recovery was fast. Dr. Chowdry explained every step clearly. Back to walking in 3 days!', color: '#22c55e', initials: 'SN' },
-    { name: 'Vikram Patel', dept: 'Sports Knee Injury', stars: 5, text: 'As a cricket player, my ACL tear was devastating. Dr. Chowdry\'s reconstruction surgery got me back on the field in 6 months. Outstanding work!', color: '#f97316', initials: 'VP' },
-    { name: 'Deepika Singh', dept: 'Total Knee Replacement', stars: 5, text: 'The robotic-assisted surgery was precise. My new knee feels completely natural. Six months later I am dancing at my daughter\'s wedding — pain free!', color: '#38bdf8', initials: 'DS' },
-    { name: 'Arjun Krishnan', dept: 'Post-Op Rehabilitation', stars: 5, text: 'The rehabilitation team was exceptional. Structured physiotherapy from day one made my recovery incredibly smooth. I exceeded all recovery milestones.', color: '#22c55e', initials: 'AK' },
+    { name: 'Madhavi Prasad', dept: 'Wrist Fracture Treatment', stars: 5, text: 'Had admitted my son for wrist fracture treatment. Dr.Madhuram had helped in getting proper diagnosis and surgery done well.', color: '#38bdf8', initials: 'MP' },
+    { name: 'Anupdev KM', dept: 'ACL Surgery & Recovery', stars: 5, text: 'I had an ACL injury and underwent surgery here, and I am doing well now. Dr. Madhuram sir explained the procedure clearly and gave me confidence throughout the treatment. The care provided by the doctor was excellent and very professional. The hospital staff were supportive, polite, and attentive during my treatment and recovery. Overall, I am very satisfied with the treatment and the care I received at A R Hospital.', color: '#22c55e', initials: 'AK' },
+    { name: 'Krishna Mk', dept: 'Knee Joint Pain', stars: 5, text: 'Words are not enough to express our gratitude to Dr Madhuram chowdry orthopedic surgeon on my mother suffering from knee joint pain, surgery done by Dr Madhuram chowdry orthopedic During one of the most difficult phases of our lives. Dr Madhuram sir was not just a doctor but a true source of strength,hope,and reassurance for our entire family.he calm approach,clarity in explaining the condition,and compassionate care gave us the confidence to move forward without fear', color: '#f97316', initials: 'KM' },
+    { name: 'Sumanth R', dept: 'Femur & Tibia Recovery', stars: 5, text: 'My brother underwent implant removal right femur nailing and right tibia nailing at A R hospital in Mysore and I must say, the experience was exceptional. The medical team led by Dr. Madhuram Chowdry was compassionate, and highly skilled. The facilities were clean and well equipped, and the nursing staff provided top notch care. The surgery was a success, and the recovery process was smooth.', color: '#38bdf8', initials: 'SR' },
+    { name: 'Sowbhagya Gowda', dept: 'Orthopedic Care', stars: 5, text: 'Dr. Madhuram and his management is very good. Patient care is excellent and very good. All nursing staff are very good.', color: '#22c55e', initials: 'SG' },
+    { name: 'Rajeshwari', dept: 'ACL Arthroscopy Surgery', stars: 5, text: 'Myself Rajeshwari from Sravanabelagola, my sister admitted in at A R hospital Mysore. Wonderful experience at A R hospital during my sister\'s arthroscopy ACL surgery under Dr. Madhuram Chowdry sir. The orthopedic surgeon is highly skilled, the nursing staff and hospital team were caring and attentive, we are truly grateful for the excellent care.', color: '#f97316', initials: 'R' },
+    { name: 'Manohar Patel', dept: 'Orthopedic Surgery & Care', stars: 5, text: 'Dr. Madhuram sir was a best orthopedic surgeon and all staffs are good and receptionists also good. The manager Lokesh sir also well explained this hospital facilities and clean also good well maintained. Thank you all.', color: '#38bdf8', initials: 'MP' },
+    { name: 'Divi Choudhary', dept: 'Knee Surgery & Recovery', stars: 5, text: 'Thank you dr.Madhuram sir, My mother recently had knee surgery, and it was completely successful. The doctor and the hospital staff were very caring and professional. We are truly thankful for their support throughout her recovery...', color: '#22c55e', initials: 'DC' }
   ];
 
-  const reviewsKN = [
-    { name: 'ಪ್ರಿಯಾ ಶರ್ಮಾ', dept: 'ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ವರ್ಷಗಳ ಮೊಣಕಾಲು ನೋವಿನ ನಂತರ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ನನಗೆ ನನ್ನ ಜೀವನವನ್ನು ಮರಳಿ ನೀಡಿದರು. ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ಒಂದು ವಾರದಲ್ಲೇ ನಾನು ಕೋಲಿನ ಸಹಾಯವಿಲ್ಲದೆ ನಡೆಯುತ್ತಿದ್ದೆ. ನಿಜವಾಗಿಯೂ ಜೀವನ ಬದಲಾಯಿತು!', color: '#38bdf8', initials: 'PS' },
-    { name: 'ರಾಜೇಶ್ ಕುಮಾರ್', dept: 'ದ್ವಿಪಕ್ಷೀಯ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ನನ್ನ ಎರಡೂ ಮೊಣಕಾಲುಗಳನ್ನು ಒಂದೇ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯಲ್ಲಿ ಬದಲಾಯಿಸಲಾಯಿತು. ರೊಬೊಟಿಕ್ ನಿಖರತೆ ಅದ್ಭುತವಾಗಿತ್ತು. ನಾನು ಈಗ 10 ವರ್ಷಗಳಲ್ಲಿ ಮೊದಲ ಬಾರಿಗೆ ನೋವು ಮುಕ್ತವಾಗಿ ಮೆಟ್ಟಿಲುಗಳನ್ನು ಹತ್ತುತ್ತಿದ್ದೇನೆ.', color: '#22c55e', initials: 'RK' },
-    { name: 'ಅನನ್ಯಾ ರೆಡ್ಡಿ', dept: 'ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ಚೇತರಿಕೆಯ ಸಮಯದ ಬಗ್ಗೆ ನಾನು ಚಿಂತಿತಳಾಗಿದ್ದೆ, ಆದರೆ ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರ ಚಿಕಿತ್ಸೆಯು ಎರಡು ದಿನಗಳಲ್ಲಿ ನನ್ನನ್ನು ಮನೆಗೆ ಮರಳುವಂತೆ ಮಾಡಿತು. ಮೊಣಕಾಲು ಸಂಪೂರ್ಣವಾಗಿ ಸಹಜವಾಗಿ ಭಾಸವಾಗುತ್ತಿದೆ.', color: '#f97316', initials: 'AR' },
-    { name: 'ಮೊಹಮ್ಮದ್ ಅಲಿ', dept: 'ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ನನ್ನ ಹಿಂದಿನ ಇಂಪ್ಲಾಂಟ್ ಬೇರೆಡೆ ವಿಫಲವಾಗಿತ್ತು. ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರು ಅಸಾಧಾರಣ ಪರಿಣತಿಯೊಂದಿಗೆ ಸಂಕೀರ್ಣ ಪುನರಾವರ್ತಿತ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯನ್ನು ನಿರ್ವಹಿಸಿದರು. ಇಂದು ನನಗೆ ಕಿಂಚಿತ್ತೂ ನೋವಿಲ್ಲ.', color: '#38bdf8', initials: 'MA' },
-    { name: 'ಸುಜಾತಾ ನಾಯರ್', dept: 'ಮೊಣಕಾಲು ಆರ್ಥ್ರೋಸ್ಕೋಪಿ', stars: 5, text: 'ನನ್ನ ಮೆನಿಸ್ಕಲ್ ಕಣ್ಣೀರಿಗೆ ಕೀಹೋಲ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಸುಗಮವಾಗಿತ್ತು ಮತ್ತು ಚೇತರಿಕೆ ವೇಗವಾಗಿತ್ತು. ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಪ್ರತಿಯೊಂದು ಹಂತವನ್ನೂ ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸಿದರು. 3 ದಿನಗಳಲ್ಲಿ ಮತ್ತೆ ನಡೆಯುತ್ತಿದ್ದೇನೆ!', color: '#22c55e', initials: 'SN' },
-    { name: 'ವಿಕ್ರಮ್ ಪಟೇಲ್', dept: 'ಕ್ರೀಡಾ ಮೊಣಕಾಲು ಗಾಯ', stars: 5, text: 'ಕ್ರಿಕೆಟ್ ಆಟಗಾರನಾಗಿ, ನನ್ನ ACL ಕಣ್ಣೀರು ವಿನಾಶಕಾರಿಯಾಗಿತ್ತು. ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅವರ ಪುನರ್ನಿರ್ಮಾಣ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯು 6 ತಿಂಗಳಲ್ಲಿ ನನ್ನನ್ನು ಮತ್ತೆ ಮೈದಾನಕ್ಕೆ ಮರಳುವಂತೆ ಮಾಡಿತು. ಅತ್ಯುತ್ತಮ ಕೆಲಸ!', color: '#f97316', initials: 'VP' },
-    { name: 'ದೀಪಿಕಾ ಸಿಂಗ್', dept: 'ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ನಿಖರವಾಗಿತ್ತು. ನನ್ನ ಹೊಸ ಮೊಣಕಾಲು ಸಂಪೂರ್ಣವಾಗಿ ಸಹಜವಾಗಿ ಭಾಸವಾಗುತ್ತಿದೆ. ಆರು ತಿಂಗಳ ನಂತರ ನಾನು ನನ್ನ ಮಗಳ ಮದುವೆಯಲ್ಲಿ ನೃತ್ಯ ಮಾಡುತ್ತಿದ್ದೇನೆ — ನೋವು ಮುಕ್ತವಾಗಿ!', color: '#38bdf8', initials: 'DS' },
-    { name: 'ಅರ್ಜುನ್ ಕೃಷ್ಣನ್', dept: 'ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ನಂತರದ ಪುನರ್ವಸತಿ', stars: 5, text: 'ಪುನರ್ವಸತಿ ತಂಡವು ಅಸಾಧಾರಣವಾಗಿತ್ತು. ಮೊದಲ ದಿನದಿಂದ ಯೋಜಿತ ಫಿಸಿಯೋಥೆರಪಿ ನನ್ನ ಚೇತರಿಕೆಯನ್ನು ಸುಗಮಗೊಳಿಸಿತು. ನಾನು ಎಲ್ಲಾ ಚೇತರಿಕೆಯ ಗುರಿಗಳನ್ನು ಮೀರಿಸಿದ್ದೇನೆ.', color: '#22c55e', initials: 'AK' },
-  ];
+  const reviewsKN = [];
 
   const reviewsToDisplay = currentLang === 'kn' ? reviewsKN : reviewsEN;
   const allReviews = [...reviewsToDisplay, ...reviewsToDisplay];
@@ -1064,29 +1046,7 @@ function scrollToSection(id) {
 // ============================================================
 // 8. MULTI-STEP APPOINTMENT FORM
 // ============================================================
-let currentStep = 1;
-const totalSteps = 3;
-
-function updateProgress(step) {
-  const fill = document.getElementById('progressFill');
-  const pct = (step / totalSteps) * 100;
-  fill.style.width = pct + '%';
-
-  for (let i = 1; i <= totalSteps; i++) {
-    const ind = document.getElementById(`step-indicator-${i}`);
-    ind.classList.remove('active', 'done');
-    if (i === step) ind.classList.add('active');
-    if (i < step) ind.classList.add('done');
-  }
-}
-
-function showStep(n) {
-  document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
-  const el = document.getElementById(`formStep${n}`);
-  if (el) el.classList.add('active');
-  currentStep = n;
-  updateProgress(n);
-}
+let currentFormState = 'form'; // can be 'form' or 'success'
 
 // Validation helpers
 function validateField(id, groupId, validator) {
@@ -1109,80 +1069,28 @@ function validateField(id, groupId, validator) {
   }
 }
 
-function validateStep1() {
+function validateForm() {
   const checks = [
     validateField('firstName', 'fg-firstName', v => v.length >= 2 ? true : 'First name is required (min 2 characters)'),
     validateField('lastName', 'fg-lastName', v => v.length >= 2 ? true : 'Last name is required (min 2 characters)'),
-    validateField('email', 'fg-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? true : 'Please enter a valid email address'),
+    validateField('email', 'fg-email', v => !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? true : 'Please enter a valid email address'),
     validateField('phone', 'fg-phone', v => v.replace(/\D/g, '').length >= 8 ? true : 'Please enter a valid phone number'),
-    validateField('dob', 'fg-dob', v => v ? true : 'Please select your date of birth'),
     validateField('gender', 'fg-gender', v => v ? true : 'Please select your gender'),
+    validateField('reason', 'fg-reason', v => v.length >= 10 ? true : 'Please describe the problem you are facing (min 10 characters)'),
   ];
   return checks.every(Boolean);
 }
 
-function validateStep2() {
-  const checks = [
-    validateField('specialty', 'fg-specialty', v => v ? true : 'Please select a specialty'),
-    validateField('preferredDate', 'fg-date', v => v ? true : 'Please select a preferred date'),
-    validateField('preferredTime', 'fg-time', v => v ? true : 'Please select a preferred time'),
-    validateField('reason', 'fg-reason', v => v.length >= 10 ? true : 'Please describe your reason (min 10 characters)'),
-  ];
-  return checks.every(Boolean);
-}
+function submitForm() {
+  const valid = validateForm();
 
-function nextStep(from) {
-  let valid = false;
-  if (from === 1) valid = validateStep1();
-  if (from === 2) valid = validateStep2();
   if (!valid) {
     // Shake animation
     const formGlass = document.querySelector('.form-glass');
     gsap.fromTo(formGlass, { x: -6 }, { x: 6, repeat: 5, yoyo: true, duration: 0.06, ease: 'power1.inOut', onComplete: () => gsap.set(formGlass, { x: 0 }) });
     return;
   }
-  if (from === 2) buildConfirmSummary();
-  showStep(from + 1);
-  document.querySelector('.form-wrapper')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
 
-function prevStep(from) {
-  showStep(from - 1);
-}
-
-function buildConfirmSummary() {
-  const summary = document.getElementById('confirmSummary');
-  const getValue = id => (document.getElementById(id)?.value || '—').trim();
-  const getSelectText = id => {
-    const sel = document.getElementById(id);
-    return sel?.options[sel.selectedIndex]?.text || '—';
-  };
-
-  const firstName = getValue('firstName');
-  const lastName = getValue('lastName');
-  const email = getValue('email');
-  const phone = getValue('phone');
-  const dob = getValue('dob') ? new Date(getValue('dob')).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) : '—';
-  const gender = getSelectText('gender');
-  const specialty = getSelectText('specialty');
-  const date = getValue('preferredDate') ? new Date(getValue('preferredDate')).toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }) : '—';
-  const time = getSelectText('preferredTime');
-  const reason = getValue('reason');
-
-  summary.innerHTML = `
-    <div class="confirm-row"><span class="confirm-label">Full Name</span><span class="confirm-value">${firstName} ${lastName}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Date of Birth</span><span class="confirm-value">${dob}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Email</span><span class="confirm-value">${email}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Phone</span><span class="confirm-value">${phone}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Gender</span><span class="confirm-value">${gender}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Specialty</span><span class="confirm-value">${specialty}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Preferred Date</span><span class="confirm-value">${date}</span></div>
-    <div class="confirm-row"><span class="confirm-label">Preferred Time</span><span class="confirm-value">${time}</span></div>
-    <div class="confirm-row" style="grid-column:1/-1"><span class="confirm-label">Reason for Visit</span><span class="confirm-value">${reason || '—'}</span></div>
-  `;
-}
-
-function submitForm() {
   const consent = document.getElementById('consent');
   if (!consent?.checked) {
     gsap.fromTo(consent.parentElement, { x: -4 }, { x: 4, repeat: 5, yoyo: true, duration: 0.05, ease: 'power1.inOut', onComplete: () => gsap.set(consent.parentElement, { x: 0 }) });
@@ -1200,9 +1108,7 @@ function submitForm() {
   const lastName = getValue('lastName');
   const phone = getValue('phone');
   const email = getValue('email');
-  const specialty = getSelectText('specialty');
-  const date = getValue('preferredDate');
-  const time = getSelectText('preferredTime');
+  const gender = getSelectText('gender');
   const reason = getValue('reason');
 
   // Build WhatsApp message
@@ -1212,10 +1118,8 @@ function submitForm() {
     `👤 *Name:* ${firstName} ${lastName}`,
     `📞 *Phone:* ${phone}`,
     `📧 *Email:* ${email}`,
-    `🦴 *Specialty:* ${specialty}`,
-    `📅 *Preferred Date:* ${date}`,
-    `⏰ *Preferred Time:* ${time}`,
-    `📝 *Reason:* ${reason}`,
+    `⚧ *Gender:* ${gender}`,
+    `📝 *Problem Description:* ${reason}`,
   ].join('\n');
 
   const encodedMsg = encodeURIComponent(message);
@@ -1231,11 +1135,10 @@ function submitForm() {
   document.body.removeChild(a);
 
   // Show success screen
-  showStep(99);
-  document.querySelectorAll('.form-step').forEach(s => s.classList.remove('active'));
+  document.getElementById('formStep1').classList.remove('active');
   const successEl = document.getElementById('formSuccess');
   successEl.classList.add('active');
-  updateProgress(3);
+  currentFormState = 'success';
   gsap.from('.success-ring', { scale: 0, opacity: 0, duration: 0.5, ease: 'back.out(1.7)' });
 }
 
@@ -1247,23 +1150,20 @@ function resetForm() {
   successEl.classList.remove('active');
   const consent = document.getElementById('consent');
   if (consent) consent.checked = false;
-  showStep(1);
+
+  document.getElementById('formStep1').classList.add('active');
+  currentFormState = 'form';
 }
 
 // Live validation on blur
 document.addEventListener('DOMContentLoaded', () => {
-  showStep(1);
 
   const fieldValidators = {
     firstName: v => v.length >= 2 ? true : 'Min 2 characters',
     lastName: v => v.length >= 2 ? true : 'Min 2 characters',
-    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? true : 'Invalid email',
+    email: v => !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? true : 'Invalid email',
     phone: v => v.replace(/\D/g, '').length >= 8 ? true : 'Invalid phone',
-    dob: v => v ? true : 'Required',
     gender: v => v ? true : 'Please select',
-    specialty: v => v ? true : 'Please select',
-    preferredDate: v => v ? true : 'Required',
-    preferredTime: v => v ? true : 'Required',
     reason: v => v.length >= 10 ? true : 'Min 10 characters',
   };
 

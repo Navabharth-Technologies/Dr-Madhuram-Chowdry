@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Madhuram Chowdry | Knee Replacement Specialist</title>
+  <title>Dr. Madhuram Chowdry | Knee Replacement surgeon</title>
   <meta name="description"
     content="Mysuru's leading knee replacement surgeon ” total, partial &amp; revision knee surgery with advanced robotic techniques. Book a consultation with Dr. Madhuram Chowdry today." />
   <meta name="keywords"
-    content="Knee replacement surgeon Mysuru, Orthopedic doctor Mysuru, Best knee surgery Mysore, Robotic knee replacement India" />
+    content="Knee replacement surgeon Mysuru, Orthopedic doctor Mysuru, Best knee surgery Mysore, Robotic knee replacement Mysuru,knee pain solution " />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -113,7 +113,7 @@
     <div class="video-banner__text">
       <span class="vb-name" data-i18n="hero_name">Dr. Madhuram Chowdry</span>
       <span class="vb-line1" data-i18n="hero_line1">Knee Replacement</span>
-      <span class="vb-line2" data-i18n="hero_line2">Specialist<span class="vb-dot">.</span></span>
+      <span class="vb-line2" data-i18n="hero_line2">surgeon<span class="vb-dot">.</span></span>
 
       <!-- Stats overlay on video -->
       <div class="vb-stats-overlay">
@@ -144,7 +144,7 @@
         <div class="about-img-col" id="aboutImgCol">
           <div class="about-img-wrapper">
             <div class="about-img-glow"></div>
-            <img src="assets/doctor-portrait.jpeg" alt="Dr. Madhuram Chowdry-Knee Replacement Specialist"
+            <img src="assets/doctor-portrait.jpeg" alt="Dr. Madhuram Chowdry-Knee Replacement surgeon"
               class="about-img" />
           </div>
         </div>
@@ -437,31 +437,10 @@
       </div>
 
       <div class="form-wrapper">
-        <!-- Progress Bar -->
-        <div class="form-progress">
-          <div class="progress-bar-bg">
-            <div class="progress-bar-fill" id="progressFill"></div>
-          </div>
-          <div class="progress-steps">
-            <div class="progress-step active" id="step-indicator-1">
-              <div class="step-num">1</div>
-              <span data-i18n="step_1">Personal</span>
-            </div>
-            <div class="progress-step" id="step-indicator-2">
-              <div class="step-num">2</div>
-              <span data-i18n="step_2">Medical</span>
-            </div>
-            <div class="progress-step" id="step-indicator-3">
-              <div class="step-num">3</div>
-              <span data-i18n="step_3">Confirm</span>
-            </div>
-          </div>
-        </div>
-
         <div class="form-glass">
-          <!-- Step 1 -->
+          <!-- Form Content -->
           <div class="form-step active" id="formStep1">
-            <h3 class="step-title" data-i18n="step_1_title">Personal Information</h3>
+            <h3 class="step-title" data-i18n="step_1_title">Patient Information</h3>
             <div class="form-grid">
               <div class="form-group" id="fg-firstName">
                 <label data-i18n="label_first_name">First Name</label>
@@ -491,13 +470,7 @@
                 <div class="validation-icon"></div>
                 <span class="field-error"></span>
               </div>
-              <div class="form-group" id="fg-dob">
-                <label data-i18n="label_dob">Date of Birth</label>
-                <input type="date" id="dob" />
-                <div class="validation-icon"></div>
-                <span class="field-error"></span>
-              </div>
-              <div class="form-group" id="fg-gender">
+              <div class="form-group full-width" id="fg-gender">
                 <label data-i18n="label_gender">Gender</label>
                 <select id="gender">
                   <option value="" data-i18n="opt_select">Select</option>
@@ -509,96 +482,22 @@
                 <div class="validation-icon"></div>
                 <span class="field-error"></span>
               </div>
-            </div>
-            <button class="form-next-btn" id="nextBtn1" onclick="nextStep(1)">
-              <span data-i18n="btn_medical">Continue to Medical Details</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="form-step" id="formStep2">
-            <h3 class="step-title" data-i18n="step_2_title">Medical Details</h3>
-            <div class="form-grid">
-              <div class="form-group full-width" id="fg-specialty">
-                <label data-i18n="label_specialty">Specialty / Department</label>
-                <select id="specialty">
-                  <option value="" data-i18n="opt_procedure">Choose procedure…</option>
-                  <option value="total-knee" data-i18n="opt_total_knee">Total Knee Replacement</option>
-                  <option value="partial-knee" data-i18n="opt_partial_knee">Partial Knee Replacement</option>
-                  <option value="revision" data-i18n="opt_revision">Revision Knee Surgery</option>
-                  <option value="arthroscopy" data-i18n="opt_arthroscopy">Knee Arthroscopy</option>
-                  <option value="sports" data-i18n="opt_sports">Sports Knee Injury</option>
-                  <option value="rehab" data-i18n="opt_rehab">Post-Op Rehabilitation</option>
-                  <option value="assessment" data-i18n="opt_assessment">Initial Knee Assessment</option>
-                </select>
-                <div class="validation-icon"></div>
-                <span class="field-error"></span>
-              </div>
-              <div class="form-group" id="fg-date">
-                <label data-i18n="label_date">Preferred Date</label>
-                <input type="date" id="preferredDate" />
-                <div class="validation-icon"></div>
-                <span class="field-error"></span>
-              </div>
-              <div class="form-group" id="fg-time">
-                <label data-i18n="label_time">Preferred Time</label>
-                <select id="preferredTime">
-                  <option value="" data-i18n="opt_time">Select time…</option>
-                  <option value="09:00">09:00 AM</option>
-                  <option value="10:00">10:00 AM</option>
-                  <option value="11:00">11:00 AM</option>
-                  <option value="14:00">02:00 PM</option>
-                  <option value="15:00">03:00 PM</option>
-                  <option value="16:00">04:00 PM</option>
-                </select>
-                <div class="validation-icon"></div>
-                <span class="field-error"></span>
-              </div>
               <div class="form-group full-width" id="fg-reason">
-                <label data-i18n="label_reason">Reason for Visit</label>
+                <label data-i18n="label_reason">Problem Description</label>
                 <textarea id="reason" data-i18n-placeholder="placeholder_reason"
-                  placeholder="Describe your knee pain, symptoms, or previous treatments…" rows="4"></textarea>
+                  placeholder="Describe the problem you are facing..." rows="4"></textarea>
                 <div class="validation-icon"></div>
                 <span class="field-error"></span>
               </div>
             </div>
-            <div class="form-btn-row">
-              <button class="form-back-btn" onclick="prevStep(2)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M19 12H5M12 19l-7-7 7-7" />
-                </svg>
-                <span data-i18n="btn_back">Back</span>
-              </button>
-              <button class="form-next-btn" onclick="nextStep(2)">
-                <span data-i18n="btn_confirm">Review & Confirm</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
 
-          <!-- Step 3 -->
-          <div class="form-step" id="formStep3">
-            <h3 class="step-title" data-i18n="step_3_title">Confirm Appointment</h3>
-            <div class="confirm-summary" id="confirmSummary">
-              <!-- Filled by JS -->
-            </div>
-            <div class="form-check">
+            <div class="form-check" style="margin-top: 2rem;">
               <input type="checkbox" id="consent" />
               <label for="consent" data-i18n="label_consent">I confirm that the information provided is accurate and I
                 consent to data processing for appointment scheduling.</label>
             </div>
+
             <div class="form-btn-row">
-              <button class="form-back-btn" onclick="prevStep(3)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M19 12H5M12 19l-7-7 7-7" />
-                </svg>
-                <span data-i18n="btn_back">Back</span>
-              </button>
               <button class="form-submit-btn" id="submitBtn" onclick="submitForm()">
                 <span data-i18n="btn_final_confirm">Confirm Appointment</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -669,7 +568,7 @@
               </div>
               <div>
                 <div class="ci-label" data-i18n="label_phone_footer">Phone</div>
-                <div class="ci-value">+91 9620307042<br>+91 821 350 1645</div>
+                <div class="ci-value">+91 9008994827 (for appointments) <br>+91 9620307042 (for emergency)</div>
               </div>
             </div>
             <div class="contact-item">
