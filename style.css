@@ -2987,10 +2987,7 @@ select option {
   letter-spacing: -0.03em;
   line-height: 1.0;
   margin-bottom: 8px;
-  background: linear-gradient(135deg, #38bdf8 0%, #22c55e 50%, #f97316 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--orange);
   filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.5));
 }
 
@@ -3010,10 +3007,7 @@ select option {
   font-weight: 900;
   letter-spacing: -0.03em;
   line-height: 1.0;
-  background: linear-gradient(135deg, #38bdf8 0%, #22c55e 50%, #f97316 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--orange);
   filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.5));
 }
 
