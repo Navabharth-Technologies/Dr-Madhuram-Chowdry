@@ -102,7 +102,7 @@ const i18nData = {
     link_hipaa: "HIPAA Compliance",
     // About section
     about_section_title: 'Dr. Madhuram Chowdry',
-    about_bio_1: 'Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+ years of experience</strong> and <strong>500+ successful knee replacements</strong>, he is committed to restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.',
+    about_bio_1: 'Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+ years of experience</strong> and <strong>1000+ successful knee replacements</strong>, he is committed to restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.',
     about_bio_2: 'Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology with compassionate patient care, ensuring every patient receives a personalized treatment plan for the fastest possible recovery.',
     ahc_1_title: 'MBBS, MS - Orthopedics',
     ahc_1_sub: 'Advanced Surgical Training',
@@ -123,7 +123,7 @@ const i18nData = {
     ls_card_text_2: 'After completing his postgraduate training, Dr. Chowdry undertook advanced fellowship training in <strong>Joint Replacement Surgery</strong> and <strong>Robotic-Assisted Knee Procedures</strong>. He trained alongside leading orthopedic surgeons, honing his craft to world-class standards.',
     ls_year_3: 'Clinical Practice',
     ls_card_title_3: 'Building a Legacy of Mobility',
-    ls_card_text_3: 'Joining <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry established himself as the city\'s most trusted knee specialist. With over <strong>10+ years</strong> of hands-on experience and <strong>500+ successful knee replacements</strong>, he has given hundreds of patients a new lease on life — free from pain and full of movement.',
+    ls_card_text_3: 'Joining <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry established himself as the city\'s most trusted knee specialist. With over <strong>10+ years</strong> of hands-on experience and <strong>1000+ successful knee replacements</strong>, he has given hundreds of patients a new lease on life — free from pain and full of movement.',
     ls_year_4: 'Today & Beyond',
     ls_card_title_4: 'A Commitment That Never Stops',
     ls_card_text_4: 'Dr. Chowdry continues to push the boundaries of orthopedic care — embracing the latest innovations in <strong>robotics</strong>, <strong>minimally invasive techniques</strong>, and <strong>rapid recovery protocols</strong>. His mission remains simple: help every patient walk pain-free, as quickly and safely as possible.',
@@ -236,7 +236,7 @@ const i18nData = {
     link_hipaa: "HIPAA ಅನುಸರಣೆ",
     // About section
     about_section_title: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ',
-    about_bio_1: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಒಬ್ಬ ಉನ್ನತ ಕೌಶಲ್ಯದ <strong>ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕ</strong>, <strong>ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ, ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong>ಯಲ್ಲಿ ಪರಿಣಿತರು. <strong>10+ ವರ್ಷಗಳ ಅನುಭವ</strong> ಮತ್ತು <strong>500+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ಅವರು ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತಂತ್ರಗಳ ಮೂಲಕ ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಮತ್ತು ಮೊಣಕಾಲು ನೋವನ್ನು ತೆಗೆದುಹಾಕಲು ಬದ್ಧರಾಗಿದ್ದಾರೆ.',
+    about_bio_1: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಒಬ್ಬ ಉನ್ನತ ಕೌಶಲ್ಯದ <strong>ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕ</strong>, <strong>ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ, ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong>ಯಲ್ಲಿ ಪರಿಣಿತರು. <strong>10+ ವರ್ಷಗಳ ಅನುಭವ</strong> ಮತ್ತು <strong>1000+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ಅವರು ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತಂತ್ರಗಳ ಮೂಲಕ ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಮತ್ತು ಮೊಣಕಾಲು ನೋವನ್ನು ತೆಗೆದುಹಾಕಲು ಬದ್ಧರಾಗಿದ್ದಾರೆ.',
     about_bio_2: '<strong>ಎ ಆರ್ ಆಸ್ಪತ್ರೆ, ಮೈಸೂರು</strong>ದಲ್ಲಿ ನೆಲೆಸಿರುವ ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅಧುನಾತನ ತಂತ್ರಜ್ಞಾನವನ್ನು ಸಹಾನುಭೂತಿಯ ರೋಗಿ ಆರೈಕೆಯೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತಾರೆ, ಪ್ರತಿ ರೋಗಿಗೂ ವೇಗವಾಗಿ ಚೇತರಿಕೆಗಾಗಿ ವೈಯಕ್ತಿಕ ಚಿಕಿತ್ಸಾ ಯೋಜನೆಯನ್ನು ಖಾತ್ರಿಪಡಿಸುತ್ತಾರೆ.',
     ahc_1_title: 'MBBS, MS - ಆರ್ಥೋಪೆಡಿಕ್ಸ್',
     ahc_1_sub: 'ಸುಧಾರಿತ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತರಬೇತಿ',
@@ -257,7 +257,7 @@ const i18nData = {
     ls_card_text_2: 'ಸ್ನಾತಕೋತ್ತರ ತರಬೇತಿ ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ <strong>ಜಾಯಿಂಟ್ ರಿಪ್ಲೇಸ್‌ಮೆಂಟ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong> ಮತ್ತು <strong>ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಮೊಣಕಾಲು ವಿಧಾನಗಳಲ್ಲಿ</strong> ಸುಧಾರಿತ ಫೆಲೋಶಿಪ್ ತರಬೇತಿ ಪಡೆದರು. ಅವರು ಪ್ರಮುಖ ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರ ಜೊತೆ ತರಬೇತಿ ಪಡೆದು ವಿಶ್ವ ಮಟ್ಟ ತಲುಪಿದರು.',
     ls_year_3: 'ವೈದ್ಯಕೀಯ ಅಭ್ಯಾಸ',
     ls_card_title_3: 'ಚಲನಶೀಲತೆಯ ಪರಂಪರೆ ನಿರ್ಮಾಣ',
-    ls_card_text_3: '<strong>ಎ ಆರ್ ಆಸ್ಪತ್ರೆ, ಮೈಸೂರು</strong> ಸೇರಿ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ನಗರದ ಅತ್ಯಂತ ವಿಶ್ವಾಸಾರ್ಹ ಮೊಣಕಾಲು ತಜ್ಞರಾಗಿ ನಿಲ್ಲಿದರು. <strong>10+ ವರ್ಷಗಳ</strong> ಪ್ರಾಯೋಗಿಕ ಅನುಭವ ಮತ್ತು <strong>500+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ನೂರಾರು ರೋಗಿಗಳಿಗೆ ಹೊಸ ಜೀವನ ನೀಡಿದ್ದಾರೆ.',
+    ls_card_text_3: '<strong>ಎ ಆರ್ ಆಸ್ಪತ್ರೆ, ಮೈಸೂರು</strong> ಸೇರಿ, ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ನಗರದ ಅತ್ಯಂತ ವಿಶ್ವಾಸಾರ್ಹ ಮೊಣಕಾಲು ತಜ್ಞರಾಗಿ ನಿಲ್ಲಿದರು. <strong>10+ ವರ್ಷಗಳ</strong> ಪ್ರಾಯೋಗಿಕ ಅನುಭವ ಮತ್ತು <strong>1000+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ನೂರಾರು ರೋಗಿಗಳಿಗೆ ಹೊಸ ಜೀವನ ನೀಡಿದ್ದಾರೆ.',
     ls_year_4: 'ಇಂದು ಮತ್ತು ಮುಂದೆ',
     ls_card_title_4: 'ನಿಲ್ಲದ ಬದ್ಧತೆ',
     ls_card_text_4: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಆರ್ಥೋಪೆಡಿಕ್ ಆರೈಕೆಯ ಗಡಿಗಳನ್ನು ತಳ್ಳುತ್ತಲೇ ಇದ್ದಾರೆ — <strong>ರೊಬೋಟಿಕ್ಸ್</strong>, <strong>ಕನಿಷ್ಠ ಆಕ್ರಮಣಕಾರಿ ತಂತ್ರಗಳು</strong>, ಮತ್ತು <strong>ತ್ವರಿತ ಚೇತರಿಕೆ ಪ್ರೋಟೋಕಾಲ್‌ಗಳಲ್ಲಿ</strong> ಇತ್ತೀಚಿನ ಆವಿಷ್ಕಾರಗಳನ್ನು ಅಳವಡಿಸಿಕೊಳ್ಳುತ್ತಾ. ಅವರ ಧ್ಯೇಯ ಸರಳ: ಪ್ರತಿ ರೋಗಿಯನ್ನು ನೋವು ಮುಕ್ತವಾಗಿ ನಡೆಯುವಂತೆ ಮಾಡುವುದು.',
@@ -1123,7 +1123,7 @@ function submitForm() {
   ].join('\n');
 
   const encodedMsg = encodeURIComponent(message);
-  const whatsappURL = `https://wa.me/918073582068?text=${encodedMsg}`;
+  const whatsappURL = `https://wa.me/919008994827?text=${encodedMsg}`;
 
   // Use anchor click to bypass popup blockers
   const a = document.createElement('a');
