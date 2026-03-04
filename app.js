@@ -9,7 +9,7 @@ const i18nData = {
     nav_about: "About",
     nav_expertise: "Expertise",
     nav_contact: "Contact",
-    nav_cta: "Schedule Now",
+    nav_cta: "Book Appointment",
     nav_drawer_cta: "Schedule Consultation",
     hero_badge: "Accepting Knee Replacement Patients",
     hero_name: "Dr. Madhuram Chowdry",
@@ -143,7 +143,7 @@ const i18nData = {
     nav_about: "ಬಗ್ಗೆ",
     nav_expertise: "ಪರಿಣಿತಿ",
     nav_contact: "ಸಂಪರ್ಕ",
-    nav_cta: "ಈಗಲೇ ನಿಗದಿಪಡಿಸಿ",
+    nav_cta: "ಅಪಾಯಿಂಟ್ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸಿ",
     nav_drawer_cta: "ಸಮಾಲೋಚನೆ ನಿಗದಿಪಡಿಸಿ",
     hero_badge: "ಮೊಣಕಾಲು ಬದಲಾವಣೆ ರೋಗಿಗಳನ್ನು ಸ್ವೀಕರಿಸಲಾಗುತ್ತಿದೆ",
     hero_name: "ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ",
@@ -364,6 +364,27 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
       link.classList.toggle('active', link.dataset.section === current);
     });
   }
+})();
+
+// ============================================================
+// 1.05 LAUNCH SCROLL BEHAVIOR
+// ============================================================
+(function initLaunchScroll() {
+  window.addEventListener('load', () => {
+    // Check if URL has ?launch=true or #launch
+    if (window.location.search.includes('launch=true') || window.location.hash === '#launch') {
+      setTimeout(() => {
+        const aboutSection = document.getElementById('aboutDoctor');
+        if (aboutSection && typeof gsap !== 'undefined') {
+          gsap.to(window, {
+            duration: 3.5, // Slow scroll duration
+            scrollTo: { y: aboutSection, offsetY: 70 },
+            ease: "power2.inOut"
+          });
+        }
+      }, 1000); // Wait 1s after load before scrolling
+    }
+  });
 })();
 
 // ============================================================

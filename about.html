@@ -29,15 +29,19 @@
     rel="stylesheet" />
 
   <!-- GSAP CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
   <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- Flatpickr (Advanced Date Picker) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css" />
+  </noscript>
 
   <!-- Preload Critical Images -->
   <link rel="preload" href="assets/logo-optimized.png" as="image" />
@@ -345,7 +349,7 @@
         <a href="about.html" class="nav-link active" data-section="about" data-i18n="nav_about">About</a>
         <a href="index.html#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
         <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
-        <a href="index.html#appointment" class="nav-cta-btn" data-i18n="nav_cta">Schedule Now</a>
+        <a href="index.html#appointment" class="nav-cta-btn" data-i18n="nav_cta">Book Appointment</a>
       </nav>
 
       <div class="nav-actions">
@@ -597,7 +601,8 @@
         </div><!-- /.ls-timeline -->
 
         <div class="ls-video-wrap">
-          <video src="assets/life story.mp4" id="lsVideo" class="ls-video" controls loop playsinline></video>
+          <video src="assets/life story.mp4" id="lsVideo" class="ls-video" controls loop playsinline
+            preload="none"></video>
         </div>
       </div><!-- /.ls-content-wrapper -->
     </div>
@@ -613,7 +618,7 @@
         <!-- Step 1 -->
         <div class="process-card">
           <div class="process-img-wrap">
-            <img src="assets/process-1.png" alt="Active Lifestyle Before Pain" class="process-img">
+            <img src="assets/process-1.png" alt="Active Lifestyle Before Pain" class="process-img" loading="lazy">
             <div class="process-step-badge">1</div>
           </div>
           <div class="process-content">
@@ -626,7 +631,7 @@
         <!-- Step 2 -->
         <div class="process-card">
           <div class="process-img-wrap">
-            <img src="assets/process-2.png" alt="Experiencing Knee Pain" class="process-img">
+            <img src="assets/process-2.png" alt="Experiencing Knee Pain" class="process-img" loading="lazy">
             <div class="process-step-badge">2</div>
           </div>
           <div class="process-content">
@@ -639,7 +644,7 @@
         <!-- Step 3 -->
         <div class="process-card">
           <div class="process-img-wrap">
-            <img src="assets/process-3.png" alt="Surgical Operation" class="process-img">
+            <img src="assets/process-3.png" alt="Surgical Operation" class="process-img" loading="lazy">
             <div class="process-step-badge">3</div>
           </div>
           <div class="process-content">
@@ -652,7 +657,7 @@
         <!-- Step 4 -->
         <div class="process-card">
           <div class="process-img-wrap">
-            <img src="assets/process-4.png" alt="Recovery" class="process-img">
+            <img src="assets/process-4.png" alt="Recovery" class="process-img" loading="lazy">
             <div class="process-step-badge">4</div>
           </div>
           <div class="process-content">
@@ -681,8 +686,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script defer src="app.js"></script>
   <script>
     // ── About Page Carousel ──────────────────────────────────
     (function () {
