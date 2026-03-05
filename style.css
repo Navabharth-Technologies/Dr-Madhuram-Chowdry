@@ -2850,6 +2850,50 @@ select option {
   gap: 24px;
 }
 
+/* Responsive Process Timeline */
+@media (max-width: 1024px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── About Grid Responsive ── */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-img-wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .about-text-col .section-title {
+    margin: 0 auto 16px;
+  }
+
+  .about-text-col .section-tag {
+    justify-content: center;
+  }
+
+  .about-highlights {
+    justify-content: center;
+  }
+
+  .about-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .process-card {
   background: var(--bg-card);
   border-radius: var(--radius);
@@ -3116,9 +3160,33 @@ select option {
 
 /* ── Video Banner Responsive ── */
 @media (max-width: 1024px) {
+  .video-banner {
+    min-height: 100svh;
+    max-height: 100svh;
+  }
+
+  .video-banner__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .video-banner__text {
+    position: absolute;
+    inset: 0;
+    padding: 100px 30px 120px;
+    justify-content: center;
+  }
+
   .vb-stats-overlay {
     gap: 12px;
     padding: 10px 16px;
+    bottom: 74px;
+    width: auto;
   }
 
   .vb-stat-item {

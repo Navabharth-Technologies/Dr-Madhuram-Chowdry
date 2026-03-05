@@ -10,7 +10,7 @@ const i18nData = {
     nav_expertise: "Expertise",
     nav_contact: "Contact",
     nav_cta: "Book Appointment",
-    nav_drawer_cta: "Schedule Consultation",
+    nav_drawer_cta: "Book Appointment",
     hero_badge: "Accepting Knee Replacement Patients",
     hero_name: "Dr. Madhuram Chowdry",
     hero_line1: "Knee Replacement",
