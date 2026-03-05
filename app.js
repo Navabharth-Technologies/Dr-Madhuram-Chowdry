@@ -905,52 +905,52 @@ function scrollToSection(id) {
   }
 
   // Video banner entrance (replaces old hero animations)
-  animateIfExists('.video-banner__text', { duration: 0.9, y: 50, opacity: 0, ease: 'power3.out', delay: 0.3 });
-  animateIfExists('.vb-stats-overlay', { duration: 0.8, y: 30, opacity: 0, ease: 'power3.out', delay: 0.7 });
+  animateIfExists('.video-banner__text', { duration: 0.9, y: 30, opacity: 0, ease: 'power3.out', delay: 0.3 });
+  animateIfExists('.vb-stats-overlay', { duration: 0.8, y: 20, opacity: 0, ease: 'power3.out', delay: 0.7 });
 
-  // Section headers
+  // Section headers — trigger early so content is visible when section enters view
   const headers = document.querySelectorAll('.section-header');
   headers.forEach(el => {
     gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
-      y: 40, opacity: 0, duration: 0.8, ease: 'power3.out'
+      scrollTrigger: { trigger: el, start: 'top 100%', toggleActions: 'play none none none', once: true },
+      y: 30, opacity: 0, duration: 0.7, ease: 'power3.out'
     });
   });
 
   // About Doctor — image from left, text from right
   animateIfExists('#aboutImgCol', {
-    scrollTrigger: { trigger: '.about-doctor', start: 'top 80%', toggleActions: 'play none none none' },
-    x: -80, opacity: 0, duration: 1, ease: 'power3.out'
+    scrollTrigger: { trigger: '.about-doctor', start: 'top 95%', toggleActions: 'play none none none', once: true },
+    x: -50, opacity: 0, duration: 0.8, ease: 'power3.out'
   });
   animateIfExists('#aboutTextCol', {
-    scrollTrigger: { trigger: '.about-doctor', start: 'top 80%', toggleActions: 'play none none none' },
-    x: 80, opacity: 0, duration: 1, ease: 'power3.out', delay: 0.15
+    scrollTrigger: { trigger: '.about-doctor', start: 'top 95%', toggleActions: 'play none none none', once: true },
+    x: 50, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.1
   });
   animateIfExists('.about-highlight-card', {
-    scrollTrigger: { trigger: '.about-doctor', start: 'top 75%', toggleActions: 'play none none none' },
-    x: 30, opacity: 0, duration: 0.6, stagger: 0.15, ease: 'power3.out'
+    scrollTrigger: { trigger: '.about-doctor', start: 'top 90%', toggleActions: 'play none none none', once: true },
+    x: 20, opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power3.out'
   });
 
   // Hex items stagger
   animateIfExists('.hex-item', {
-    scrollTrigger: { trigger: '#hexGrid', start: 'top 80%', toggleActions: 'play none none none' },
-    y: 50, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out'
+    scrollTrigger: { trigger: '#hexGrid', start: 'top 98%', toggleActions: 'play none none none', once: true },
+    y: 30, opacity: 0, duration: 0.5, stagger: 0.08, ease: 'power3.out'
   });
 
   // Form wrapper
   animateIfExists('.form-wrapper', {
-    scrollTrigger: { trigger: '.appointment', start: 'top 75%', toggleActions: 'play none none none' },
-    y: 60, opacity: 0, duration: 0.8, ease: 'power3.out'
+    scrollTrigger: { trigger: '.appointment', start: 'top 95%', toggleActions: 'play none none none', once: true },
+    y: 40, opacity: 0, duration: 0.7, ease: 'power3.out'
   });
 
   // Contact grid
   animateIfExists('.contact-info-col', {
-    scrollTrigger: { trigger: '.contact-footer', start: 'top 80%', toggleActions: 'play none none none' },
-    x: -50, opacity: 0, duration: 0.8, ease: 'power3.out'
+    scrollTrigger: { trigger: '.contact-footer', start: 'top 98%', toggleActions: 'play none none none', once: true },
+    x: -40, opacity: 0, duration: 0.7, ease: 'power3.out'
   });
   animateIfExists('.map-col', {
-    scrollTrigger: { trigger: '.contact-footer', start: 'top 80%', toggleActions: 'play none none none' },
-    x: 50, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.15
+    scrollTrigger: { trigger: '.contact-footer', start: 'top 98%', toggleActions: 'play none none none', once: true },
+    x: 40, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.1
   });
 })();
 
