@@ -90,12 +90,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Improve rendering while scrolling */
-* {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+
 
 ::-webkit-scrollbar {
   width: 6px;
