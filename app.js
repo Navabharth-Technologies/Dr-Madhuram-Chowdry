@@ -901,10 +901,12 @@ function scrollToSection(id) {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
   // Video banner entrance — these always run on page load
-  gsap.fromTo('.video-banner__text',
-    { y: 30, opacity: 0 },
-    { duration: 0.9, y: 0, opacity: 1, ease: 'power3.out', delay: 0.3 }
-  );
+  if (document.querySelector('.video-banner__text')) {
+    gsap.fromTo('.video-banner__text',
+      { y: 30, opacity: 0 },
+      { duration: 0.9, y: 0, opacity: 1, ease: 'power3.out', delay: 0.3 }
+    );
+  }
   if (document.querySelector('.vb-stats-overlay')) {
     gsap.fromTo('.vb-stats-overlay',
       { y: 20, opacity: 0 },
@@ -1323,6 +1325,174 @@ function notifyPortal() {
 (function () {
   const sections = document.querySelectorAll('#videoBanner, #expertise, #contact, #appointment');
   // Year is already set to 2026 in HTML
+})();
+
+// ============================================================
+// TESTIMONIAL RIBBON — drag-to-scroll (mouse & touch)
+// ============================================================
+(function initRibbonScroll() {
+  const ribbon = document.getElementById('testimonialRibbon');
+  const track = document.getElementById('ribbonTrack');
+  if (!ribbon || !track) return;
+
+  let isDown = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let resumeTimer = null;
+
+  function pauseAnimation() {
+    track.style.animationPlayState = 'paused';
+  }
+
+  function resumeAnimation() {
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => {
+      track.style.animationPlayState = 'running';
+    }, 2000);
+  }
+
+  // ── Mouse drag ────────────────────────────────────────────
+  ribbon.addEventListener('mousedown', e => {
+    isDown = true;
+    ribbon.classList.add('dragging');
+    startX = e.pageX - ribbon.offsetLeft;
+    scrollLeft = ribbon.scrollLeft;
+    pauseAnimation();
+  });
+
+  ribbon.addEventListener('mouseleave', () => {
+    if (!isDown) return;
+    isDown = false;
+    ribbon.classList.remove('dragging');
+    resumeAnimation();
+  });
+
+  ribbon.addEventListener('mouseup', () => {
+    isDown = false;
+    ribbon.classList.remove('dragging');
+    resumeAnimation();
+  });
+
+  ribbon.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - ribbon.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    ribbon.scrollLeft = scrollLeft - walk;
+  });
+
+  // ── Touch drag (pause auto-scroll on touch) ───────────────
+  ribbon.addEventListener('touchstart', () => {
+    pauseAnimation();
+  }, { passive: true });
+
+  ribbon.addEventListener('touchend', () => {
+    resumeAnimation();
+  }, { passive: true });
+})();
+
+// ============================================================
+// REEL MANAGER — single-play cover overlay + footer redirect
+// Each reel starts hidden behind a play cover.
+// Clicking a cover reveals that reel only & pauses all others.
+// Footer area redirects to @madhuramchowdry14 (not original account).
+// ============================================================
+(function initReelManager() {
+  const IG_PROFILE = 'https://www.instagram.com/madhuramchowdry14/';
+
+  // Store { card, cover, savedSrc } for every reel slot
+  const reels = [];
+
+  function pauseIframe(card) {
+    const iframe = card.querySelector('iframe');
+    if (!iframe) return;
+    const src = iframe.src;
+    if (!src || src === 'about:blank') return;
+    card._savedSrc = src;
+    iframe.src = 'about:blank';
+    // Restore quickly so embed is ready for next play
+    setTimeout(() => {
+      if (card._savedSrc) iframe.src = card._savedSrc;
+    }, 300);
+  }
+
+  function buildCover(card, coverEl) {
+    coverEl.style.display = 'flex';
+    pauseIframe(card);
+  }
+
+  function playCover(activeCard, activeCover) {
+    // Hide this cover → reveal the real reel
+    activeCover.style.display = 'none';
+
+    // Pause & re-cover every OTHER reel
+    reels.forEach(({ card, cover }) => {
+      if (card === activeCard) return;
+      buildCover(card, cover);
+    });
+  }
+
+  function setupCard(card) {
+    if (card.querySelector('.reel-cover')) return; // already done
+
+    // --- Play cover ---
+    const cover = document.createElement('div');
+    cover.className = 'reel-cover';
+    cover.innerHTML = `
+      <div class="reel-play-btn">
+        <svg viewBox="0 0 24 24" fill="white" width="30" height="30">
+          <polygon points="6,3 20,12 6,21"/>
+        </svg>
+      </div>
+      <span class="reel-play-label">Tap to play</span>`;
+
+    // --- Footer redirect link (covers "View more on Instagram" area) ---
+    const footerLink = document.createElement('a');
+    footerLink.className = 'reel-footer-overlay';
+    footerLink.href = IG_PROFILE;
+    footerLink.target = '_blank';
+    footerLink.rel = 'noopener noreferrer';
+    footerLink.setAttribute('aria-label', 'View @madhuramchowdry14 on Instagram');
+
+    card.appendChild(cover);
+    card.appendChild(footerLink);
+
+    // Immediately hide the iframe so autoplay can't start
+    pauseIframe(card);
+
+    reels.push({ card, cover });
+
+    cover.addEventListener('click', () => playCover(card, cover));
+  }
+
+  function init() {
+    document.querySelectorAll('.reel-placeholder').forEach(setupCard);
+  }
+
+  // Run immediately and after embed.js has time to create iframes
+  init();
+  setTimeout(init, 800);
+  setTimeout(init, 2000);
+  setTimeout(init, 4000);
+
+  // --- Auto-pause on scroll ---
+  // When the happyClients section goes out of view, we pause any playing reel.
+  const section = document.getElementById('happyClients');
+  if (section && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          // Section scrolled out of view -> Reset all reels to cover state
+          reels.forEach(({ card, cover }) => {
+            if (cover.style.display === 'none') {
+              buildCover(card, cover);
+            }
+          });
+        }
+      });
+    }, { threshold: 0.05 }); // Trigger as soon as it's almost gone
+    observer.observe(section);
+  }
 })();
 
 console.log('%c Dr. Madhuram Chowdry — Website Loaded ✔', 'background:#06080F;color:#38bdf8;font-size:14px;padding:6px 12px;border-radius:4px;font-weight:bold;');

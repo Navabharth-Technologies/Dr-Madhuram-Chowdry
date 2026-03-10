@@ -1272,32 +1272,47 @@ body {
 
 .testimonial-ribbon-wrapper {
   position: relative;
-  overflow: hidden;
-  margin-top: 48px;
+  margin-top: 40px;
+  /* Clip only left & right with a mask, not top/bottom, so hover-lifted cards aren't cut off */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 80px, black calc(100% - 80px), transparent 100%);
 }
 
 .ribbon-fade-left,
 .ribbon-fade-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 200px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.ribbon-fade-left {
-  left: 0;
-  background: linear-gradient(90deg, #f8fbff, transparent);
-}
-
-.ribbon-fade-right {
-  right: 0;
-  background: linear-gradient(-90deg, #f0f9f4, transparent);
+  display: none;
+  /* mask-image on wrapper handles fading now */
 }
 
 .testimonial-ribbon {
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scroll-behavior: smooth;
+  /* Vertical padding so hover-lifted cards are never clipped */
+  padding-block: 12px;
+}
+
+.testimonial-ribbon:active {
+  cursor: grabbing;
+}
+
+/* Hide scrollbar visually but keep it scrollable */
+.testimonial-ribbon::-webkit-scrollbar {
+  height: 4px;
+}
+
+.testimonial-ribbon::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.testimonial-ribbon::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.25);
+  border-radius: 2px;
+}
+
+.testimonial-ribbon::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.5);
 }
 
 .ribbon-track {
@@ -1403,8 +1418,258 @@ body {
 }
 
 /* ============================================
+   HAPPY CLIENTS — INSTAGRAM REELS
+============================================ */
+.happy-clients {
+  padding: 100px 0 80px;
+  position: relative;
+  background: linear-gradient(180deg, #f0f9f4 0%, #f8fbff 100%);
+}
+
+.happy-clients::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(22, 163, 74, 0.35), transparent);
+}
+
+/* ── Grid: 4 equal columns, all same height via row alignment ── */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  align-items: start;
+  /* keeps cards top-aligned even if heights differ */
+  margin-bottom: 48px;
+}
+
+.reel-slot {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Card shell ── */
+.reel-placeholder {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid rgba(14, 165, 233, 0.15);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.07);
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  /* Let Instagram embed dictate the height — no forced aspect-ratio */
+}
+
+.reel-placeholder:hover {
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 12px 36px rgba(14, 165, 233, 0.16);
+  transform: translateY(-6px);
+}
+
+/* Instagram-gradient top accent bar on hover */
+.reel-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #e1306c, #833ab4);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.reel-placeholder:hover::before {
+  opacity: 1;
+}
+
+/* ── Force the Instagram blockquote to fill the card fully ── */
+.reel-placeholder>.instagram-media {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* ── Placeholder state (before embed is live) ── */
+.reel-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 360px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 24px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.reel-ig-icon {
+  color: var(--blue);
+  opacity: 0.45;
+}
+
+.reel-placeholder-inner span {
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.reel-placeholder-inner small {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ── Follow CTA ── */
+/* ── Tap-to-play cover overlay ── */
+.reel-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  background: linear-gradient(160deg, rgba(4, 7, 15, 0.82) 0%, rgba(14, 30, 50, 0.90) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background 0.25s;
+}
+
+.reel-cover:hover {
+  background: linear-gradient(160deg, rgba(4, 7, 15, 0.72) 0%, rgba(14, 30, 50, 0.80) 100%);
+}
+
+.reel-play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.30);
+  animation: playPulse 2s ease-out infinite;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.reel-cover:hover .reel-play-btn {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+@keyframes playPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.30);
+  }
+
+  70% {
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.00);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.00);
+  }
+}
+
+.reel-play-label {
+  font-family: var(--font-head);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Invisible overlay covering the embed footer → redirects to madhuramchowdry14 */
+
+.reel-footer-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  /* covers "View more on Instagram" + likes + comments footer */
+  z-index: 20;
+  background: transparent;
+  display: block;
+  cursor: pointer;
+}
+
+.reels-follow-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.ig-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f97316, #e1306c, #833ab4);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px rgba(225, 48, 108, 0.28);
+}
+
+.ig-follow-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 32px rgba(225, 48, 108, 0.42);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .happy-clients {
+    padding: 80px 0 60px;
+  }
+}
+
+/* Dark theme */
+[data-theme="dark"] .happy-clients {
+  background: linear-gradient(180deg, rgba(4, 7, 15, 0.95) 0%, #080c18 100%);
+}
+
+[data-theme="dark"] .reel-placeholder {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+/* ============================================
    APPOINTMENT FORM
 ============================================ */
+
 .appointment {
   padding: 120px 0;
   position: relative;
@@ -2010,15 +2275,53 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
+  color: #ffffff;
+  /* White icons by default */
   transition: all var(--transition);
 }
 
+.social-btn.facebook {
+  background: #1877f2;
+  border-color: transparent;
+}
+
+.social-btn.linkedin {
+  background: #0a66c2;
+  border-color: transparent;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: transparent;
+}
+
+.social-btn.threads {
+  background: #000000;
+  border-color: transparent;
+}
+
 .social-btn:hover {
-  background: rgba(14, 165, 233, 0.10);
-  border-color: var(--blue);
-  color: var(--blue);
-  transform: translateY(-2px);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.25);
+}
+
+.social-btn.facebook:hover {
+  background: #1877f2;
+}
+
+.social-btn.linkedin:hover {
+  background: #0a66c2;
+}
+
+.social-btn.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff53d4 45%, #62cffc 90%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.threads:hover {
+  background: #000000;
 }
 
 .map-container {
@@ -4108,15 +4411,18 @@ select option {
 }
 
 [data-theme="dark"] .social-btn {
-  background: rgba(14, 165, 233, 0.08);
-  border-color: rgba(14, 165, 233, 0.18);
-  color: #94a3b8;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+[data-theme="dark"] .social-btn.threads {
+  background: #ffffff;
+  color: #000000;
 }
 
 [data-theme="dark"] .social-btn:hover {
-  background: rgba(14, 165, 233, 0.20);
-  border-color: #38bdf8;
-  color: #38bdf8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2);
 }
 
 /* ── Map container ── */
