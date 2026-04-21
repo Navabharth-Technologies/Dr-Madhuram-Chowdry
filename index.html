@@ -81,9 +81,6 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
-  <!-- Three.js CDN -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
   <!-- Flatpickr (Advanced Date Picker) -->
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css"
     onload="this.onload=null;this.rel='stylesheet'" />
@@ -92,12 +89,10 @@
   </noscript>
 
   <!-- Preload Critical Assets -->
-  <link rel="preload" href="assets/logo-optimized.png" as="image" />
-  <link rel="preload" href="assets/process-3.png" as="image" />
-  <link rel="preload" href="style.css" as="style" />
-
+  <link rel="preload" href="assets/logo-optimized.png" as="image" fetchpriority="high" />
+  <link rel="preload" href="style.css?v=1.1" as="style" />
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1.1" />
 
 </head>
 
@@ -177,7 +172,7 @@
   <section class="video-banner" id="videoBanner">
 
     <video class="video-banner__video" src="assets/Video_Creation_for_Website (1).mp4" autoplay muted loop playsinline
-      aria-label="Knee replacement procedure overview" poster="assets/process-3.png"></video>
+      aria-label="Knee replacement procedure overview"></video>
     <div class="video-banner__overlay"></div>
     <div class="video-banner__text">
       <span class="vb-name" data-i18n="hero_name">Dr. Madhuram Chowdry</span>
@@ -832,7 +827,7 @@
 
   <!-- Scripts -->
   <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script defer src="app.js"></script>
+  <script defer src="app.js?v=1.1"></script>
 </body>
 
 </html>
