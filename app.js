@@ -50,8 +50,8 @@ const i18nData = {
     step_2_title: "Medical Details",
     label_specialty: "Specialty / Department",
     opt_procedure: "Choose procedure…",
-    opt_total_knee: "Total Knee Replacement",
-    opt_partial_knee: "Partial Knee Replacement",
+    opt_total_knee: "Minimally Invasive Knee Replacement",
+    opt_partial_knee: "Robotic Knee Replacement",
     opt_revision: "Revision Knee Surgery",
     opt_arthroscopy: "Knee Arthroscopy",
     opt_sports: "Sports Knee Injury",
@@ -70,12 +70,12 @@ const i18nData = {
     success_title: "Appointment Requested!",
     success_msg: "Thank you! Our team will contact you within <strong>24 hours</strong> to confirm your appointment.",
     btn_reset: "Book Another",
-    service_0_title: "Total Knee Replacement",
+    service_0_title: "Minimally Invasive Knee Replacement",
     service_0_sub: "Full joint resurfacing",
     service_0_desc: "Complete resurfacing of the knee joint using high-grade titanium and polyethylene implants. Ideal for severe arthritis, providing long-lasting pain relief and restored mobility.",
-    service_1_title: "Partial Knee Replacement",
-    service_1_sub: "Unicompartmental surgery",
-    service_1_desc: "Minimally invasive surgery replacing only the damaged compartment of the knee. Preserves healthy bone and ligaments for a quicker, more natural recovery.",
+    service_1_title: "Robotic Knee Replacement",
+    service_1_sub: "Robotic-assisted surgery",
+    service_1_desc: "Advanced robotic-assisted technology provides unmatched precision in implant alignment and placement. Minimizes damage to surrounding healthy tissue for a faster recovery and a natural-feeling knee.",
     service_2_title: "Revision Knee Surgery",
     service_2_sub: "Implant replacement & repair",
     service_2_desc: "Specialised surgery to replace or repair a failed or worn-out knee implant. Our team handles the most complex revision cases with cutting-edge implants and techniques.",
@@ -102,7 +102,7 @@ const i18nData = {
     link_hipaa: "HIPAA Compliance",
     // About section
     about_section_title: 'Dr. Madhuram Chowdry',
-    about_bio_1: 'Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+ years of experience</strong> and <strong>1000+ successful knee replacements</strong>, he is committed to restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.',
+    about_bio_1: 'Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Minimally Invasive Knee Replacement, Robotic Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+ years of experience</strong> and <strong>1000+ successful knee replacements</strong>, he is committed to restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.',
     about_bio_2: 'Based at <strong>A R Hospital, Mysuru</strong>, Dr. Chowdry combines cutting-edge technology with compassionate patient care, ensuring every patient receives a personalized treatment plan for the fastest possible recovery.',
     ahc_1_title: 'MBBS, MS - Orthopedics',
     ahc_1_sub: 'Advanced Surgical Training',
@@ -184,8 +184,8 @@ const i18nData = {
     step_2_title: "ವೈದ್ಯಕೀಯ ವಿವರಗಳು",
     label_specialty: "ಪರಿಣಿತಿ / ಇಲಾಖೆ",
     opt_procedure: "ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ…",
-    opt_total_knee: "ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
-    opt_partial_knee: "ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
+    opt_total_knee: "ಕನಿಷ್ಠ ಆಕ್ರಮಣಕಾರಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
+    opt_partial_knee: "ರೊಬೊಟಿಕ್ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
     opt_revision: "ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ",
     opt_arthroscopy: "ಮೊಣಕಾಲು ಆರ್ಥ್ರೋಸ್ಕೋಪಿ",
     opt_sports: "ಕ್ರೀಡಾ ಮೊಣಕಾಲು ಗಾಯ",
@@ -204,12 +204,12 @@ const i18nData = {
     success_title: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ವಿನಂತಿಸಲಾಗಿದೆ!",
     success_msg: "ಧನ್ಯವಾದಗಳು! ನಿಮ್ಮ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಅನ್ನು ದೃಢೀಕರಿಸಲು ನಮ್ಮ ತಂಡವು 24 ಗಂಟೆಗಳ ಒಳಗೆ ನಿಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸುತ್ತದೆ.",
     btn_reset: "ಇನ್ನೊಂದನ್ನು ಕಾಯ್ದಿರಿಸಿ",
-    service_0_title: "ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
+    service_0_title: "ಕನಿಷ್ಠ ಆಕ್ರಮಣಕಾರಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
     service_0_sub: "ಸಂಪೂರ್ಣ ಕೀಲು ಮರುಮೇಲ್ಮೈ ಮಾಡುವಿಕೆ",
     service_0_desc: "ಉನ್ನತ ದರ್ಜೆಯ ಟೈಟಾನಿಯಂ ಮತ್ತು ಪಾಲಿಥಿಲೀನ್ ಇಂಪ್ಲಾಂಟ್‌ಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಮೊಣಕಾಲಿನ ಕೀಲಿನ ಸಂಪೂರ್ಣ ಮರುಮೇಲ್ಮೈ ಮಾಡುವಿಕೆ. ತೀವ್ರವಾದ ಸಂಧಿವಾತಕ್ಕೆ ಸೂಕ್ತವಾಗಿದೆ, ದೀರ್ಘಕಾಲದ ನೋವು ನಿವಾರಣೆ ಮತ್ತು ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸುತ್ತದೆ.",
-    service_1_title: "ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
-    service_1_sub: "ಯುನಿಕಂಪಾರ್ಟ್‌ಮೆಂಟಲ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ",
-    service_1_desc: "ಮೊಣಕಾಲಿನ ಹಾನಿಗೊಳಗಾದ ಭಾಗವನ್ನು ಮಾತ್ರ ಬದಲಾಯಿಸುವ ಕನಿಷ್ಠ ಆಕ್ರಮಣಕಾರಿ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ. ವೇಗವಾಗಿ ಮತ್ತು ನೈಸರ್ಗಿಕ ಚೇತರಿಕೆಗಾಗಿ ಆರೋಗ್ಯಕರ ಮೂಳೆ ಮತ್ತು ಅಸ್ಥಿರಜ್ಜುಗಳನ್ನು ಸಂರಕ್ಷಿಸುತ್ತದೆ.",
+    service_1_title: "ರೊಬೊಟಿಕ್ ಮೊಣಕಾಲು ಬದಲಾವಣೆ",
+    service_1_sub: "ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ",
+    service_1_desc: "ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ತಂತ್ರಜ್ಞಾನವು ಇಂಪ್ಲಾಂಟ್ ಜೋಡಣೆ ಮತ್ತು ನಿಯೋಜನೆಯಲ್ಲಿ ಸಾಟಿಯಿಲ್ಲದ ನಿಖರತೆಯನ್ನು ಒದಗಿಸುತ್ತದೆ. ವೇಗವಾಗಿ ಚೇತರಿಸಿಕೊಳ್ಳಲು ಮತ್ತು ನೈಸರ್ಗಿಕ ಮೊಣಕಾಲು ಭಾವನೆಗಾಗಿ ಸುತ್ತಮುತ್ತಲಿನ ಆರೋಗ್ಯಕರ ಅಂಗಾಂಶಗಳಿಗೆ ಹಾನಿಯಾಗದಂತೆ ಕನಿಷ್ಠಗೊಳಿಸುತ್ತದೆ.",
     service_2_title: "ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ",
     service_2_sub: "ಇಂಪ್ಲಾಂಟ್ ಬದಲಾವಣೆ ಮತ್ತು ದುರಸ್ತಿ",
     service_2_desc: "ವಿಫಲವಾದ ಅಥವಾ ಸವೆದುಹೋದ ಮೊಣಕಾಲು ಇಂಪ್ಲಾಂಟ್ ಅನ್ನು ಬದಲಿಸಲು ಅಥವಾ ಸರಿಪಡಿಸಲು ವಿಶೇಷ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ. ನಮ್ಮ ತಂಡವು ಅತ್ಯಾಧುನಿಕ ಇಂಪ್ಲಾಂಟ್‌ಗಳು ಮತ್ತು ತಂತ್ರಗಳೊಂದಿಗೆ ಅತ್ಯಂತ ಸಂಕೀರ್ಣವಾದ ಪುನರಾವರ್ತಿತ ಪ್ರಕರಣಗಳನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ.",
@@ -236,7 +236,7 @@ const i18nData = {
     link_hipaa: "HIPAA ಅನುಸರಣೆ",
     // About section
     about_section_title: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ',
-    about_bio_1: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಒಬ್ಬ ಉನ್ನತ ಕೌಶಲ್ಯದ <strong>ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕ</strong>, <strong>ಸಂಪೂರ್ಣ ಮೊಣಕಾಲು ಬದಲಾವಣೆ, ಭಾಗಶಃ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong>ಯಲ್ಲಿ ಪರಿಣಿತರು. <strong>10+ ವರ್ಷಗಳ ಅನುಭವ</strong> ಮತ್ತು <strong>1000+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ಅವರು ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತಂತ್ರಗಳ ಮೂಲಕ ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಮತ್ತು ಮೊಣಕಾಲು ನೋವನ್ನು ತೆಗೆದುಹಾಕಲು ಬದ್ಧರಾಗಿದ್ದಾರೆ.',
+    about_bio_1: 'ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಒಬ್ಬ ಉನ್ನತ ಕೌಶಲ್ಯದ <strong>ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕ</strong>, <strong>ಕನಿಷ್ಠ ಆಕ್ರಮಣಕಾರಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ, ರೊಬೊಟಿಕ್ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಮತ್ತು ಪುನರಾವರ್ತಿತ ಮೊಣಕಾಲು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</strong>ಯಲ್ಲಿ ಪರಿಣಿತರು. <strong>10+ ವರ್ಷಗಳ ಅನುಭವ</strong> ಮತ್ತು <strong>1000+ ಯಶಸ್ವಿ ಮೊಣಕಾಲು ಬದಲಾವಣೆ</strong>ಗಳೊಂದಿಗೆ, ಅವರು ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತಂತ್ರಗಳ ಮೂಲಕ ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಮತ್ತು ಮೊಣಕಾಲು ನೋವನ್ನು ತೆಗೆದುಹಾಕಲು ಬದ್ಧರಾಗಿದ್ದಾರೆ.',
     about_bio_2: '<strong>ಎ ಆರ್ ಆಸ್ಪತ್ರೆ, ಮೈಸೂರು</strong>ದಲ್ಲಿ ನೆಲೆಸಿರುವ ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ ಅಧುನಾತನ ತಂತ್ರಜ್ಞಾನವನ್ನು ಸಹಾನುಭೂತಿಯ ರೋಗಿ ಆರೈಕೆಯೊಂದಿಗೆ ಸಂಯೋಜಿಸುತ್ತಾರೆ, ಪ್ರತಿ ರೋಗಿಗೂ ವೇಗವಾಗಿ ಚೇತರಿಕೆಗಾಗಿ ವೈಯಕ್ತಿಕ ಚಿಕಿತ್ಸಾ ಯೋಜನೆಯನ್ನು ಖಾತ್ರಿಪಡಿಸುತ್ತಾರೆ.',
     ahc_1_title: 'MBBS, MS - ಆರ್ಥೋಪೆಡಿಕ್ಸ್',
     ahc_1_sub: 'ಸುಧಾರಿತ ಶಸ್ತ್ರಚಿಕಿತ್ಸಾ ತರಬೇತಿ',
@@ -317,12 +317,19 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   const navLinks = document.querySelectorAll('.nav-link');
   const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-cta');
 
-  // Scroll → add glass effect
+  // Scroll → add glass effect (throttled via rAF for smooth performance)
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-    updateActiveLink();
-  });
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        if (window.scrollY > 60) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+        updateActiveLink();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 
   // Hamburger toggle
   hamburger.addEventListener('click', () => { toggleDrawer(true); });
@@ -648,7 +655,16 @@ function scrollToSection(id) {
     });
   }
 
-  window.addEventListener('scroll', animateCounters);
+  let counterTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!counterTicking) {
+      requestAnimationFrame(() => {
+        animateCounters();
+        counterTicking = false;
+      });
+      counterTicking = true;
+    }
+  }, { passive: true });
   setTimeout(animateCounters, 1500); // try on initial render too
 })();
 
@@ -689,17 +705,28 @@ function scrollToSection(id) {
   const currentLang = localStorage.getItem('drChowdryLang') || 'en';
 
   const reviewsEN = [
-    { name: 'Madhavi Prasad', dept: 'Wrist Fracture Treatment', stars: 5, text: 'Had admitted my son for wrist fracture treatment. Dr.Madhuram had helped in getting proper diagnosis and surgery done well.', color: '#38bdf8', initials: 'MP' },
-    { name: 'Anupdev KM', dept: 'ACL Surgery & Recovery', stars: 5, text: 'I had an ACL injury and underwent surgery here, and I am doing well now. Dr. Madhuram sir explained the procedure clearly and gave me confidence throughout the treatment. The care provided by the doctor was excellent and very professional. The hospital staff were supportive, polite, and attentive during my treatment and recovery. Overall, I am very satisfied with the treatment and the care I received at A R Hospital.', color: '#22c55e', initials: 'AK' },
-    { name: 'Krishna Mk', dept: 'Knee Joint Pain', stars: 5, text: 'Words are not enough to express our gratitude to Dr Madhuram chowdry orthopedic surgeon on my mother suffering from knee joint pain, surgery done by Dr Madhuram chowdry orthopedic During one of the most difficult phases of our lives. Dr Madhuram sir was not just a doctor but a true source of strength,hope,and reassurance for our entire family.he calm approach,clarity in explaining the condition,and compassionate care gave us the confidence to move forward without fear', color: '#f97316', initials: 'KM' },
-    { name: 'Sumanth R', dept: 'Femur & Tibia Recovery', stars: 5, text: 'My brother underwent implant removal right femur nailing and right tibia nailing at A R hospital in Mysore and I must say, the experience was exceptional. The medical team led by Dr. Madhuram Chowdry was compassionate, and highly skilled. The facilities were clean and well equipped, and the nursing staff provided top notch care. The surgery was a success, and the recovery process was smooth.', color: '#38bdf8', initials: 'SR' },
-    { name: 'Sowbhagya Gowda', dept: 'Orthopedic Care', stars: 5, text: 'Dr. Madhuram and his management is very good. Patient care is excellent and very good. All nursing staff are very good.', color: '#22c55e', initials: 'SG' },
-    { name: 'Rajeshwari', dept: 'ACL Arthroscopy Surgery', stars: 5, text: 'Myself Rajeshwari from Sravanabelagola, my sister admitted in at A R hospital Mysore. Wonderful experience at A R hospital during my sister\'s arthroscopy ACL surgery under Dr. Madhuram Chowdry sir. The orthopedic surgeon is highly skilled, the nursing staff and hospital team were caring and attentive, we are truly grateful for the excellent care.', color: '#f97316', initials: 'R' },
-    { name: 'Manohar Patel', dept: 'Orthopedic Surgery & Care', stars: 5, text: 'Dr. Madhuram sir was a best orthopedic surgeon and all staffs are good and receptionists also good. The manager Lokesh sir also well explained this hospital facilities and clean also good well maintained. Thank you all.', color: '#38bdf8', initials: 'MP' },
-    { name: 'Divi Choudhary', dept: 'Knee Surgery & Recovery', stars: 5, text: 'Thank you dr.Madhuram sir, My mother recently had knee surgery, and it was completely successful. The doctor and the hospital staff were very caring and professional. We are truly thankful for their support throughout her recovery...', color: '#22c55e', initials: 'DC' }
+    { name: 'Gagan Gowda', dept: 'Knee Replacement Surgery', stars: 5, text: 'We had a very good experience at AR hospital. Dr. Madhuram sir had helped in getting proper surgery done well. Post op care was good. Hospital is hygienic and well maintained. Very best knee replacement surgeon in entire Mysore.', color: '#38bdf8', initials: 'GG' },
+    { name: 'Sukaram Seervi', dept: 'Hip Replacement Surgery', stars: 5, text: 'I had my hip replacement surgery done by Dr. Madhuram sir, and I am extremely happy with the treatment and care I received. From the first consultation to post-surgery follow-up, he explained everything clearly and gave me great confidence. The surgery was successful, my recovery has been smooth, and I am now able to walk comfortably with much less pain. Dr. Madhuram sir is highly skilled, kind, and very supportive throughout the process. I sincerely thank him for the excellent care.', color: '#22c55e', initials: 'SS' },
+    { name: 'Kiran Kumar', dept: 'Joint Replacement', stars: 5, text: 'Very kind hearted doctor and best joint replacement surgeon in entire Mysore.', color: '#ea580c', initials: 'KK' },
+    { name: 'Devaraj Kavya', dept: 'Orthopedic Care', stars: 5, text: 'Very best orthopedic surgeon.', color: '#a855f7', initials: 'DK' },
+    { name: 'Chandana D N', dept: 'Knee Replacement', stars: 5, text: 'Best orthopedic surgeon and best knee replacement surgeon Dr. Madhuram sir.', color: '#ec4899', initials: 'CD' },
+    { name: 'Gowdru C', dept: 'Knee Replacement Surgery', stars: 5, text: 'I recently underwent right knee replacement surgery under the care of Dr. Madhuram. From the initial consultation to the surgery and post-operative follow-ups, the entire experience was excellent.', color: '#eab308', initials: 'GC' },
+    { name: 'Lakshmi M Gowda', dept: 'Spine Surgery', stars: 5, text: 'Dr. Madhuram Chowdry is the best spine surgeon in Mysore. My husband had pain and numbness in both legs for 11 months. He was diagnosed with L4 pathological fracture with compressive myelopathy and underwent surgery for the same. He is recovering well.', color: '#14b8a6', initials: 'LG' },
+    { name: 'NithyanandaNayak Nayak', dept: 'Orthopedic Recovery', stars: 5, text: 'Dear doctor, I sincerely appreciate your dedication, care, and expertise. Your kindness and commitment made a real difference in my recovery. Thank you for being not just a great doctor, you are a god for me, but also a wonderful human being.', color: '#f97316', initials: 'NN' },
+    { name: 'Raj Prince', dept: 'Orthopedic Treatment', stars: 5, text: 'Highly recommend him for his professionalism and patient care. He explained my condition clearly and provided excellent treatment.', color: '#3b82f6', initials: 'RP' }
   ];
 
-  const reviewsKN = [];
+  const reviewsKN = [
+    { name: 'ಗಗನ್ ಗೌಡ', dept: 'ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ನಮಗೆ ಎಆರ್ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಉತ್ತಮ ಅನುಭವವಾಯಿತು. ಡಾ. ಮಧುರಾಮ್ ಸರ್ ಅವರು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯನ್ನು ಉತ್ತಮವಾಗಿ ಮಾಡಲು ಸಹಾಯ ಮಾಡಿದರು. ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ನಂತರದ ಆರೈಕೆ ಚೆನ್ನಾಗಿತ್ತು. ಆಸ್ಪತ್ರೆಯು ಸ್ವಚ್ಛವಾಗಿದ್ದು, ಉತ್ತಮವಾಗಿ ನಿರ್ವಹಿಸಲ್ಪಟ್ಟಿದೆ. ಇಡೀ ಮೈಸೂರಿನಲ್ಲೇ ಅತ್ಯುತ್ತಮ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರು.', color: '#38bdf8', initials: 'GG' },
+    { name: 'ಸುಖರಾಮ್ ಸೀರ್ವಿ', dept: 'ಸೊಂಟ ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ನಾನು ಡಾ. ಮಧುರಾಮ್ ಸರ್ ಅವರಿಂದ ಸೊಂಟ ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಮಾಡಿಸಿಕೊಂಡಿದ್ದೇನೆ ಮತ್ತು ನನಗೆ ಸಿಕ್ಕ ಚಿಕಿತ್ಸೆ ಹಾಗೂ ಆರೈಕೆಯಿಂದ ನನಗೆ ತುಂಬಾ ಸಂತೋಷವಾಗಿದೆ. ಮೊದಲ ಸಮಾಲೋಚನೆಯಿಂದ ಹಿಡಿದು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ನಂತರದ ವರೆಗೆ ಎಲ್ಲವನ್ನೂ ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸಿದರು ಮತ್ತು ನನಗೆ ಹೆಚ್ಚಿನ ವಿಶ್ವಾಸ ನೀಡಿದರು. ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಯಶಸ್ವಿಯಾಯಿತು, ಚೇತರಿಕೆ ಸುಗಮವಾಗಿದೆ ಮತ್ತು ಈಗ ನೋವು ಇಲ್ಲದೆ ಆರಾಮವಾಗಿ ನಡೆಯುತ್ತಿದ್ದೇನೆ. ಡಾ. ಮಧುರಾಮ್ ಸರ್ ಅತ್ಯಂತ ನುರಿತವರು, ದಯಾಳು ಮತ್ತು ಬೆಂಬಲ ನೀಡುವವರಾಗಿದ್ದಾರೆ. ಅವರಿಗೆ ಹಾಗೂ ಅತ್ಯುತ್ತಮ ಆರೈಕೆಗೆ ಧನ್ಯವಾದಗಳು.', color: '#22c55e', initials: 'SS' },
+    { name: 'ಕಿರಣ್ ಕುಮಾರ್', dept: 'ಕೀಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ಅತ್ಯಂತ ದಯಾಳು ವೈದ್ಯರು ಮತ್ತು ಇಡೀ ಮೈಸೂರಿನಲ್ಲೇ ಅತ್ಯುತ್ತಮ ಕೀಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರು.', color: '#ea580c', initials: 'KK' },
+    { name: 'ದೇವರಾಜ್ ಕಾವ್ಯ', dept: 'ಆರ್ಥೋಪೆಡಿಕ್ ಆರೈಕೆ', stars: 5, text: 'ಅತ್ಯಂತ ಶ್ರೇಷ್ಠ ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರು.', color: '#a855f7', initials: 'DK' },
+    { name: 'ಚಂದನಾ ಡಿ ಎನ್', dept: 'ಮೊಣಕಾಲು ಬದಲಾವಣೆ', stars: 5, text: 'ಅತ್ಯುತ್ತಮ ಆರ್ಥೋಪೆಡಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರು ಮತ್ತು ಅತ್ಯುತ್ತಮ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರು ಡಾ. ಮಧುರಾಮ್ ಸರ್.', color: '#ec4899', initials: 'CD' },
+    { name: 'ಗೌಡ್ರು ಸಿ', dept: 'ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ನಾನು ಇತ್ತೀಚೆಗೆ ಡಾ. ಮಧುರಾಮ್ ಅವರ ಆರೈಕೆಯಲ್ಲಿ ಬಲ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಗೆ ಒಳಗಾಗಿದ್ದೆ. ಆರಂಭಿಕ ಸಮಾಲೋಚನೆಯಿಂದ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಮತ್ತು ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ನಂತರದ ಫಾಲೋ-ಅಪ್‌ಗಳವರೆಗೆ ಸಂಪೂರ್ಣ ಅನುಭವವು ಅತ್ಯುತ್ತಮವಾಗಿತ್ತು.', color: '#eab308', initials: 'GC' },
+    { name: 'ಲಕ್ಷ್ಮಿ ಎಂ ಗೌಡ', dept: 'ಬೆನ್ನುಮೂಳೆಯ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ', stars: 5, text: 'ಡಾ. ಮಧುರಾಮ್ ಚೌದರಿ ಮೈಸೂರಿನ ಅತ್ಯುತ್ತಮ ಬೆನ್ನುಮೂಳೆಯ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರಾಗಿದ್ದಾರೆ. ನನ್ನ ಪತಿಗೆ 11 ತಿಂಗಳಿನಿಂದ ಎರಡೂ ಕಾಲುಗಳಲ್ಲಿ ನೋವು ಮತ್ತು ಮರಗಟ್ಟುವಿಕೆ ಇತ್ತು, ಅವರಿಗೆ L4 ಪ್ಯಾಥೋಲಾಜಿಕಲ್ ಫ್ರಾಕ್ಚರ್ ಪತ್ತೆಯಾಗಿತ್ತು ಮತ್ತು ಅದಕ್ಕಾಗಿ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಗೆ ಒಳಗಾಗಿದ್ದರು. ಅವರು ಈಗ ಚೇತರಿಸಿಕೊಳ್ಳುತ್ತಿದ್ದಾರೆ.', color: '#14b8a6', initials: 'LG' },
+    { name: 'ನಿತ್ಯಾನಂದ ನಾಯಕ್', dept: 'ಆರ್ಥೋಪೆಡಿಕ್ ಚೇತರಿಕೆ', stars: 5, text: 'ಆತ್ಮೀಯ ವೈದ್ಯರೇ, ನಿಮ್ಮ ಸಮರ್ಪಣೆ, ವ್ಯಾಯಾಮದ ಆರೈಕೆ ಮತ್ತು ಪರಿಣಿತಿಯನ್ನು ನಾನು ಪ್ರಾಮಾಣಿಕವಾಗಿ ಪ್ರಶಂಸಿಸುತ್ತೇನೆ. ನಿಮ್ಮ ದಯೆ ಮತ್ತು ಬದ್ಧತೆಯು ನನ್ನ ಚೇತರಿಕೆಯಲ್ಲಿ ನಿಜವಾದ ಬದಲಾವಣೆಯನ್ನು ತಂದಿತು. ನನಗೆ ಕೇವಲ ಉತ್ತಮ ವೈದ್ಯರಷ್ಟೇ ಅಲ್ಲದೆ ದೇವರಂತಿರುವ ಮತ್ತು ಅದ್ಭುತ ಮನುಷ್ಯರಾಗಿರುವುದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು.', color: '#f97316', initials: 'NN' },
+    { name: 'ರಾಜ್ ಪ್ರಿನ್ಸ್', dept: 'ಆರ್ಥೋಪೆಡಿಕ್ ಚಿಕಿತ್ಸೆ', stars: 5, text: 'ಅವರ ವೃತ್ತಿಪರತೆ ಮತ್ತು ರೋಗಿಗಳ ಆರೈಕೆಗಾಗಿ ಅವರನ್ನು ಹೆಚ್ಚು ಶಿಫಾರಸು ಮಾಡುತ್ತೇನೆ. ಅವರು ನನ್ನ ಸ್ಥಿತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸಿದರು ಮತ್ತು ಅತ್ಯುತ್ತಮ ಚಿಕಿತ್ಸೆ ನೀಡಿದರು.', color: '#3b82f6', initials: 'RP' }
+  ];
 
   const reviewsToDisplay = currentLang === 'kn' ? reviewsKN : reviewsEN;
   const allReviews = [...reviewsToDisplay, ...reviewsToDisplay];
@@ -1144,3 +1171,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// ============================================================
+// X. ACCESSIBILITY: Auto-tag generated external iframes
+// ============================================================
+(function observerIframes() {
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.tagName === 'IFRAME' && node.classList.contains('instagram-media')) {
+          if (!node.hasAttribute('title')) {
+            node.setAttribute('title', 'Instagram Post Component');
+          }
+        } else if (node.querySelectorAll) {
+          const iframes = node.querySelectorAll('iframe.instagram-media');
+          iframes.forEach(iframe => {
+            if (!iframe.hasAttribute('title')) {
+              iframe.setAttribute('title', 'Instagram Post Component');
+            }
+          });
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  
+  // Retroactive check
+  setTimeout(() => {
+    document.querySelectorAll('iframe.instagram-media').forEach(iframe => {
+      if (!iframe.hasAttribute('title')) iframe.setAttribute('title', 'Instagram Post Component');
+    });
+  }, 3000);
+})();
+
+// ============================================================
+// XI. CLEAN URL NAVIGATION (Prevent hash pollution in address bar)
+// ============================================================
+(function initCleanNavigation() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href').substring(1);
+      if (!targetId) return;
+
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault(); // Stop hash from appearing in URL
+        
+        if (typeof gsap !== 'undefined' && typeof ScrollToPlugin !== 'undefined') {
+          gsap.to(window, { duration: 1, scrollTo: { y: targetEl, offsetY: 70 }, ease: 'power3.inOut' });
+        } else {
+          const y = targetEl.getBoundingClientRect().top + window.scrollY - 70;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        
+        // Remove any existing hash cleanly
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname + window.location.search);
+        }
+      }
+    });
+  });
+
+  // Clean URL on page load if user came from a shared link with a hash
+  if (window.location.hash) {
+    setTimeout(() => {
+      history.replaceState(null, null, window.location.pathname + window.location.search);
+    }, 10);
+  }
+})();

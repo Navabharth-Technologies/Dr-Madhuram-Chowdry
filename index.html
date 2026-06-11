@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -71,9 +71,9 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts with font-display:swap for faster rendering -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
 
   <!-- GSAP CDN -->
@@ -99,7 +99,7 @@
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-P5HNVDVHH2" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+      style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- ===================== NAVBAR ===================== -->
@@ -116,6 +116,7 @@
         <a href="#videoBanner" class="nav-link active" data-section="videoBanner" data-i18n="nav_home">Home</a>
         <a href="about.html" class="nav-link" data-section="about" data-i18n="nav_about">About</a>
         <a href="#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
+        <a href="blog.html" class="nav-link" data-section="doctorBlog">Blog</a>
         <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
         <a href="#appointment" class="nav-cta-btn" data-i18n="nav_cta">Book Appointment</a>
       </nav>
@@ -127,7 +128,7 @@
         </button>
 
         <div class="lang-switcher" id="langSwitcher">
-          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <button class="lang-btn" aria-haspopup="true" aria-expanded="false" aria-label="Select Language">
             <span class="lang-text">English</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <polyline points="6 9 12 15 18 9"></polyline>
@@ -152,6 +153,7 @@
         <a href="#videoBanner" class="drawer-link" data-i18n="nav_home">Home</a>
         <a href="about.html" class="drawer-link" data-i18n="nav_about">About</a>
         <a href="#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
+        <a href="blog.html" class="drawer-link">Blog</a>
         <a href="#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
         <a href="#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Book Appointment</a>
 
@@ -171,8 +173,17 @@
   <!-- ===================== VIDEO BANNER ===================== -->
   <section class="video-banner" id="videoBanner">
 
-    <video class="video-banner__video" src="assets/Video_Creation_for_Website (1).mp4" autoplay muted loop playsinline
+    <video class="video-banner__video" data-src="assets/Video_Creation_for_Website (1).mp4" autoplay muted loop playsinline
       aria-label="Knee replacement procedure overview"></video>
+    <script>
+      // Defer loading of video to keep page load fast
+      document.addEventListener("DOMContentLoaded", function() {
+        var video = document.querySelector('.video-banner__video');
+        if (video && video.dataset.src) {
+          video.src = video.dataset.src;
+        }
+      });
+    </script>
     <div class="video-banner__overlay"></div>
     <div class="video-banner__text">
       <span class="vb-name" data-i18n="hero_name">Dr. Madhuram Chowdry</span>
@@ -230,8 +241,7 @@
           <h2 class="section-title" data-i18n="about_section_title"><span class="highlight-text">Dr. Madhuram
               Chowdry</span></h2>
           <p class="about-bio" id="aboutBio1" data-i18n="about_bio_1">
-            Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Total
-              Knee Replacement, Partial Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+
+            Dr. Madhuram Chowdry is a highly skilled <strong>Orthopedic Surgeon</strong> specializing in <strong>Minimally Invasive Knee Replacement, Robotic Knee Replacement, and Revision Knee Surgery</strong>. With over <strong>10+
               years of experience</strong> and <strong>1000+ successful knee replacements</strong>, he is committed to
             restoring mobility and eliminating knee pain through advanced robotic-assisted surgical techniques.
           </p>
@@ -311,13 +321,13 @@
                 <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2" />
               </svg>
             </div>
-            <h3 data-i18n="service_0_title">Total Knee Replacement</h3>
+            <h3 data-i18n="service_0_title">Minimally Invasive Knee Replacement</h3>
             <p data-i18n="service_0_sub">Full joint resurfacing</p>
           </div>
           <div class="hex-expand" id="hexExpand-0">
             <div class="expand-content">
               <div class="expand-icon">🦴</div>
-              <h4 data-i18n="service_0_title">Total Knee Replacement</h4>
+              <h4 data-i18n="service_0_title">Minimally Invasive Knee Replacement</h4>
               <p data-i18n="service_0_desc">Complete resurfacing of the knee joint using high-grade titanium and
                 polyethylene implants. Ideal for
                 severe arthritis, providing long-lasting pain relief and restored mobility.</p>
@@ -333,23 +343,21 @@
           <div class="hex-shape">
             <div class="hex-icon">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 10 L24 8 L32 10 L32 26 Q32 36 24 40 Q16 36 16 26 Z" stroke="currentColor" stroke-width="2"
-                  stroke-linejoin="round" />
-                <line x1="24" y1="18" x2="24" y2="30" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <rect x="14" y="14" width="20" height="20" rx="4" stroke="currentColor" stroke-width="2" />
+                <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="2" />
+                <path d="M24 6V14M24 34v8M6 24h8M34 24h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg>
             </div>
-            <h3 data-i18n="service_1_title">Partial Knee Replacement</h3>
-            <p data-i18n="service_1_sub">Unicompartmental surgery</p>
+            <h3 data-i18n="service_1_title">Robotic Knee Replacement</h3>
+            <p data-i18n="service_1_sub">Robotic-assisted surgery</p>
           </div>
           <div class="hex-expand" id="hexExpand-1">
             <div class="expand-content">
-              <div class="expand-icon">⚙️</div>
-              <h4 data-i18n="service_1_title">Partial Knee Replacement</h4>
-              <p data-i18n="service_1_desc">Minimally invasive surgery replacing only the damaged compartment of the
-                knee. Preserves healthy bone
-                and ligaments for a quicker, more natural recovery.</p>
+              <div class="expand-icon">🤖</div>
+              <h4 data-i18n="service_1_title">Robotic Knee Replacement</h4>
+              <p data-i18n="service_1_desc">Advanced robotic-assisted technology provides unmatched precision in implant alignment and placement. Minimizes damage to surrounding healthy tissue for a faster recovery and a natural-feeling knee.</p>
               <div class="expand-tags">
-                <span>Minimally Invasive</span><span>Unicompartmental</span><span>Quick Recovery</span>
+                <span>Robotic Precision</span><span>Minimally Invasive</span><span>Fast Recovery</span>
               </div>
             </div>
           </div>
@@ -515,7 +523,7 @@
         <div class="reel-slot">
           <div class="reel-placeholder">
             <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DNImHtjhXYa/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-permalink="https://www.instagram.com/reel/DZU9iPWt0qP/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
               style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:100%;min-width:0;padding:0;width:100%;">
             </blockquote>
@@ -527,7 +535,7 @@
         <div class="reel-slot">
           <div class="reel-placeholder">
             <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DPYwhHaARou/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-permalink="https://www.instagram.com/reel/DZH0G7EP25M/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
               style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:100%;min-width:0;padding:0;width:100%;">
             </blockquote>
@@ -538,7 +546,7 @@
         <div class="reel-slot">
           <div class="reel-placeholder">
             <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DMiL8dlhWdi/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-permalink="https://www.instagram.com/reel/DY68L29S-wx/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
               style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:100%;min-width:0;padding:0;width:100%;">
             </blockquote>
@@ -549,7 +557,7 @@
         <div class="reel-slot">
           <div class="reel-placeholder">
             <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DTnOjr9iI0H/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-permalink="https://www.instagram.com/reel/DZEXMhiIzTg/?utm_source=ig_embed&amp;utm_campaign=loading"
               data-instgrm-version="14"
               style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px;max-width:100%;min-width:0;padding:0;width:100%;">
             </blockquote>
@@ -573,7 +581,9 @@
     </div>
   </section>
 
+
   <!-- ===================== APPOINTMENT FORM ===================== -->
+
 
   <section class="appointment" id="appointment">
     <div class="section-container">
@@ -629,7 +639,7 @@
               </div>
               <div class="form-group full-width" id="fg-gender">
                 <label data-i18n="label_gender">Gender</label>
-                <select id="gender">
+                <select id="gender" aria-label="Gender">
                   <option value="" data-i18n="opt_select">Select</option>
                   <option value="male" data-i18n="opt_male">Male</option>
                   <option value="female" data-i18n="opt_female">Female</option>
