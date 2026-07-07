@@ -3740,11 +3740,11 @@ select option {
   }
 
   .mobile-drawer {
-    width: 100%;
     right: -100%;
     padding-top: 80px;
     padding-left: 24px;
     padding-right: 24px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
   }
 
   .mobile-drawer.open {
@@ -4885,7 +4885,8 @@ select option {
   }
 
   .blog-author-name {
-    display: none;
+    display: block;
+    font-size: 0.72rem;
   }
 
   .blog-view-all {

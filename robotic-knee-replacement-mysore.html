@@ -255,6 +255,7 @@
 
     .article-body p {
       margin-bottom: 24px;
+      text-align: justify;
     }
 
     .article-body h2 {
@@ -567,6 +568,50 @@
       
       .article-cover-placeholder {
         height: 240px;
+      }
+
+      .timeline-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 16px 18px;
+      }
+
+      .timeline-badge {
+        font-size: 0.72rem;
+        padding: 3px 10px;
+      }
+
+      .table-responsive {
+        position: relative;
+      }
+
+      .table-responsive::after {
+        content: '↔ Scroll horizontally to view full table';
+        display: block;
+        text-align: center;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        background: rgba(14, 165, 233, 0.05);
+        padding: 6px 12px;
+        border-top: 1px solid var(--border);
+      }
+
+      .faq-question-btn {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+      }
+
+      .faq-answer-inner {
+        padding: 0 16px 16px;
+        font-size: 0.88rem;
+      }
+
+      .sidebar-widget {
+        position: static;
+        padding: 22px;
+        margin-top: 20px;
       }
     }
   </style>
