@@ -3839,29 +3839,29 @@ select option {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    padding: 10px 16px;
-    gap: 10px;
-    border-radius: 12px;
+    padding: 14px 22px;
+    gap: 14px;
+    border-radius: 16px;
     width: auto;
-    max-width: calc(100% - 32px);
+    max-width: calc(100% - 24px);
     pointer-events: auto;
   }
 
   .vb-stat-item {
-    min-width: 60px;
+    min-width: 76px;
   }
 
   .vb-stat-num,
   .vb-stat-suf {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .vb-stat-label {
-    font-size: 0.55rem;
+    font-size: 0.62rem;
   }
 
   .vb-stat-divider {
-    height: 28px;
+    height: 32px;
   }
 
   /* Watermark blur adjustment for mobile */
