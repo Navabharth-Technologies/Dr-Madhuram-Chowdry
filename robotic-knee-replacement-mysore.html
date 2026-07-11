@@ -170,6 +170,19 @@
       overflow: hidden;
     }
 
+    /* Article Cover Image */
+    .article-cover-img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
     .cover-icon {
       font-size: 5rem;
       margin-bottom: 12px;
@@ -570,6 +583,12 @@
         height: 240px;
       }
 
+      .article-cover-img {
+        height: auto;
+        max-height: 320px;
+        object-position: top;
+      }
+
       .timeline-card {
         flex-direction: column;
         align-items: flex-start;
@@ -740,12 +759,8 @@
             </div>
           </header>
 
-          <!-- Article Cover Image Placeholder -->
-          <div class="article-cover-placeholder">
-            <span class="cover-icon">🤖</span>
-            <span class="cover-text">Robotic Knee Replacement</span>
-            <span class="cover-subtext">Precision Orthopedic Surgery Guide</span>
-          </div>
+          <!-- Article Cover Image -->
+          <img src="assets/madhuramblogimag.png" alt="Robotic Knee Replacement in Mysore" class="article-cover-img">
 
           <div class="article-body">
             
