@@ -4865,7 +4865,7 @@ select option {
   }
 
   .blog-card-img {
-    height: 160px;
+    height: 190px;
   }
 
   .blog-img-icon {
@@ -4877,16 +4877,19 @@ select option {
   }
 
   .blog-card-title {
-    font-size: 0.98rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    font-weight: 700;
   }
 
   .blog-card-excerpt {
-    font-size: 0.84rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .blog-author-name {
     display: block;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
   }
 
   .blog-view-all {
