@@ -565,39 +565,64 @@
     }
     .mobile-cta-btn:active { transform: scale(0.97); }
 
+    /* TOC details styling */
+    .toc-card summary { cursor: pointer; list-style: none; user-select: none; outline: none; }
+    .toc-card summary::-webkit-details-marker { display: none; }
+    .toc-card[open] .toc-chevron { transform: rotate(180deg); }
+    .toc-chevron { transition: transform 0.25s ease; color: var(--text-muted); }
+
     /* Responsive styling adjustments */
     @media (max-width: 768px) {
-      .mobile-cta-bar { display: block; }
-      .article-section { padding: 24px 0 100px; }
+      .mobile-cta-bar { display: block !important; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); }
+      .article-section { padding: 20px 0 110px; }
       .section-container { padding: 0 16px; }
-      .breadcrumbs { font-size: 0.78rem; gap: 5px; margin-bottom: 14px; flex-wrap: wrap; }
-      .article-tag { font-size: 0.72rem; padding: 5px 12px; margin-bottom: 12px; }
-      .article-title { font-size: clamp(1.5rem, 5.5vw, 1.85rem); line-height: 1.28; letter-spacing: -0.02em; margin-bottom: 16px; }
-      .article-meta { flex-direction: column; gap: 8px; font-size: 0.8rem; padding-bottom: 14px; margin-bottom: 0; border-bottom: 1px solid var(--border); }
-      .meta-item { gap: 6px; }
-      .article-cover-img { border-radius: 12px; margin-bottom: 24px; max-width: 100%; object-fit: cover; }
-      .article-body h2 { font-size: 1.25rem; margin-top: 28px; margin-bottom: 10px; line-height: 1.35; }
-      .article-body h3 { font-size: 1.05rem; margin-top: 20px; margin-bottom: 8px; line-height: 1.4; }
-      .article-body p { font-size: 0.96rem; line-height: 1.75; margin-bottom: 16px; }
-      .article-body li { font-size: 0.95rem; line-height: 1.65; margin-bottom: 8px; }
-      .article-image-wrap { max-width: 100%; margin: 16px 0 !important; border-radius: 12px !important; }
-      .article-callout { padding: 14px 16px; margin: 18px 0; font-size: 0.92rem; line-height: 1.65; border-radius: 0 10px 10px 0; }
-      .faq-accordion { margin: 24px 0; gap: 8px; }
-      .faq-question-btn { padding: 14px 14px; font-size: 0.92rem; line-height: 1.4; }
-      .faq-icon { font-size: 0.9rem; flex-shrink: 0; }
-      .faq-answer-inner { padding: 0 14px 14px; font-size: 0.9rem; line-height: 1.65; }
+      .breadcrumbs { font-size: 0.78rem; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }
+      .article-tag { font-size: 0.72rem; padding: 4px 12px; margin-bottom: 10px; }
+      .article-title { font-size: clamp(1.45rem, 5.5vw, 1.85rem); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 14px; }
+      .article-meta { flex-direction: row; flex-wrap: wrap; gap: 10px 16px; font-size: 0.78rem; padding-bottom: 12px; margin-bottom: 0; border-bottom: 1px solid var(--border); }
+      .meta-item { gap: 5px; }
+      .article-cover-img { border-radius: 14px; margin-top: 16px; margin-bottom: 20px; max-height: 280px; width: 100%; object-fit: cover; }
+      
+      /* Mobile Collapsible TOC */
+      .toc-card { padding: 16px 18px !important; margin-bottom: 24px !important; border-radius: 14px !important; }
+      .toc-card ul { margin-top: 14px !important; gap: 8px !important; font-size: 0.88rem !important; }
+      
+      .article-body h2 { font-size: 1.22rem; margin-top: 26px; margin-bottom: 10px; line-height: 1.35; letter-spacing: -0.01em; }
+      .article-body h3 { font-size: 1.02rem; margin-top: 18px; margin-bottom: 8px; line-height: 1.38; }
+      .article-body p { font-size: 0.96rem; line-height: 1.72; margin-bottom: 16px; color: var(--text-primary); }
+      .article-body li { font-size: 0.94rem; line-height: 1.65; margin-bottom: 7px; }
+      .article-body ul, .article-body ol { padding-left: 18px; margin-bottom: 18px; }
+      
+      /* Responsive Images */
+      .article-image-wrap { max-width: 100%; margin: 20px 0 !important; border-radius: 14px !important; box-shadow: var(--shadow-sm) !important; }
+      .article-image-wrap img { width: 100%; height: auto; border-radius: 14px; }
+
+      /* Touch-Friendly Video Reel Box */
+      .article-callout { padding: 16px 18px !important; margin: 22px 0 !important; font-size: 0.9rem !important; line-height: 1.6 !important; border-radius: 14px !important; }
+      .article-callout h4 { font-size: 1rem !important; margin-bottom: 8px !important; }
+
+      /* Horizontal Scrollable Table on Mobile */
+      .article-table-wrap { margin: 20px 0 !important; border-radius: 14px !important; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important; }
+      .article-table-wrap::after { content: "Scroll horizontally to see full table →"; display: block; text-align: right; font-size: 0.72rem; color: var(--text-muted); padding: 6px 12px; background: rgba(14, 165, 233, 0.04); border-top: 1px solid var(--border); font-family: var(--font-head); }
+      .article-table th { padding: 10px 14px !important; font-size: 0.85rem !important; white-space: nowrap; }
+      .article-table td { padding: 10px 14px !important; font-size: 0.84rem !important; min-width: 135px; }
+
+      /* FAQ Accordion Mobile Enhancements */
+      .faq-accordion { margin: 20px 0; gap: 8px; }
+      .faq-question-btn { padding: 13px 14px; font-size: 0.88rem; line-height: 1.4; border-radius: 12px; }
+      .faq-question-btn:active { background: rgba(14, 165, 233, 0.06); }
+      .faq-answer-inner { padding: 0 14px 14px; font-size: 0.88rem; line-height: 1.6; }
       .sidebar-widget { display: none; }
-      .article-body ul, .article-body ol { padding-left: 16px; margin-bottom: 20px; }
-      .article-grid { gap: 0; margin-top: 20px; }
+      .article-grid { gap: 0; margin-top: 16px; }
     }
 
     @media (max-width: 480px) {
       .article-title { font-size: clamp(1.35rem, 6vw, 1.65rem); }
       .article-body h2 { font-size: 1.15rem; }
-      .article-body h3 { font-size: 1rem; }
-      .article-body p, .article-body li { font-size: 0.93rem; }
-      .mobile-cta-btn { padding: 10px 16px; font-size: 0.8rem; }
-      .faq-question-btn { font-size: 0.88rem; padding: 12px 12px; }
+      .article-body h3 { font-size: 0.98rem; }
+      .article-body p, .article-body li { font-size: 0.92rem; }
+      .mobile-cta-btn { padding: 9px 15px; font-size: 0.8rem; }
+      .faq-question-btn { font-size: 0.85rem; padding: 12px 12px; }
     }
   </style>
 

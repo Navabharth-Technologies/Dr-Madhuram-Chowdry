@@ -5380,19 +5380,36 @@ select option {
   .article-table td {
     padding: 10px 14px !important;
     font-size: 0.85rem !important;
+    min-width: 135px;
+  }
+  .article-table-wrap::after {
+    content: "Scroll horizontally to see full table →";
+    display: block;
+    text-align: right;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    background: rgba(14, 165, 233, 0.04);
+    border-top: 1px solid var(--border);
+    font-family: var(--font-head);
   }
 
   /* Accordion FAQs Mobile Upgrade */
   .faq-accordion {
-    margin: 24px 0 !important;
+    margin: 20px 0 !important;
     gap: 10px !important;
   }
 
   .faq-question-btn {
-    padding: 16px 16px !important;
-    font-size: 0.93rem !important;
+    padding: 14px 16px !important;
+    font-size: 0.90rem !important;
     line-height: 1.4 !important;
-    min-height: 52px;
+    min-height: 48px;
+    border-radius: 12px !important;
+  }
+
+  .faq-question-btn:active {
+    background: rgba(14, 165, 233, 0.06) !important;
   }
 
   .faq-answer-inner {
@@ -5400,5 +5417,65 @@ select option {
     font-size: 0.9rem !important;
     line-height: 1.65 !important;
   }
+
+  /* Mobile Collapsible TOC & Article Cover */
+  .toc-card summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  .toc-card summary::-webkit-details-marker {
+    display: none;
+  }
+  .toc-card[open] .toc-chevron {
+    transform: rotate(180deg);
+  }
+  .toc-chevron {
+    transition: transform 0.25s ease;
+  }
+  .article-cover-img {
+    border-radius: 14px !important;
+    margin-top: 16px !important;
+    margin-bottom: 20px !important;
+    max-height: 280px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Global Phone View Enhancements */
+  .article-meta {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px 16px !important;
+    font-size: 0.78rem !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+  .comparison-table-wrap {
+    margin: 20px 0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  .comparison-table-wrap::after {
+    content: "Scroll horizontally to see full comparison →";
+    display: block;
+    text-align: right;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    padding: 6px 12px;
+    background: rgba(14, 165, 233, 0.04);
+    border-top: 1px solid var(--border);
+    font-family: var(--font-head);
+  }
+  .mobile-cta-bar {
+    display: block !important;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  }
 }
+
+
+
+
 
