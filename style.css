@@ -3557,54 +3557,108 @@ select option {
   }
 
   .video-banner__text {
-    padding: calc(var(--navbar-h, 60px) + 52px) 16px 120px;
+    padding: calc(var(--navbar-h, 60px) + 20px) 16px 100px;
+    justify-content: center;
+    gap: 0px;
+  }
+
+  .vb-name {
+    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+    margin-bottom: 2px;
+  }
+
+  .vb-line1,
+  .vb-line2 {
+    font-size: clamp(1.45rem, 6.5vw, 2.1rem);
+    line-height: 1.08;
+  }
+
+  .vb-cta {
+    margin-top: 14px !important;
+  }
+
+  .liquid-btn {
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
   }
 
   .vb-stats-overlay {
     gap: 8px;
-    padding: 8px 12px;
-    bottom: 60px;
+    padding: 8px 14px;
+    bottom: 20px;
+    width: calc(100% - 24px);
+    max-width: 380px;
+    justify-content: space-around;
   }
 
   .vb-stat-item {
-    min-width: 60px;
+    min-width: 55px;
   }
 
   .vb-stat-num,
   .vb-stat-suf {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .vb-stat-label {
     font-size: 0.55rem;
+    letter-spacing: 0.05em;
   }
 
   .vb-stat-divider {
-    height: 28px;
+    display: block;
+    height: 24px;
+    opacity: 0.5;
   }
 }
 
 @media (max-width: 480px) {
   .video-banner__text {
-    padding: calc(var(--navbar-h, 56px) + 48px) 12px 110px;
+    padding: calc(var(--navbar-h, 56px) + 16px) 12px 90px;
+  }
+
+  .vb-name {
+    font-size: 1.05rem;
+  }
+
+  .vb-line1,
+  .vb-line2 {
+    font-size: 1.35rem;
+  }
+
+  .vb-cta {
+    margin-top: 10px !important;
+  }
+
+  .liquid-btn {
+    padding: 8px 18px !important;
+    font-size: 0.82rem !important;
   }
 
   .vb-stats-overlay {
-    gap: 6px;
-    padding: 8px 10px;
+    bottom: 12px;
+    padding: 6px 10px;
+    gap: 4px;
+    width: calc(100% - 20px);
   }
 
   .vb-stat-divider {
-    display: none;
+    display: block;
+    height: 20px;
+    opacity: 0.4;
   }
 
   .vb-stat-item {
-    min-width: 54px;
+    min-width: 48px;
   }
 
   .vb-stat-num,
   .vb-stat-suf {
-    font-size: 1rem;
+    font-size: 0.98rem;
+  }
+
+  .vb-stat-label {
+    font-size: 0.5rem;
   }
 }
 
@@ -3676,8 +3730,9 @@ select option {
   }
 
   .lang-text {
-    display: none;
-    /* Hide "English" text, show only chevron on tiny screens */
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.76rem;
   }
 
   /* Drawer language switcher */
