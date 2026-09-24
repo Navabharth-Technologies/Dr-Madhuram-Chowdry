@@ -89,9 +89,9 @@
 
   <!-- Preload Critical Assets -->
   <link rel="preload" href="assets/logo-optimized.png" as="image" fetchpriority="high" />
-  <link rel="preload" href="style.css?v=1.1" as="style" />
+  <link rel="preload" href="style.css?v=2.0" as="style" />
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=1.1" />
+  <link rel="stylesheet" href="style.css?v=2.0" />
 
   <!-- Blog page: override navbar to always show dark text (no video hero) -->
   <style>
@@ -109,7 +109,7 @@
     .nav-link:hover,
     .nav-link.active {
       color: var(--blue) !important;
-      background: rgba(14, 165, 233, 0.08) !important;
+      background: rgba(15, 38, 72, 0.08) !important;
     }
 
     .logo-name {
@@ -117,7 +117,7 @@
     }
 
     .logo-title {
-      background: linear-gradient(90deg, var(--blue), var(--green)) !important;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold-light)) !important;
       -webkit-background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
       background-clip: text !important;
@@ -125,6 +125,16 @@
 
     .hamburger span {
       background: var(--text-primary);
+    }
+
+    .page-top-spacer {
+      padding-top: 85px;
+    }
+
+    @media (max-width: 768px) {
+      .page-top-spacer {
+        padding-top: 70px;
+      }
     }
 
     .coming-soon-container {
@@ -251,7 +261,7 @@
   </header>
 
   <!-- Add some top padding since it's an internal page without a video hero -->
-  <div style="padding-top: 85px;"></div>
+  <div class="page-top-spacer"></div>
 
   <!-- ===================== DOCTOR'S BLOG ===================== -->
   <section class="doctor-blog" id="doctorBlog">
@@ -269,8 +279,18 @@
           Madhuram Chowdry to help you make informed decisions.</p>
       </div>
 
+      <!-- Blog Category Filter Bar (Smooth horizontal scroll on phone) -->
+      <div class="blog-filter-bar" id="blogFilterBar" role="tablist" aria-label="Filter blog posts">
+        <button class="blog-filter-chip active" data-filter="all" role="tab" aria-selected="true">All Articles</button>
+        <button class="blog-filter-chip" data-filter="knee-replacement" role="tab" aria-selected="false">Knee Replacement</button>
+        <button class="blog-filter-chip" data-filter="recovery" role="tab" aria-selected="false">Recovery & Rehab</button>
+        <button class="blog-filter-chip" data-filter="arthritis" role="tab" aria-selected="false">Arthritis & Joint Care</button>
+        <button class="blog-filter-chip" data-filter="medical-conditions" role="tab" aria-selected="false">Health & Pre-Op</button>
+        <button class="blog-filter-chip" data-filter="comparisons" role="tab" aria-selected="false">Treatment Comparisons</button>
+      </div>
+
       <div class="blog-grid" id="blogGrid">
-        <article class="blog-card">
+        <article class="blog-card" data-category="medical-conditions knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/Blog 14 Cover image.jpg" alt="Knee Replacement in Patients with BP and Heart Disease: What Patients Need to Know" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -311,7 +331,7 @@
             </div>
           </div>
         </article>
-        <article class="blog-card">
+        <article class="blog-card" data-category="recovery knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog13image1.png" alt="Physiotherapy Before Knee Replacement: Benefits & Exercises" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -353,7 +373,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="recovery knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog12image1.webp" alt="Exercises After Knee Replacement: A Complete Guide to Recovery" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -395,7 +415,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="medical-conditions knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog11image1.jpg" alt="Knee Replacement for Diabetic Patients: Is It Safe?" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -437,7 +457,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="arthritis">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog10image1.webp" alt="Can Knee Arthritis Be Treated Without Surgery?" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -479,7 +499,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="comparisons knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog9image1.webp" alt="Bilateral Knee Replacement: Pros and Cons" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -521,7 +541,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="arthritis">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog8image1.webp" alt="Stage 4 Knee Arthritis: Symptoms, Causes & Treatment" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -563,7 +583,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="comparisons arthritis knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog7image1.webp" alt="PRP vs Knee Replacement: Which Is Better?" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -605,7 +625,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="knee-replacement arthritis">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog6image1.webp" alt="15 Early Signs You Need a Knee Replacement" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -647,7 +667,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="recovery knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog5image1.png" alt="Recovery Timeline After Knee Replacement" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -689,7 +709,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="arthritis">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog4image1.jpg" alt="Weight Loss and Knee Pain" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -731,7 +751,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog3image1.png" alt="How Long Does a Knee Implant Last" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -773,7 +793,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="arthritis">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/blog2image1.jpg" alt="How to Prevent Knee Arthritis" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -815,7 +835,7 @@
           </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" data-category="knee-replacement">
           <div class="blog-card-img-wrap">
             <div class="blog-card-img">
               <img src="assets/madhuramblogimag.png" alt="Robotic Knee Replacement in Mysore" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -997,9 +1017,63 @@
     </div>
   </footer>
 
+  <!-- Floating Mobile Quick-Action Dock (Visible on Mobile <= 768px) -->
+  <aside class="mobile-bottom-dock" aria-label="Quick Mobile Actions">
+    <a href="tel:+919901768877" class="mbd-btn mbd-call" aria-label="Call Doctor Now">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919901768877?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20inquire%20about%20a%20knee%20consultation." target="_blank" rel="noopener noreferrer" class="mbd-btn mbd-whatsapp" aria-label="Chat on WhatsApp">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.07-1.748-.393-.85-.353-1.423-.847-1.956-1.38-.535-.533-1.029-1.106-1.382-1.956-.463-1.114-.438-1.436-.393-1.748.05-.333.419-1.026.824-1.17.133-.048.28-.069.412-.069.155 0 .285.006.402.024.135.021.28.096.345.244.133.303.46 1.11.501 1.192.042.083.07.18.014.293-.056.113-.083.183-.166.281-.083.098-.175.22-.25.295-.083.084-.17.176-.073.343.097.166.432.712.928 1.154.638.568 1.176.744 1.343.827.166.083.264.07.362-.042.098-.112.417-.487.528-.654.111-.167.222-.139.375-.083.153.056.97.458 1.137.541.167.083.278.125.319.194.042.069.042.402-.102.807z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="index.html#appointment" class="mbd-btn mbd-book" aria-label="Book Appointment">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span>Book Visit</span>
+    </a>
+  </aside>
+
   <!-- Scripts -->
   <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script defer src="app.js?v=1.1"></script>
+  <script>
+    // Blog Category Filter
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterChips = document.querySelectorAll('.blog-filter-chip');
+      const blogCards = document.querySelectorAll('.blog-card');
+      if (!filterChips.length || !blogCards.length) return;
+
+      filterChips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          filterChips.forEach(function (c) {
+            c.classList.remove('active');
+            c.setAttribute('aria-selected', 'false');
+          });
+          chip.classList.add('active');
+          chip.setAttribute('aria-selected', 'true');
+
+          const filter = chip.getAttribute('data-filter');
+          blogCards.forEach(function (card) {
+            const categories = card.getAttribute('data-category') || '';
+            if (filter === 'all' || categories.split(' ').includes(filter)) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

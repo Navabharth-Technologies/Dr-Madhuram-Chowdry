@@ -665,7 +665,12 @@ function scrollToSection(id) {
       counterTicking = true;
     }
   }, { passive: true });
-  setTimeout(animateCounters, 1500); // try on initial render too
+  setTimeout(animateCounters, 300);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', animateCounters);
+  } else {
+    animateCounters();
+  }
 })();
 
 // ============================================================
