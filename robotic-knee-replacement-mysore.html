@@ -703,13 +703,44 @@
         <a href="index.html#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
         <a href="blog.html" class="nav-link active" data-section="doctorBlog">Blog</a>
         <a href="index.html#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
-        <a href="index.html#appointment" class="nav-cta-btn" data-i18n="nav_cta">Book Appointment</a>
+        <a href="tel:+916361652352" class="nav-cta-btn" data-i18n="nav_cta">Book Appointment</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"
+        <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark/light mode"
           title="Toggle dark/light mode">
-          🌙
+          <span class="toggle-track-icons" aria-hidden="true">
+            <svg class="track-icon track-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="track-icon track-moon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="toggle-thumb" aria-hidden="true">
+            <svg class="toggle-thumb-icon thumb-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" fill="currentColor" fill-opacity="0.3"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="toggle-thumb-icon thumb-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" fill-opacity="0.3"></path>
+            </svg>
+          </span>
         </button>
 
         <div class="lang-switcher" id="langSwitcher">
@@ -740,7 +771,7 @@
         <a href="index.html#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
         <a href="blog.html" class="drawer-link active">Blog</a>
         <a href="index.html#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
-        <a href="index.html#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Book Appointment</a>
+        <a href="tel:+916361652352" class="drawer-cta" data-i18n="nav_drawer_cta">Book Appointment</a>
 
         <div class="drawer-lang-row">
           <span class="drawer-lang-label">🌐 Language</span>
@@ -1080,7 +1111,7 @@
               </div>
             </div>
 
-            <a href="index.html#appointment" class="sidebar-cta-btn">Book an Appointment</a>
+            <a href="tel:+916361652352" class="sidebar-cta-btn">Book an Appointment</a>
           </div>
         </aside>
 
@@ -1128,7 +1159,7 @@
               </div>
               <div>
                 <div class="ci-label" data-i18n="label_phone_footer">Phone</div>
-                <div class="ci-value">+91 9008994827 (for appointments) <br>+91 9620307042 (for emergency)</div>
+                <div class="ci-value"><a href="tel:+916361652352">+91 63616 52352</a> (for appointments) <br><a href="tel:+919620307042">+91 9620307042</a> (for emergency)</div>
               </div>
             </div>
             <div class="contact-item">

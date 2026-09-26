@@ -8,11 +8,12 @@ const i18nData = {
     nav_home: "Home",
     nav_about: "About",
     nav_expertise: "Expertise",
+    nav_blog: "Blog",
     nav_contact: "Contact",
     nav_cta: "Book Appointment",
     nav_drawer_cta: "Book Appointment",
     hero_badge: "Accepting Knee Replacement Patients",
-    hero_name: "Dr. Madhuram Chowdry",
+    hero_name: "DR. MADHURAM CHOWDRY",
     hero_line1: "Knee Replacement",
     hero_line2: 'surgeon<span class="vb-dot">.</span>',
     stat_years: "Years Experience",
@@ -88,6 +89,10 @@ const i18nData = {
     service_5_title: "Post-Op Rehabilitation",
     service_5_sub: "Recovery & physiotherapy",
     service_5_desc: "Comprehensive physiotherapy and rehabilitation programs tailored for knee replacement patients — from in-hospital mobilisation to full return-to-activity milestones.",
+    blog_tag: "Health & Education",
+    blog_title: 'Dr. Madhuram\'s <span class="highlight-text">Blog</span>',
+    blog_sub: "Expert insights on knee health, surgery recovery, and orthopaedic wellness to help you make informed decisions.",
+    blog_view_all: "View All Articles",
     footer_name: "Dr. Madhuram Chowdry",
     footer_tagline: "MBBS, MS-Orthopedics",
     footer_desc: "Mysuru's leading knee replacement surgeon, dedicated to restoring mobility and eliminating knee pain through advanced robotic-assisted surgery and compassionate care.",
@@ -142,6 +147,7 @@ const i18nData = {
     nav_home: "ಮುಖಪುಟ",
     nav_about: "ಬಗ್ಗೆ",
     nav_expertise: "ಪರಿಣಿತಿ",
+    nav_blog: "ಬ್ಲಾಗ್",
     nav_contact: "ಸಂಪರ್ಕ",
     nav_cta: "ಅಪಾಯಿಂಟ್ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸಿ",
     nav_drawer_cta: "ಸಮಾಲೋಚನೆ ನಿಗದಿಪಡಿಸಿ",
@@ -222,6 +228,10 @@ const i18nData = {
     service_5_title: "ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ನಂತರದ ಪುನರ್ವಸತಿ",
     service_5_sub: "ಚೇತರಿಕೆ ಮತ್ತು ಫಿಸಿಯೋಥೆರಪಿ",
     service_5_desc: "ಮೊಣಕಾಲು ಬದಲಾವಣೆ ರೋಗಿಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಸಮಗ್ರ ಫಿಸಿಯೋಥೆರಪಿ ಮತ್ತು ಪುನರ್ವಸತಿ ಕಾರ್ಯಕ್ರಮಗಳು — ಆಸ್ಪತ್ರೆಯ ಒಳಗಿನ ಚಟುವಟಿಕೆಯಿಂದ ಪೂರ್ಣ ಚಟುವಟಿಕೆಗೆ ಮರಳುವವರೆಗೆ.",
+    blog_tag: "ಆರೋಗ್ಯ ಮತ್ತು ಶಿಕ್ಷಣ",
+    blog_title: 'ಡಾ. ಮಧುರಾಮ್ ಅವರ <span class="highlight-text">ಬ್ಲಾಗ್</span>',
+    blog_sub: "ಮೊಣಕಾಲಿನ ಆರೋಗ್ಯ, ಶಸ್ತ್ರಚಿಕಿತ್ಸೆಯ ಚೇತರಿಕೆ ಮತ್ತು ಕೀಲು ಕ್ಷೇಮದ ಬಗ್ಗೆ ತಜ್ಞರ ಸಲಹೆಗಳು.",
+    blog_view_all: "ಎಲ್ಲಾ ಲೇಖನಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
     footer_name: "ಡಾ. ಮಧು ರಾಮ್ ಚೌದ್ರಿ",
     footer_tagline: "MBBS, MS-Orthopedics",
     footer_desc: "ಮೈಸೂರಿನ ಪ್ರಮುಖ ಮೊಣಕಾಲು ಬದಲಾವಣೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸಕರು, ಸುಧಾರಿತ ರೊಬೊಟಿಕ್-ಸಹಾಯದ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಮತ್ತು ಕಾಳಜಿಯುಕ್ತ ಆರೈಕೆಯ ಮೂಲಕ ಚಲನಶೀಲತೆಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಮತ್ತು ಮೊಣಕಾಲು ನೋವನ್ನು ಹೋಗಲಾಡಿಸಲು ಸಮರ್ಪಿತರಾಗಿದ್ದಾರೆ.",
@@ -357,7 +367,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   }
 
   // Active section detection — only runs on pages that have these sections (e.g. index.html)
-  const sections = ['videoBanner', 'expertise', 'testimonials', 'appointment', 'portal', 'contact'];
+  const sections = ['videoBanner', 'aboutDoctor', 'expertise', 'doctorBlog', 'testimonials', 'appointment', 'portal', 'contact'];
   const hasSections = !!document.getElementById('videoBanner'); // Only true on index.html
   function updateActiveLink() {
     if (!hasSections) return; // Skip on about.html — active link is set in HTML
@@ -578,16 +588,30 @@ function scrollToSection(id) {
     );
   });
 
-  // Hex items
+  // Hex items - clean centered entrance animation
   document.querySelectorAll('.hex-item').forEach((el, i) => {
     gsap.fromTo(el,
-      { y: 25, opacity: 0 },
+      { y: 28, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.5, ease: 'power3.out', delay: i * 0.07,
-        scrollTrigger: { trigger: '#hexGrid', start: 'top 100%', toggleActions: 'play none none none', once: true }
+        y: 0, opacity: 1, duration: 0.55, ease: 'power3.out', delay: (i % 3) * 0.08,
+        scrollTrigger: { trigger: '#hexGrid', start: 'top 88%', toggleActions: 'play none none none', once: true },
+        onComplete: () => { gsap.set(el, { clearProps: 'transform' }); }
       }
     );
   });
+
+  // Doctor blog cards
+  if (document.querySelector('#doctorBlog')) {
+    document.querySelectorAll('#doctorBlog .blog-card').forEach((el, i) => {
+      gsap.fromTo(el,
+        { y: 25, opacity: 0 },
+        {
+          y: 0, opacity: 1, duration: 0.5, ease: 'power3.out', delay: i * 0.08,
+          scrollTrigger: { trigger: '#doctorBlog', start: 'top 95%', toggleActions: 'play none none none', once: true }
+        }
+      );
+    });
+  }
 
   // Form
   if (document.querySelector('.form-wrapper')) {
@@ -836,7 +860,7 @@ function submitForm() {
   ].join('\n');
 
   const encodedMsg = encodeURIComponent(message);
-  const whatsappURL = `https://wa.me/919008994827?text=${encodedMsg}`;
+  const whatsappURL = `https://wa.me/919620307042?text=${encodedMsg}`;
 
   // Use anchor click to bypass popup blockers
   const a = document.createElement('a');
@@ -1124,35 +1148,71 @@ function notifyPortal() {
 console.log('%c Dr. Madhuram Chowdry — Website Loaded ✔', 'background:#06080F;color:#38bdf8;font-size:14px;padding:6px 12px;border-radius:4px;font-weight:bold;');
 
 // ============================================================
-// THEME TOGGLE — dark / light mode with localStorage
+// THEME TOGGLE — dark / light mode toggle switch
 // ============================================================
 (function initTheme() {
   const html = document.documentElement;
-  const toggleBtn = document.getElementById('themeToggle');
+  const toggleBtns = document.querySelectorAll('.theme-toggle, #themeToggle');
 
-  // Icons
-  const MOON = '🌙';
-  const SUN = '☀️';
+  const TOGGLE_SWITCH_HTML = `
+    <span class="toggle-track-icons" aria-hidden="true">
+      <svg class="track-icon track-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="track-icon track-moon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </span>
+    <span class="toggle-thumb" aria-hidden="true">
+      <svg class="toggle-thumb-icon thumb-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5" fill="currentColor" fill-opacity="0.3"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="toggle-thumb-icon thumb-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" fill-opacity="0.3"></path>
+      </svg>
+    </span>`;
 
-  // Load saved preference; default is light
-  const saved = localStorage.getItem('drChowdryTheme') || 'light';
-  applyTheme(saved);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
+  // Inject switch structure into each toggle button if not already present
+  toggleBtns.forEach((btn) => {
+    if (!btn.querySelector('.toggle-thumb')) {
+      btn.innerHTML = TOGGLE_SWITCH_HTML;
+    }
+    btn.setAttribute('role', 'switch');
+    btn.addEventListener('click', () => {
       const current = html.getAttribute('data-theme') || 'light';
       const next = current === 'light' ? 'dark' : 'light';
       applyTheme(next);
       localStorage.setItem('drChowdryTheme', next);
     });
-  }
+  });
+
+  // Load saved preference; default is light
+  const saved = localStorage.getItem('drChowdryTheme') || 'light';
+  applyTheme(saved);
 
   function applyTheme(theme) {
     html.setAttribute('data-theme', theme);
-    if (toggleBtn) {
-      toggleBtn.textContent = theme === 'dark' ? SUN : MOON;
-      toggleBtn.title = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    }
+    toggleBtns.forEach((btn) => {
+      btn.setAttribute('aria-checked', theme === 'dark' ? 'true' : 'false');
+      btn.setAttribute('title', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+    });
   }
 })();
 

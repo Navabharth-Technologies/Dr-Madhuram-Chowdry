@@ -36,7 +36,7 @@
     "name": "Dr. Madhuram Chowdry",
     "image": "https://drmadhuramchowdryortho.com/assets/doctor-portrait.png",
     "url": "https://drmadhuramchowdryortho.com",
-    "telephone": "+91 9008994827",
+    "telephone": "+91 63616 52352",
     "medicalSpecialty": "Orthopedic",
     "address": {
       "@type": "PostalAddress",
@@ -208,13 +208,44 @@
         <a href="index.html#expertise" class="nav-link" data-section="expertise" data-i18n="nav_expertise">Expertise</a>
         <a href="blog.html" class="nav-link active" data-section="doctorBlog">Blog</a>
         <a href="index.html#contact" class="nav-link" data-section="contact" data-i18n="nav_contact">Contact</a>
-        <a href="index.html#appointment" class="nav-cta-btn" data-i18n="nav_cta">Book Appointment</a>
+        <a href="tel:+916361652352" class="nav-cta-btn" data-i18n="nav_cta">Book Appointment</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"
+        <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="Toggle dark/light mode"
           title="Toggle dark/light mode">
-          🌙
+          <span class="toggle-track-icons" aria-hidden="true">
+            <svg class="track-icon track-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="track-icon track-moon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+          <span class="toggle-thumb" aria-hidden="true">
+            <svg class="toggle-thumb-icon thumb-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5" fill="currentColor" fill-opacity="0.3"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="toggle-thumb-icon thumb-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" fill-opacity="0.3"></path>
+            </svg>
+          </span>
         </button>
 
         <div class="lang-switcher" id="langSwitcher">
@@ -245,7 +276,7 @@
         <a href="index.html#expertise" class="drawer-link" data-i18n="nav_expertise">Expertise</a>
         <a href="blog.html" class="drawer-link active">Blog</a>
         <a href="index.html#contact" class="drawer-link" data-i18n="nav_contact">Contact</a>
-        <a href="index.html#appointment" class="drawer-cta" data-i18n="nav_drawer_cta">Book Appointment</a>
+        <a href="tel:+916361652352" class="drawer-cta" data-i18n="nav_drawer_cta">Book Appointment</a>
 
         <!-- Language switcher inside drawer -->
         <div class="drawer-lang-row">
@@ -919,7 +950,7 @@
               </div>
               <div>
                 <div class="ci-label" data-i18n="label_phone_footer">Phone</div>
-                <div class="ci-value">+91 9008994827 (for appointments) <br>+91 9620307042 (for emergency)</div>
+                <div class="ci-value"><a href="tel:+916361652352">+91 63616 52352</a> (for appointments) <br><a href="tel:+919620307042">+91 9620307042</a> (for emergency)</div>
               </div>
             </div>
             <div class="contact-item">
@@ -1019,19 +1050,19 @@
 
   <!-- Floating Mobile Quick-Action Dock (Visible on Mobile <= 768px) -->
   <aside class="mobile-bottom-dock" aria-label="Quick Mobile Actions">
-    <a href="tel:+919901768877" class="mbd-btn mbd-call" aria-label="Call Doctor Now">
+    <a href="tel:+916361652352" class="mbd-btn mbd-call" aria-label="Call Doctor Now">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
       </svg>
       <span>Call</span>
     </a>
-    <a href="https://wa.me/919901768877?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20inquire%20about%20a%20knee%20consultation." target="_blank" rel="noopener noreferrer" class="mbd-btn mbd-whatsapp" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20inquire%20about%20a%20knee%20consultation." target="_blank" rel="noopener noreferrer" class="mbd-btn mbd-whatsapp" aria-label="Chat on WhatsApp">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.07-1.748-.393-.85-.353-1.423-.847-1.956-1.38-.535-.533-1.029-1.106-1.382-1.956-.463-1.114-.438-1.436-.393-1.748.05-.333.419-1.026.824-1.17.133-.048.28-.069.412-.069.155 0 .285.006.402.024.135.021.28.096.345.244.133.303.46 1.11.501 1.192.042.083.07.18.014.293-.056.113-.083.183-.166.281-.083.098-.175.22-.25.295-.083.084-.17.176-.073.343.097.166.432.712.928 1.154.638.568 1.176.744 1.343.827.166.083.264.07.362-.042.098-.112.417-.487.528-.654.111-.167.222-.139.375-.083.153.056.97.458 1.137.541.167.083.278.125.319.194.042.069.042.402-.102.807z"/>
       </svg>
       <span>WhatsApp</span>
     </a>
-    <a href="index.html#appointment" class="mbd-btn mbd-book" aria-label="Book Appointment">
+    <a href="tel:+916361652352" class="mbd-btn mbd-book" aria-label="Book Appointment">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
         <line x1="16" y1="2" x2="16" y2="6"></line>
