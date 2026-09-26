@@ -343,16 +343,14 @@
 
       <div class="hex-grid" id="hexGrid">
         <div class="hex-item" data-index="0">
-          <div class="hex-shape">
+          <div class="hex-shape" role="button" aria-expanded="false" tabindex="0">
             <div class="hex-image-wrap">
               <img src="assets/service-1-minimally-invasive.jpg" alt="Minimally Invasive Knee Replacement" class="hex-card-img" width="400" height="267" loading="lazy" decoding="async">
               <div class="hex-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <line x1="24" y1="8" x2="24" y2="40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-                  <path d="M14 16L24 12L34 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M14 32L24 38L34 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+                  <path d="M14 16L24 12L34 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M14 32L24 38L34 32" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2" />
                 </svg>
               </div>
@@ -361,21 +359,75 @@
               <h3 data-i18n="service_0_title">Minimally Invasive Knee Replacement</h3>
               <p data-i18n="service_0_sub">Full joint resurfacing</p>
             </div>
+            <div class="hex-expand-indicator" aria-hidden="true">
+              <span class="hei-text">View Details</span>
+              <svg class="hei-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
           <div class="hex-expand" id="hexExpand-0">
             <div class="expand-content">
-              <div class="expand-media">
-                <img src="assets/service-1-minimally-invasive.jpg" alt="Minimally Invasive Knee Replacement" class="expand-img" width="300" height="200" loading="lazy" decoding="async">
+              <div class="expand-media-col">
+                <div class="expand-media">
+                  <img src="assets/service-1-minimally-invasive.jpg" alt="Minimally Invasive Knee Replacement" class="expand-img" width="400" height="267" loading="lazy" decoding="async">
+                  <span class="expand-media-badge">Primary Specialty</span>
+                </div>
+                <div class="expand-quick-stats">
+                  <div class="eqs-item">
+                    <span class="eqs-val">24 Hrs</span>
+                    <span class="eqs-lbl">Walk Timeline</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">25-30 Yrs</span>
+                    <span class="eqs-lbl">Implant Life</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">4-5 Inch</span>
+                    <span class="eqs-lbl">Small Incision</span>
+                  </div>
+                </div>
               </div>
-              <div class="expand-info">
-                <div class="expand-icon">🦴</div>
-                <h4 data-i18n="service_0_title">Minimally Invasive Knee Replacement</h4>
-                <p data-i18n="service_0_desc">Complete resurfacing of the knee joint using high-grade titanium and
-                  polyethylene implants. Ideal for
-                  severe arthritis, providing long-lasting pain relief and restored mobility.</p>
+              <div class="expand-info-col">
+                <div class="expand-header-row">
+                  <h4 data-i18n="service_0_title">Minimally Invasive Knee Replacement</h4>
+                  <span class="expand-type-pill">Full Joint Resurfacing</span>
+                </div>
+                <p class="expand-desc">
+                  Minimally invasive knee replacement is an advanced surgical technique where damaged joint cartilage and worn bone are resurfaced through a much smaller incision (4–5 inches compared to traditional 8–10 inches). By avoiding disruption to the quadriceps tendon and surrounding muscle tissues, patients experience significantly less post-operative pain, minimal blood loss, minimal scarring, and faster joint stability.
+                </p>
+                <div class="expand-features-grid">
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Tissue Preservation:</strong> Quad-sparing approach minimizes muscle trauma</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Rapid Recovery:</strong> Mobilisation on feet within 24 hours of surgery</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Premium Implants:</strong> High-grade titanium &amp; cross-linked polyethylene</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Ideal For:</strong> Advanced osteoarthritis, cartilage loss, chronic pain</div>
+                  </div>
+                </div>
                 <div class="expand-tags">
-                  <span>Titanium Implant</span><span>Arthritis</span><span>Robotic-Assisted</span><span>Fast
-                    Recovery</span>
+                  <span>Titanium Implants</span>
+                  <span>Quad-Sparing</span>
+                  <span>Walk in 24h</span>
+                  <span>Minimal Blood Loss</span>
+                  <span>25+ Year Durability</span>
+                </div>
+                <div class="expand-actions">
+                  <a href="tel:+916361652352" class="expand-call-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Consult Doctor: +91 63616 52352</span>
+                  </a>
+                  <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20consult%20regarding%20Minimally%20Invasive%20Knee%20Replacement" target="_blank" rel="noopener" class="expand-whatsapp-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -383,7 +435,7 @@
         </div>
 
         <div class="hex-item" data-index="1">
-          <div class="hex-shape">
+          <div class="hex-shape" role="button" aria-expanded="false" tabindex="0">
             <div class="hex-image-wrap">
               <img src="assets/service-2-robotic-knee.jpg" alt="Robotic Knee Replacement" class="hex-card-img" width="400" height="267" loading="lazy" decoding="async">
               <div class="hex-icon-badge" aria-hidden="true">
@@ -398,18 +450,75 @@
               <h3 data-i18n="service_1_title">Robotic Knee Replacement</h3>
               <p data-i18n="service_1_sub">Robotic-assisted surgery</p>
             </div>
+            <div class="hex-expand-indicator" aria-hidden="true">
+              <span class="hei-text">View Details</span>
+              <svg class="hei-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
           <div class="hex-expand" id="hexExpand-1">
             <div class="expand-content">
-              <div class="expand-media">
-                <img src="assets/service-2-robotic-knee.jpg" alt="Robotic Knee Replacement" class="expand-img" width="300" height="200" loading="lazy" decoding="async">
+              <div class="expand-media-col">
+                <div class="expand-media">
+                  <img src="assets/service-2-robotic-knee.jpg" alt="Robotic Knee Replacement" class="expand-img" width="400" height="267" loading="lazy" decoding="async">
+                  <span class="expand-media-badge">Robotic Precision</span>
+                </div>
+                <div class="expand-quick-stats">
+                  <div class="eqs-item">
+                    <span class="eqs-val">&lt; 0.5 mm</span>
+                    <span class="eqs-lbl">Alignment</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">3D CT</span>
+                    <span class="eqs-lbl">Pre-Planning</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">100%</span>
+                    <span class="eqs-lbl">Bone Sparing</span>
+                  </div>
+                </div>
               </div>
-              <div class="expand-info">
-                <div class="expand-icon">🤖</div>
-                <h4 data-i18n="service_1_title">Robotic Knee Replacement</h4>
-                <p data-i18n="service_1_desc">Advanced robotic-assisted technology provides unmatched precision in implant alignment and placement. Minimizes damage to surrounding healthy tissue for a faster recovery and a natural-feeling knee.</p>
+              <div class="expand-info-col">
+                <div class="expand-header-row">
+                  <h4 data-i18n="service_1_title">Robotic Knee Replacement</h4>
+                  <span class="expand-type-pill">Robotic-Assisted Surgery</span>
+                </div>
+                <p class="expand-desc">
+                  Advanced robotic-assisted technology provides unmatched sub-millimeter precision in implant sizing, alignment, and placement. Dr. Madhuram Chowdry utilizes 3D computer mapping to execute bone resurfacing with pinpoint accuracy, balancing soft tissues throughout flexion and extension for a truly natural knee feel.
+                </p>
+                <div class="expand-features-grid">
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Sub-Millimeter Accuracy:</strong> Eliminates human alignment variance</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Personalized 3D Model:</strong> Mapped to your exact bone anatomy</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Bone &amp; Ligament Preservation:</strong> Removes only diseased cartilage</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Ideal For:</strong> Active lifestyles, complex deformities, maximum longevity</div>
+                  </div>
+                </div>
                 <div class="expand-tags">
-                  <span>Robotic Precision</span><span>Minimally Invasive</span><span>Fast Recovery</span>
+                  <span>Robotic-Assisted</span>
+                  <span>3D Pre-Plan</span>
+                  <span>Sub-Millimeter Precision</span>
+                  <span>Natural Knee Feel</span>
+                  <span>Rapid Recovery</span>
+                </div>
+                <div class="expand-actions">
+                  <a href="tel:+916361652352" class="expand-call-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Consult Doctor: +91 63616 52352</span>
+                  </a>
+                  <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20consult%20regarding%20Robotic%20Knee%20Replacement" target="_blank" rel="noopener" class="expand-whatsapp-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -417,14 +526,13 @@
         </div>
 
         <div class="hex-item" data-index="2">
-          <div class="hex-shape">
+          <div class="hex-shape" role="button" aria-expanded="false" tabindex="0">
             <div class="hex-image-wrap">
               <img src="assets/service-3-revision-knee.jpg" alt="Revision Knee Surgery" class="hex-card-img" width="400" height="267" loading="lazy" decoding="async">
               <div class="hex-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2" />
-                  <path d="M16 24 Q20 18 24 22 Q28 26 32 24" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" />
+                  <path d="M16 24 Q20 18 24 22 Q28 26 32 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 </svg>
               </div>
             </div>
@@ -432,20 +540,75 @@
               <h3 data-i18n="service_2_title">Revision Knee Surgery</h3>
               <p data-i18n="service_2_sub">Implant replacement &amp; repair</p>
             </div>
+            <div class="hex-expand-indicator" aria-hidden="true">
+              <span class="hei-text">View Details</span>
+              <svg class="hei-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
           <div class="hex-expand" id="hexExpand-2">
             <div class="expand-content">
-              <div class="expand-media">
-                <img src="assets/service-3-revision-knee.jpg" alt="Revision Knee Surgery" class="expand-img" width="300" height="200" loading="lazy" decoding="async">
+              <div class="expand-media-col">
+                <div class="expand-media">
+                  <img src="assets/service-3-revision-knee.jpg" alt="Revision Knee Surgery" class="expand-img" width="400" height="267" loading="lazy" decoding="async">
+                  <span class="expand-media-badge">Complex Joint Repair</span>
+                </div>
+                <div class="expand-quick-stats">
+                  <div class="eqs-item">
+                    <span class="eqs-val">Modular</span>
+                    <span class="eqs-lbl">Prostheses</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Stability</span>
+                    <span class="eqs-lbl">Restored</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Expert</span>
+                    <span class="eqs-lbl">Re-operation</span>
+                  </div>
+                </div>
               </div>
-              <div class="expand-info">
-                <div class="expand-icon">🛠️</div>
-                <h4 data-i18n="service_2_title">Revision Knee Surgery</h4>
-                <p data-i18n="service_2_desc">Specialised surgery to replace or repair a failed or worn-out knee implant.
-                  Our team handles the most
-                  complex revision cases with cutting-edge implants and techniques.</p>
+              <div class="expand-info-col">
+                <div class="expand-header-row">
+                  <h4 data-i18n="service_2_title">Revision Knee Surgery</h4>
+                  <span class="expand-type-pill">Implant Replacement &amp; Repair</span>
+                </div>
+                <p class="expand-desc">
+                  Specialized surgery performed to replace or repair an existing knee implant that has experienced wear, aseptic loosening, instability, or complications after 15–20+ years. Dr. Chowdry utilizes modular revision prostheses, metal augments, and bone grafting techniques to re-establish anatomical stability and comfortable weight-bearing.
+                </p>
+                <div class="expand-features-grid">
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Advanced Reconstruction:</strong> Constrained and hinged modular options</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Comprehensive Diagnostics:</strong> CT imaging, joint fluid and lab workup</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Bone Augmentation:</strong> Trabecular metal cones for severe bone loss</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Ideal For:</strong> Loose implants, stiffness, mechanical wear, fractures</div>
+                  </div>
+                </div>
                 <div class="expand-tags">
-                  <span>Implant Failure</span><span>Complex Cases</span><span>Re-operation</span>
+                  <span>Revision Specialist</span>
+                  <span>Bone Augmentation</span>
+                  <span>Modular Implants</span>
+                  <span>Joint Reconstruction</span>
+                  <span>Stability Restored</span>
+                </div>
+                <div class="expand-actions">
+                  <a href="tel:+916361652352" class="expand-call-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Consult Doctor: +91 63616 52352</span>
+                  </a>
+                  <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20consult%20regarding%20Revision%20Knee%20Surgery" target="_blank" rel="noopener" class="expand-whatsapp-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -453,14 +616,13 @@
         </div>
 
         <div class="hex-item" data-index="3">
-          <div class="hex-shape">
+          <div class="hex-shape" role="button" aria-expanded="false" tabindex="0">
             <div class="hex-image-wrap">
               <img src="assets/service-4-knee-arthroscopy.jpg" alt="Knee Arthroscopy" class="hex-card-img" width="400" height="267" loading="lazy" decoding="async">
               <div class="hex-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="16" r="7" stroke="currentColor" stroke-width="2" />
-                  <path d="M14 40C14 33.373 18.477 28 24 28C29.523 28 34 33.373 34 40" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" />
+                  <path d="M14 40C14 33.373 18.477 28 24 28C29.523 28 34 33.373 34 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                   <line x1="18" y1="34" x2="30" y2="34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                 </svg>
               </div>
@@ -469,20 +631,75 @@
               <h3 data-i18n="service_3_title">Knee Arthroscopy</h3>
               <p data-i18n="service_3_sub">Keyhole joint surgery</p>
             </div>
+            <div class="hex-expand-indicator" aria-hidden="true">
+              <span class="hei-text">View Details</span>
+              <svg class="hei-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
           <div class="hex-expand" id="hexExpand-3">
             <div class="expand-content">
-              <div class="expand-media">
-                <img src="assets/service-4-knee-arthroscopy.jpg" alt="Knee Arthroscopy" class="expand-img" width="300" height="200" loading="lazy" decoding="async">
+              <div class="expand-media-col">
+                <div class="expand-media">
+                  <img src="assets/service-4-knee-arthroscopy.jpg" alt="Knee Arthroscopy" class="expand-img" width="400" height="267" loading="lazy" decoding="async">
+                  <span class="expand-media-badge">Day-Care Procedure</span>
+                </div>
+                <div class="expand-quick-stats">
+                  <div class="eqs-item">
+                    <span class="eqs-val">&lt; 5 mm</span>
+                    <span class="eqs-lbl">Keyhole</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Same Day</span>
+                    <span class="eqs-lbl">Discharge</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Zero</span>
+                    <span class="eqs-lbl">Muscle Cut</span>
+                  </div>
+                </div>
               </div>
-              <div class="expand-info">
-                <div class="expand-icon">🔬</div>
-                <h4 data-i18n="service_3_title">Knee Arthroscopy</h4>
-                <p data-i18n="service_3_desc">Minimally invasive keyhole surgery to diagnose and treat meniscal tears,
-                  ligament injuries, cartilage
-                  damage, and loose bodies inside the knee joint.</p>
+              <div class="expand-info-col">
+                <div class="expand-header-row">
+                  <h4 data-i18n="service_3_title">Knee Arthroscopy</h4>
+                  <span class="expand-type-pill">Keyhole Joint Surgery</span>
+                </div>
+                <p class="expand-desc">
+                  Ultra-minimally invasive day-care procedure where a high-definition 4K arthroscope and micro-instruments are placed through small 5mm punctures. Dr. Chowdry evaluates the articular surfaces in real time and treats meniscus tears, cartilage damage, loose cartilage fragments, and synovial inflammation without opening the joint.
+                </p>
+                <div class="expand-features-grid">
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Tiny Keyhole Incisions:</strong> Fast cosmetic healing with no large scars</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Same-Day Return Home:</strong> Walk comfortably on the day of surgery</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Targeted Treatment:</strong> Precise meniscus repair, trimming &amp; chondroplasty</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Ideal For:</strong> Sudden knee locking, meniscus tears, athletic joint injuries</div>
+                  </div>
+                </div>
                 <div class="expand-tags">
-                  <span>Meniscal Tear</span><span>ACL Repair</span><span>Cartilage</span><span>Keyhole</span>
+                  <span>Keyhole Surgery</span>
+                  <span>Day-Care Procedure</span>
+                  <span>Meniscus Repair</span>
+                  <span>Same-Day Walking</span>
+                  <span>Minimal Downtime</span>
+                </div>
+                <div class="expand-actions">
+                  <a href="tel:+916361652352" class="expand-call-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Consult Doctor: +91 63616 52352</span>
+                  </a>
+                  <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20consult%20regarding%20Knee%20Arthroscopy" target="_blank" rel="noopener" class="expand-whatsapp-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -490,13 +707,12 @@
         </div>
 
         <div class="hex-item" data-index="4">
-          <div class="hex-shape">
+          <div class="hex-shape" role="button" aria-expanded="false" tabindex="0">
             <div class="hex-image-wrap">
               <img src="assets/service-5-sports-injuries.jpg" alt="Sports Knee Injuries" class="hex-card-img" width="400" height="267" loading="lazy" decoding="async">
               <div class="hex-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 8L16 16H8L14 22L11 30L20 24L29 30L26 22L32 16H24L20 8Z" stroke="currentColor"
-                    stroke-width="2" stroke-linejoin="round" />
+                  <path d="M20 8L16 16H8L14 22L11 30L20 24L29 30L26 22L32 16H24L20 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
                   <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.4" />
                 </svg>
               </div>
@@ -505,20 +721,74 @@
               <h3 data-i18n="service_4_title">Sports Knee Injuries</h3>
               <p data-i18n="service_4_sub">ACL, meniscus &amp; ligaments</p>
             </div>
+            <div class="hex-expand-indicator" aria-hidden="true">
+              <span class="hei-text">View Details</span>
+              <svg class="hei-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
           <div class="hex-expand" id="hexExpand-4">
             <div class="expand-content">
-              <div class="expand-media">
-                <img src="assets/service-5-sports-injuries.jpg" alt="Sports Knee Injuries" class="expand-img" width="300" height="200" loading="lazy" decoding="async">
+              <div class="expand-media-col">
+                <div class="expand-media">
+                  <img src="assets/service-5-sports-injuries.jpg" alt="Sports Knee Injuries" class="expand-img" width="400" height="267" loading="lazy" decoding="async">
+                  <span class="expand-media-badge">Sports Medicine</span>
+                </div>
+                <div class="expand-quick-stats">
+                  <div class="eqs-item">
+                    <span class="eqs-val">ACL / PCL</span>
+                    <span class="eqs-lbl">Reconstruction</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Autograft</span>
+                    <span class="eqs-lbl">High Strength</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Phased</span>
+                    <span class="eqs-lbl">Sport Return</span>
+                  </div>
+                </div>
               </div>
-              <div class="expand-info">
-                <div class="expand-icon">⚽</div>
-                <h4 data-i18n="service_4_title">Sports Knee Injuries</h4>
-                <p data-i18n="service_4_desc">Expert management of sports-related knee injuries including ACL/PCL tears,
-                  meniscal injuries, patellar
-                  dislocations, and collateral ligament damage for athletes of all levels.</p>
+              <div class="expand-info-col">
+                <div class="expand-header-row">
+                  <h4 data-i18n="service_4_title">Sports Knee Injuries</h4>
+                  <span class="expand-type-pill">ACL, Meniscus &amp; Ligaments</span>
+                </div>
+                <p class="expand-desc">
+                  Comprehensive arthroscopic treatment for athletes and active individuals with acute ligament ruptures (ACL/PCL/MCL/LCL), patellar dislocations, and complex meniscus tears. Dr. Chowdry performs anatomical reconstruction using bio-absorbable fixations and custom autografts for supreme rotational joint stability.
+                </p>
+                <div class="expand-features-grid">
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Anatomical Placement:</strong> Recreates natural ligament biomechanics</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Meniscus Preservation:</strong> Advanced inside-out and all-inside repair</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Functional Sports Rehab:</strong> Safe progression back to sprinting and agility</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Ideal For:</strong> High-impact athletes, runners, sports trauma, joint instability</div>
+                  </div>
+                </div>
                 <div class="expand-tags">
-                  <span>ACL Reconstruction</span><span>PCL Repair</span><span>Meniscus</span><span>Athletes</span>
+                  <span>Anatomical ACL</span>
+                  <span>Meniscus Preservation</span>
+                  <span>Sports Rehabilitation</span>
+                  <span>High Rotational Stability</span>
+                </div>
+                <div class="expand-actions">
+                  <a href="tel:+916361652352" class="expand-call-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Consult Doctor: +91 63616 52352</span>
+                  </a>
+                  <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20consult%20regarding%20Sports%20Injury%20and%20Arthroscopy" target="_blank" rel="noopener" class="expand-whatsapp-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -526,7 +796,7 @@
         </div>
 
         <div class="hex-item" data-index="5">
-          <div class="hex-shape">
+          <div class="hex-shape" role="button" aria-expanded="false" tabindex="0">
             <div class="hex-image-wrap">
               <img src="assets/service-6-post-op-rehab.jpg" alt="Post-Op Rehabilitation" class="hex-card-img" width="400" height="267" loading="lazy" decoding="async">
               <div class="hex-icon-badge" aria-hidden="true">
@@ -541,19 +811,75 @@
               <h3 data-i18n="service_5_title">Post-Op Rehabilitation</h3>
               <p data-i18n="service_5_sub">Recovery &amp; physiotherapy</p>
             </div>
+            <div class="hex-expand-indicator" aria-hidden="true">
+              <span class="hei-text">View Details</span>
+              <svg class="hei-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
           </div>
           <div class="hex-expand" id="hexExpand-5">
             <div class="expand-content">
-              <div class="expand-media">
-                <img src="assets/service-6-post-op-rehab.jpg" alt="Post-Op Rehabilitation" class="expand-img" width="300" height="200" loading="lazy" decoding="async">
+              <div class="expand-media-col">
+                <div class="expand-media">
+                  <img src="assets/service-6-post-op-rehab.jpg" alt="Post-Op Rehabilitation" class="expand-img" width="400" height="267" loading="lazy" decoding="async">
+                  <span class="expand-media-badge">Milestone-Based Care</span>
+                </div>
+                <div class="expand-quick-stats">
+                  <div class="eqs-item">
+                    <span class="eqs-val">Day 1</span>
+                    <span class="eqs-lbl">First Steps</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">0-120°</span>
+                    <span class="eqs-lbl">Range of Motion</span>
+                  </div>
+                  <div class="eqs-item">
+                    <span class="eqs-val">Dedicated</span>
+                    <span class="eqs-lbl">Physiotherapist</span>
+                  </div>
+                </div>
               </div>
-              <div class="expand-info">
-                <div class="expand-icon">🏃</div>
-                <h4 data-i18n="service_5_title">Post-Op Rehabilitation</h4>
-                <p data-i18n="service_5_desc">Comprehensive physiotherapy and rehabilitation programs tailored for knee
-                  replacement patients – from in-hospital mobilisation to full return-to-activity milestones.</p>
+              <div class="expand-info-col">
+                <div class="expand-header-row">
+                  <h4 data-i18n="service_5_title">Post-Op Rehabilitation</h4>
+                  <span class="expand-type-pill">Recovery &amp; Physiotherapy</span>
+                </div>
+                <p class="expand-desc">
+                  A structured clinical recovery protocol supervised directly by Dr. Madhuram Chowdry and dedicated orthopedic physiotherapists. From immediate bedside mobilization and Day-1 walking to stair training and quadriceps strengthening, every milestone is designed to ensure you regain complete independence pain-free.
+                </p>
+                <div class="expand-features-grid">
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Day-1 Mobilization:</strong> Assisted walking within 24 hours of surgery</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Structured Flexion Goals:</strong> 90° bend at 2 weeks, 110–120° at 6 weeks</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Home Exercise Guidance:</strong> Step-by-step video &amp; exercise illustrations</div>
+                  </div>
+                  <div class="ef-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    <div><strong>Ideal For:</strong> All knee replacement, revision &amp; arthroscopy patients</div>
+                  </div>
+                </div>
                 <div class="expand-tags">
-                  <span>Physiotherapy</span><span>Gait Training</span><span>Pain Management</span><span>Mobility</span>
+                  <span>Day-1 Walking</span>
+                  <span>Guided Physiotherapy</span>
+                  <span>Range of Motion</span>
+                  <span>Strength Recovery</span>
+                  <span>Long-Term Care</span>
+                </div>
+                <div class="expand-actions">
+                  <a href="tel:+916361652352" class="expand-call-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>Consult Doctor: +91 63616 52352</span>
+                  </a>
+                  <a href="https://wa.me/919620307042?text=Hello%20Dr.%20Madhuram%20Chowdry,%20I%20would%20like%20to%20consult%20regarding%20Post-Op%20Rehabilitation" target="_blank" rel="noopener" class="expand-whatsapp-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                    <span>WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </div>

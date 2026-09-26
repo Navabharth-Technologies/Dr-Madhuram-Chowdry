@@ -698,22 +698,48 @@ function scrollToSection(id) {
 })();
 
 // ============================================================
-// 6. SERVICE HEXAGONS — click to expand
+// 6. SERVICE PROCEDURE CARDS — click to expand cleanly
 // ============================================================
 (function initHexGrid() {
   const hexItems = document.querySelectorAll('.hex-item');
   hexItems.forEach((item, i) => {
     const shape = item.querySelector('.hex-shape');
-    shape.addEventListener('click', () => {
+    if (!shape) return;
+
+    shape.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+
       const isExpanded = item.classList.contains('expanded');
       // Collapse all
-      hexItems.forEach(h => h.classList.remove('expanded'));
-      // If it wasn't expanded, expand it
+      hexItems.forEach(h => {
+        h.classList.remove('expanded');
+        const shapeEl = h.querySelector('.hex-shape');
+        if (shapeEl) shapeEl.setAttribute('aria-expanded', 'false');
+        const ind = h.querySelector('.hei-text');
+        if (ind) ind.textContent = 'View Details';
+      });
+
+      // If it wasn't expanded, expand it cleanly
       if (!isExpanded) {
         item.classList.add('expanded');
-        gsap.from(item.querySelector('.expand-content'), {
-          duration: 0.4, y: -10, opacity: 0, ease: 'power3.out'
-        });
+        shape.setAttribute('aria-expanded', 'true');
+        const ind = item.querySelector('.hei-text');
+        if (ind) ind.textContent = '✕ Close Details';
+
+        const content = item.querySelector('.expand-content');
+        if (content && typeof gsap !== 'undefined') {
+          gsap.fromTo(content, 
+            { y: -10, opacity: 0 }, 
+            { duration: 0.38, y: 0, opacity: 1, ease: 'power2.out', clearProps: 'transform' }
+          );
+        }
+
+        // Smoothly position so the entire dropdown is cleanly and fully visible
+        setTimeout(() => {
+          const rect = item.getBoundingClientRect();
+          const targetY = window.pageYOffset + rect.top - 80;
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }, 100);
       }
     });
   });
