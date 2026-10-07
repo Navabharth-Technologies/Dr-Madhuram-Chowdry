@@ -6487,14 +6487,14 @@ select option {
 
   /* 9. Blog Page & Blog Cards Phone View */
   .doctor-blog {
-    padding: 60px 0 50px !important;
+    padding: 36px 0 96px !important;
   }
 
   .blog-grid {
     grid-template-columns: 1fr !important;
-    gap: 18px !important;
+    gap: 20px !important;
     padding: 0 !important;
-    margin-top: 24px !important;
+    margin-top: 14px !important;
   }
 
   .blog-card {
@@ -6504,35 +6504,39 @@ select option {
   }
 
   .blog-card-img {
-    height: 180px !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    min-height: 180px !important;
+    max-height: 225px !important;
   }
 
   .blog-category-badge {
-    top: 10px !important;
-    left: 10px !important;
+    top: 12px !important;
+    left: 12px !important;
+    font-size: 0.7rem !important;
+    padding: 4px 11px !important;
+  }
+
+  .blog-read-time {
+    bottom: 12px !important;
+    right: 12px !important;
     font-size: 0.68rem !important;
     padding: 4px 10px !important;
   }
 
-  .blog-read-time {
-    bottom: 10px !important;
-    right: 10px !important;
-    font-size: 0.65rem !important;
-    padding: 3px 8px !important;
-  }
-
   .blog-card-body {
-    padding: 16px !important;
-    gap: 10px !important;
+    padding: 16px 16px 14px !important;
+    gap: 8px !important;
   }
 
   .blog-card-title {
-    font-size: 1.05rem !important;
-    line-height: 1.35 !important;
+    font-size: 1.12rem !important;
+    line-height: 1.36 !important;
   }
 
   .blog-card-excerpt {
-    font-size: 0.86rem !important;
+    font-size: 0.88rem !important;
     line-height: 1.55 !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 3 !important;
@@ -6543,14 +6547,17 @@ select option {
   .blog-card-footer {
     padding-top: 12px !important;
     gap: 10px !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
   }
 
   .blog-read-btn {
-    min-height: 42px !important;
-    padding: 9px 18px !important;
-    font-size: 0.82rem !important;
+    min-height: 38px !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
     margin-left: auto !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
   .blog-view-all {
