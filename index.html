@@ -24,7 +24,7 @@
   <!-- Fonts & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="premium.css">
+  <link rel="stylesheet" href="premium.css?v=3.2">
 
   <!-- JSON-LD Structured Data: Physician & MedicalClinic -->
   <script type="application/ld+json">
@@ -147,10 +147,29 @@
   <!-- ===================== HERO SECTION ===================== -->
   <section class="hero" id="homeHero">
     <div class="container hero-grid">
+      <!-- Doctor Consultation Image (On Top in Phone View) -->
+      <div class="hero-image-wrap">
+        <div class="hero-image-card">
+          <img src="assets/Mr. Madhuran Chowdry.png" alt="Dr. Madhuram Chowdry - Senior Consultant Orthopedic & Knee Replacement Surgeon in Mysuru" class="hero-doctor-img" width="1366" height="768" fetchpriority="high">
+          <div class="hero-floating-card">
+            <div class="floating-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="floating-text-primary">Medical Director &bull; A.R. Hospital</div>
+              <div class="floating-text-sub">Mysuru &amp; Aasare Hospital, Hunsur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Text Content -->
       <div class="hero-content">
         <div class="hero-badge-row">
           <span class="hero-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
             Specialist Knee Arthroplasty
@@ -160,14 +179,16 @@
         <h1 class="hero-title">Expert Knee Replacement &amp; Comprehensive Orthopedic Care in Mysuru</h1>
         
         <div class="hero-doctor-name">
-          Dr. Madhuram Chowdry | Orthopedic &amp; Knee Replacement Surgeon
+          <span class="hero-doc-name">Dr. Madhuram Chowdry</span>
+          <span class="hero-doc-sep">|</span>
+          <span class="hero-doc-title">Orthopedic &amp; Knee Replacement Surgeon</span>
         </div>
 
         <p class="hero-lead">
           Personalized orthopedic evaluation and treatment focused on improving mobility, managing joint pain and supporting recovery. Senior Consultant Orthopedic &amp; Knee Replacement Surgeon &amp; Medical Director at A.R. Hospital, Mysuru.
         </p>
 
-        <div style="margin-bottom:24px; font-weight:700; color:var(--color-gold-dark); font-size:1.05rem; letter-spacing:0.02em;">
+        <div class="hero-tagline">
           Healthy Joints. Active Life.
         </div>
 
@@ -188,23 +209,6 @@
           <div class="trust-item">
             <span class="trust-value">AO Trauma Trained</span>
             <span class="trust-label">Basic &amp; Advanced Fracture Care</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-image-wrap">
-        <div class="hero-image-card">
-          <img src="assets/Mr. Madhuran Chowdry.png" alt="Dr. Madhuram Chowdry - Senior Consultant Orthopedic & Knee Replacement Surgeon in Mysuru" class="hero-doctor-img" width="1366" height="768" fetchpriority="high">
-          <div class="hero-floating-card">
-            <div class="floating-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
-            </div>
-            <div>
-              <div class="floating-text-primary">Medical Director &bull; A.R. Hospital</div>
-              <div class="floating-text-sub">Mysuru &amp; Aasare Hospital, Hunsur</div>
-            </div>
           </div>
         </div>
       </div>
